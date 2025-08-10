@@ -56,7 +56,7 @@ const Index = () => {
                   <br />
                   INTEGRAL DE TU
                   <br />
-                  <span className="text-primary">APARICIÓN DIGITAL</span>
+                  <span className="text-primary">PRESENCIA DIGITAL</span>
                 </EditableHeading>
                 <EditableText className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto" delay={0.2}>
                   Ahorras tiempo y dinero para tu negocio, mientras nosotros nos encargamos de todo.
