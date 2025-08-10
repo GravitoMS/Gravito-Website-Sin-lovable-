@@ -18,7 +18,12 @@
     "protect:help": "node scripts/document-protection.cjs help",
     "protect:install": "node scripts/setup-protection.cjs",
     "no-mock": "node scripts/anti-mock-detector.cjs",
-    "setup-real-data": "node scripts/setup-real-data.cjs"
+    "setup-real-data": "node scripts/setup-real-data.cjs",
+    "complexity:check": "node scripts/complexity-monitor.cjs",
+    "complexity:fix": "node scripts/complexity-monitor.cjs --fix",
+    "pre-commit": "npm run complexity:check && npm run lint",
+    "quality:check": "npm run complexity:check && npm run lint && npm run validate-colors",
+    "quality:fix": "npm run complexity:fix && npm run lint -- --fix"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
