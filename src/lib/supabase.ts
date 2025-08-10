@@ -35,7 +35,7 @@ export async function withRetry<T>(
       return await operation();
     } catch (error) {
       lastError = error;
-      console.warn(`⚠️ Intento ${attempt}/${maxRetries} falló:`, error);
+      // Retry attempt failed
       
       if (attempt < maxRetries) {
         await new Promise(resolve => setTimeout(resolve, delay * attempt));

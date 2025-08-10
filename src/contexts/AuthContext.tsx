@@ -34,7 +34,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         const { data: { session }, error } = await supabase.auth.getSession()
         
         if (error) {
-          console.error('Error obteniendo sesión:', error)
+          // Error getting session
           return
         }
 
@@ -55,7 +55,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
           }
         }
       } catch (error) {
-        console.error('Error verificando sesión:', error)
+        // Error verifying session
       } finally {
         if (mounted) {
           setLoading(false)

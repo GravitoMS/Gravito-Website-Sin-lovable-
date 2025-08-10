@@ -179,7 +179,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, className = '' }) =
       setErrors({});
       
     } catch (error) {
-      console.error('Error submitting form:', error);
+      // Error handling - form submission failed
     } finally {
       setIsSubmitting(false);
     }

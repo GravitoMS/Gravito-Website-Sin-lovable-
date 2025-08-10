@@ -112,13 +112,17 @@ export default {
 						filter: 'hue-rotate(0deg) brightness(1)',
 					},
 				},
-
+				'slide': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-1000px)' }
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
-				'glow-rotate': 'glow-rotate 4s ease-in-out infinite'
+				'glow-rotate': 'glow-rotate 4s ease-in-out infinite',
+				'slide': 'slide 42s linear infinite'
 			}
 		}
 	},

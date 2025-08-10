@@ -1,8 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { FadeInUp, HoverScale } from '@/components/ui/AnimatedComponents';
 import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Map, Puzzle, MessageCircle } from 'lucide-react';
-import { ANIMATION_DURATIONS, ANIMATION_DELAYS } from '@/lib/animations';
 
 interface ServiceCard {
   icon: React.ComponentType<{ className?: string }>;
@@ -41,87 +40,69 @@ const services: ServiceCard[] = [
 const ServicesCarousel: React.FC = () => {
   return (
     <div className="relative w-full overflow-hidden py-8">
-      <motion.div 
-        className="flex space-x-8"
-        animate={{ 
-          x: [0, -1000, 0] 
-        }}
-        transition={{ 
-          duration: 42, 
-          repeat: Infinity, 
-          ease: "linear" 
-        }}
-      >
+      <div className="flex space-x-8 animate-[slide_42s_linear_infinite]">
         {/* Primera ronda de tarjetas */}
         {services.map((service, index) => (
-          <motion.div 
+          <FadeInUp 
             key={index} 
             className="flex-shrink-0 w-80 ml-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ 
-              duration: ANIMATION_DURATIONS.SLOW, 
-              delay: index * ANIMATION_DELAYS.SMALL 
+              duration: 0.7, 
+              delay: index * 0.1 
             }}
             viewport={{ once: true }}
           >
             <Card className="border border-primary/20 bg-card hover:shadow-lg transition-all duration-300 hover:border-primary/40 h-full group">
               <CardContent className="p-8 h-full flex flex-col">
-                <motion.div 
-                  className="flex items-center space-x-3 mb-6"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: ANIMATION_DURATIONS.FAST }}
-                >
+                <HoverScale className="flex items-center space-x-3 mb-6">
                   <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300">
                     <service.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </h3>
-                </motion.div>
+                </HoverScale>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
                   {service.description}
                 </p>
               </CardContent>
             </Card>
-          </motion.div>
+          </FadeInUp>
         ))}
         
         {/* Segunda ronda de tarjetas (para el carrusel infinito) */}
         {services.map((service, index) => (
-          <motion.div 
+          <FadeInUp 
             key={`duplicate-${index}`} 
             className="flex-shrink-0 w-80 ml-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ 
-              duration: ANIMATION_DURATIONS.SLOW, 
-              delay: (index + services.length) * ANIMATION_DELAYS.SMALL 
+              duration: 0.7, 
+              delay: (index + services.length) * 0.1 
             }}
             viewport={{ once: true }}
           >
             <Card className="border border-primary/20 bg-card hover:shadow-lg transition-all duration-300 hover:border-primary/40 h-full group">
               <CardContent className="p-8 h-full flex flex-col">
-                <motion.div 
-                  className="flex items-center space-x-3 mb-6"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: ANIMATION_DURATIONS.FAST }}
-                >
+                <HoverScale className="flex items-center space-x-3 mb-6">
                   <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors duration-300">
                     <service.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </h3>
-                </motion.div>
+                </HoverScale>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
                   {service.description}
                 </p>
               </CardContent>
             </Card>
-          </motion.div>
+          </FadeInUp>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };

@@ -36,8 +36,7 @@ const Contacto = () => {
   ], []);
 
   const handleFormSubmit = (data: any) => {
-    console.log('Formulario enviado:', data);
-    // Aquí se implementaría la lógica de envío
+    // Form submission logic here
     alert('¡Gracias por tu consulta! Te contactaremos pronto.');
   };
 

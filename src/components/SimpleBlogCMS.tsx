@@ -44,7 +44,7 @@ export const SimpleBlogCMS: React.FC = () => {
       if (error) throw error
       setPosts(data || [])
     } catch (error) {
-      console.error('Error cargando posts:', error)
+      // Error loading posts
     } finally {
       setLoading(false)
     }
@@ -65,7 +65,7 @@ export const SimpleBlogCMS: React.FC = () => {
       resetForm()
       setShowForm(false)
     } catch (error) {
-      console.error('Error creando post:', error)
+      // Error creating post
     }
   }
 
@@ -89,7 +89,7 @@ export const SimpleBlogCMS: React.FC = () => {
       resetForm()
       setEditingPost(null)
     } catch (error) {
-      console.error('Error actualizando post:', error)
+      // Error updating post
     }
   }
 
@@ -107,7 +107,7 @@ export const SimpleBlogCMS: React.FC = () => {
       
       setPosts(prev => prev.filter(post => post.id !== id))
     } catch (error) {
-      console.error('Error eliminando post:', error)
+      // Error deleting post
     }
   }
 

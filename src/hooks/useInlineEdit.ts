@@ -18,7 +18,7 @@ export const useInlineEdit = () => {
   // Activar/desactivar modo de edición
   const toggleEditMode = useCallback(() => {
     if (!isAdmin) {
-      console.warn('⚠️ Solo administradores pueden editar')
+      // Only admins can edit
       return
     }
     
@@ -55,8 +55,7 @@ export const useInlineEdit = () => {
     if (!isAdmin) return false
     
     try {
-      // Aquí guardarías en la base de datos
-      console.log('💾 Guardando cambios:', { id, newValue })
+      // Save changes to database here
       
       setEditState(prev => ({
         ...prev,
@@ -66,7 +65,7 @@ export const useInlineEdit = () => {
       
       return true
     } catch (error) {
-      console.error('❌ Error guardando cambios:', error)
+      // Error saving changes
       return false
     }
   }, [isAdmin])

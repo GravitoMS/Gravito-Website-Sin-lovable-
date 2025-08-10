@@ -79,7 +79,7 @@ export const usePageLoading = () => {
         try {
           return await config.customLoadingCheck();
         } catch (error) {
-          console.warn('Error checking custom resources:', error);
+          // Error checking custom resources
           return true;
         }
       }
@@ -105,7 +105,7 @@ export const usePageLoading = () => {
         await Promise.all(promises);
         return true;
       } catch (error) {
-        console.warn('Error loading external resources:', error);
+        // Error loading external resources
         return true;
       }
     };
