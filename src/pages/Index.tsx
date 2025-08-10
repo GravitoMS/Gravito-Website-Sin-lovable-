@@ -52,11 +52,11 @@ const Index = () => {
             <FadeIn className="flex flex-col items-center text-center gap-12">
               <div className="max-w-4xl">
                 <EditableHeading level={1} className="text-5xl lg:text-7xl font-black text-foreground mb-8 leading-none" delay={0.1}>
-                  MANEJO
+                  GESTIÓN
                   <br />
                   INTEGRAL DE TU
                   <br />
-                  <span className="text-primary">PRESENCIA DIGITAL</span>
+                  <span className="text-primary">APARICIÓN DIGITAL</span>
                 </EditableHeading>
                 <EditableText className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto" delay={0.2}>
                   Ahorras tiempo y dinero para tu negocio, mientras nosotros nos encargamos de todo.
