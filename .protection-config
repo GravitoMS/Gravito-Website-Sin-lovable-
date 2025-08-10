@@ -1,0 +1,15 @@
+# 🛡️ CONFIGURACIÓN LOCAL DEL SISTEMA DE PROTECCIÓN
+# Este archivo fue creado automáticamente
+
+CONFIGURATION_DATE="2025-08-10T00:36:40.282Z"
+PROJECT_NAME="Gravito Website"
+PROTECTION_ENABLED=true
+AUTO_BACKUP=true
+MONITORING_ENABLED=false
+
+# Comandos útiles:
+# npm run protect:check    - Verificar estado
+# npm run protect:backup   - Crear backup
+# npm run protect:restore  - Restaurar desde backup
+# npm run protect:setup    - Reconfigurar sistema
+# npm run protect:monitor  - Iniciar monitoreo

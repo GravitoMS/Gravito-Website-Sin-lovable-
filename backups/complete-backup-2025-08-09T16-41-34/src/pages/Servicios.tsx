@@ -1,0 +1,564 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle, ChevronDown, Star, Users, Target, Zap, Shield, TrendingUp, Globe, Smartphone, Palette, Brain, Map, Puzzle, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+
+const Servicios = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {/* Hero Section - Declaración de Principios */}
+      <section className="pt-40 pb-20 relative overflow-hidden min-h-screen flex items-center">
+        <div className="container mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-6xl mx-auto"
+          >
+            {/* Título Principal - Declaración de Principios */}
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-8 leading-tight"
+            >
+              Tu{' '}
+              <span className="text-primary" style={{
+                background: 'linear-gradient(135deg, hsl(162 100% 45%) 0%, hsl(162 100% 55%) 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                textShadow: '0 0 20px hsl(162 100% 45% / 0.3)'
+              }}>
+                crecimiento
+              </span>{' '}
+              no debería depender de tu tiempo.
+            </motion.h1>
+            
+            {/* Párrafo de Contexto */}
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12"
+            >
+              En Gravito, hemos diseñado nuestros servicios para hacer esto una realidad alcanzable. A continuación, encontrarás los planes que te devolverán tu tiempo y potenciarán tu crecimiento.
+            </motion.p>
+            
+            {/* Llamada a la Acción - Scroll */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mt-16"
+            >
+              <div className="flex flex-col items-center space-y-4">
+                <motion.div
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="text-foreground font-medium text-lg"
+                >
+                  ▼ Compara los Planes ▼
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, 5, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                >
+                  <ChevronDown className="h-6 w-6 text-muted-foreground" />
+                </motion.div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Sección de Servicios Principales */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+              Servicios
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Lo que hacemos por ti
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Carrusel de Servicios - Expandido hasta los bordes */}
+        <div className="relative w-full overflow-hidden">
+          <motion.div 
+            className="flex space-x-8"
+            animate={{ x: [0, -1000, 0] }}
+            transition={{ 
+              duration: 42, 
+              repeat: Infinity, 
+              ease: "linear" 
+            }}
+          >
+            {/* Duplicamos las tarjetas para el carrusel infinito */}
+            {[
+              {
+                icon: Brain,
+                title: "Análisis y Decisiones Basadas en Datos",
+                description: "No solo gestionamos, analizamos. Convertimos los datos de tus redes en decisiones inteligentes y estrategias comprobadas que impulsan el crecimiento real de tu negocio.",
+                color: "from-blue-500/20 to-blue-600/10"
+              },
+              {
+                icon: Map,
+                title: "Una Hoja de Ruta Clara",
+                description: "Olvídate de la incertidumbre. Te entregamos un plan de acción visual y detallado cada mes para que sepas exactamente qué haremos, por qué lo haremos y qué objetivos buscamos alcanzar.",
+                color: "from-green-500/20 to-green-600/10"
+              },
+              {
+                icon: Puzzle,
+                title: "Contenido que Conecta",
+                description: "Creamos contenido atractivo y relevante que resuena con tu audiencia. Desde el diseño gráfico hasta los videos UGC, nuestro objetivo es generar confianza y construir una comunidad leal.",
+                color: "from-purple-500/20 to-purple-600/10"
+              },
+              {
+                icon: MessageCircle,
+                title: "Crecimiento de la Comunidad",
+                description: "Transformamos a tu audiencia pasiva en una comunidad activa y comprometida. Gestionamos la interacción diaria para fortalecer la relación con tus clientes y convertir seguidores en fans.",
+                color: "from-orange-500/20 to-orange-600/10"
+              }
+            ].map((service, index) => (
+              <div key={index} className="flex-shrink-0 w-80 ml-6">
+                <Card className="border border-primary/20 bg-card hover:shadow-lg transition-all duration-300 hover:border-primary/40 h-full">
+                  <CardContent className="p-8 h-full flex flex-col">
+                    <div className="flex items-center space-x-3 mb-6">
+                      <div className="p-3 bg-primary/10 rounded-lg">
+                        <service.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-bold text-foreground">{service.title}</h3>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed flex-grow">
+                      {service.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+            
+            {/* Duplicamos las tarjetas para el carrusel infinito */}
+            {[
+              {
+                icon: Brain,
+                title: "Análisis y Decisiones Basadas en Datos",
+                description: "No solo gestionamos, analizamos. Convertimos los datos de tus redes en decisiones inteligentes y estrategias comprobadas que impulsan el crecimiento real de tu negocio.",
+                color: "from-blue-500/20 to-blue-600/10"
+              },
+              {
+                icon: Map,
+                title: "Una Hoja de Ruta Clara",
+                description: "Olvídate de la incertidumbre. Te entregamos un plan de acción visual y detallado cada mes para que sepas exactamente qué haremos, por qué lo haremos y qué objetivos buscamos alcanzar.",
+                color: "from-green-500/20 to-green-600/10"
+              },
+              {
+                icon: Puzzle,
+                title: "Contenido que Conecta",
+                description: "Creamos contenido atractivo y relevante que resuena con tu audiencia. Desde el diseño gráfico hasta los videos UGC, nuestro objetivo es generar confianza y construir una comunidad leal.",
+                color: "from-purple-500/20 to-purple-600/10"
+              },
+              {
+                icon: MessageCircle,
+                title: "Crecimiento de la Comunidad",
+                description: "Transformamos a tu audiencia pasiva en una comunidad activa y comprometida. Gestionamos la interacción diaria para fortalecer la relación con tus clientes y convertir seguidores en fans.",
+                color: "from-orange-500/20 to-orange-600/10"
+              }
+            ].map((service, index) => (
+              <div key={`duplicate-${index}`} className="flex-shrink-0 w-80 ml-6">
+                <Card className="border border-primary/20 bg-card hover:shadow-lg transition-all duration-300 hover:border-primary/40 h-full">
+                  <CardContent className="p-8 h-full flex flex-col">
+                    <div className="flex items-center space-x-3 mb-6">
+                      <div className="p-3 bg-primary/10 rounded-lg">
+                        <service.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-bold text-foreground">{service.title}</h3>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed flex-grow">
+                      {service.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Ícono "Conoce Más" */}
+        <div className="container mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-center mt-16"
+          >
+            <div className="flex flex-col items-center space-y-4">
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="text-foreground font-medium text-lg"
+              >
+                Conoce nuestros planes en detalle
+              </motion.div>
+              <motion.div
+                animate={{ y: [0, 5, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              >
+                <ChevronDown className="h-6 w-6 text-muted-foreground" />
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Sección Get Started con Tarjetas */}
+      <section className="py-20 bg-muted/20">
+        <div className="container mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+              Nuestros Servicios Principales
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Descubre las opciones que hemos diseñado para acompañar tu crecimiento digital de manera estratégica y sin riesgo.
+            </p>
+          </motion.div>
+
+          {/* Tarjetas de Servicios */}
+          <div className="max-w-6xl mx-auto space-y-8">
+            {/* Tarjeta Impulso Estratégico */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <Card className="border border-primary/20 bg-card hover:shadow-lg transition-shadow">
+                <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between p-8">
+                  <div className="flex-1 lg:pr-8">
+                    <div className="mb-4">
+                      <h3 className="text-2xl font-bold text-foreground mb-2">Impulso Estratégico</h3>
+                      <p className="text-muted-foreground font-medium">Análisis inicial sin riesgo</p>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Tu punto de entrada sin riesgo al mundo del marketing digital. Un análisis profundo que transforma tu presencia digital y acelera el crecimiento de tu negocio. El costo se descuenta 100% de tu primera factura si decides continuar con nuestros servicios.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">Análisis profundo de tu presencia digital</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">Diagnóstico inicial sin compromiso</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">Estrategia personalizada</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">Recomendación de plan ideal</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex-shrink-0 mt-6 lg:mt-0">
+                    <Link to="/estrategia">
+                      <Button 
+                        size="lg" 
+                        className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                      >
+                        Comenzar Impulso Estratégico
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+
+            {/* Tarjeta Suscripciones */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <Card className="border border-secondary/20 bg-card hover:shadow-lg transition-shadow">
+                <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between p-8">
+                  <div className="flex-1 lg:pr-8">
+                    <div className="mb-4">
+                      <h3 className="text-2xl font-bold text-foreground mb-2">Suscripciones</h3>
+                      <p className="text-muted-foreground font-medium">Planes mensuales escalables</p>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Hemos diseñado tres niveles de servicio para acompañar a tu negocio en cada etapa de su crecimiento digital. Ya sea que busques aliviar tu carga de trabajo o un socio estratégico para tu expansión, aquí encontrarás la solución perfecta.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">Nivel 1: Presencia Esencial</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">Nivel 2: Crecimiento y Optimización</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">Nivel 3: Liderazgo y Expansión</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex-shrink-0 mt-6 lg:mt-0">
+                    <Link to="/suscripciones">
+                      <Button 
+                        size="lg" 
+                        className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                      >
+                        Ver Planes de Suscripción
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Sección de Testimonios */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+              NUESTROS PARTNERS
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Nuestros partners están altamente satisfechos con su colaboración con Gravito y orgullosos de los resultados creativos que entregamos.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Alex Garcia",
+                title: "Co-Founder de Zintex",
+                quote: "Recientemente tuve el placer de trabajar con Gravito Media Solutions, y debo decir que estoy verdaderamente impresionado!"
+              },
+              {
+                name: "Emilie Watson",
+                title: "Directora Creativa en Vellum",
+                quote: "Fue un absoluto placer colaborar con Gravito. ¡Su atención al detalle es inigualable!"
+              },
+              {
+                name: "Sofia Ramires",
+                title: "Marketing Lead en Novanta",
+                quote: "Gravito llevó nuestra visión a la vida con estilo y precisión. ¡No podríamos estar más felices con el resultado!"
+              },
+              {
+                name: "Jordan Miles",
+                title: "Co-Founder de Brightscale",
+                quote: "Nuestra experiencia con Gravito fue fantástica—profesional, creativa y fluida de principio a fin."
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="border border-primary/20 bg-card hover:shadow-lg transition-all duration-300 hover:border-primary/40">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Users className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-bold text-foreground mb-1">{testimonial.name}</h3>
+                        <p className="text-sm text-muted-foreground mb-3">{testimonial.title}</p>
+                        <p className="text-muted-foreground leading-relaxed">"{testimonial.quote}"</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sección FAQ */}
+      <section className="py-20 bg-muted/20">
+        <div className="container mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+              FAQ
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Hemos respondido las preguntas más comunes para ayudarte a obtener claridad—rápida y confiadamente.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            {[
+              {
+                question: "¿Qué servicios ofrecen?",
+                answer: "Ofrecemos una gama completa de servicios digitales incluyendo marketing digital, gestión de redes sociales, diseño y branding, y consultoría estratégica. Cada servicio está diseñado para impulsar tu presencia online y maximizar tu ROI."
+              },
+              {
+                question: "¿Cómo funciona el Impulso Estratégico?",
+                answer: "El Impulso Estratégico es tu punto de entrada sin riesgo al mundo del marketing digital. Realizamos un análisis profundo de tu presencia digital actual y te proporcionamos una estrategia personalizada. El costo se descuenta 100% de tu primera factura si decides continuar con nuestros servicios."
+              },
+              {
+                question: "¿Puedo cambiar de plan en cualquier momento?",
+                answer: "Sí, ofrecemos total flexibilidad. Puedes cambiar de plan en cualquier momento, sin contratos a largo plazo. Si tu negocio crece y necesitas más servicios, puedes subir de plan fácilmente."
+              },
+              {
+                question: "¿Qué incluyen los planes de suscripción?",
+                answer: "Nuestros planes incluyen gestión de redes sociales, diseño de contenido, análisis de métricas, reportes mensuales, y soporte dedicado. Cada plan está diseñado para acompañar tu negocio en diferentes etapas de crecimiento."
+              }
+            ].map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="border border-border hover:border-primary/30 transition-colors">
+                  <CardContent className="p-6">
+                    <details className="group">
+                      <summary className="flex items-center justify-between cursor-pointer list-none">
+                        <h3 className="text-lg font-semibold text-foreground group-open:text-primary transition-colors">
+                          {faq.question}
+                        </h3>
+                        <div className="flex-shrink-0 ml-4">
+                          <div className="w-6 h-6 flex items-center justify-center">
+                            <div className="w-4 h-4 border-2 border-current rounded-full relative">
+                              <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="w-2 h-0.5 bg-current transition-transform duration-300 group-open:rotate-90"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </summary>
+                      <div className="mt-4 pt-4 border-t border-border">
+                        <p className="text-muted-foreground leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </details>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sección CTA Final - Cerrador de Ventas Experto */}
+      <section className="py-20 bg-primary">
+        <div className="container mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            {/* Encabezado - El Reaseguro */}
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6"
+            >
+              Ahorra Tiempo Dinero y Esfuerzo
+            </motion.h2>
+
+            {/* Subtítulo - La Guía */}
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed"
+            >
+              Nuestros productos están específicamente diseñados para eliminar los dolores de cabeza que pueden llevarte a perder tiempo y dinero.
+            </motion.p>
+
+            {/* Botones - La Decisión Final */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            >
+              {/* Botón Primario - Naranja sólido con texto oscuro */}
+              <Link to="/estrategia">
+                <Button 
+                  size="lg" 
+                  className="bg-orange-400 hover:bg-orange-500 text-gray-900 px-8 py-4 text-lg font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-0"
+                >
+                  Comenzar con mi Impulso Estratégico
+                </Button>
+              </Link>
+
+              {/* Botón Secundario - Outline blanco con texto blanco (Ghost Mode) */}
+              <Link to="/contacto">
+                <Button 
+                  variant="outline"
+                  size="lg" 
+                  className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg font-bold rounded-2xl transition-all duration-300 bg-transparent"
+                >
+                  Tengo una Pregunta
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default Servicios; 

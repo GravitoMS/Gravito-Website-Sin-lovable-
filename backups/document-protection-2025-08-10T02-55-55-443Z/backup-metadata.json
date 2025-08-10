@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-08-10T02:55:55.465Z",
+  "description": "Backup automático de documentos críticos",
+  "files": [
+    "COLOR_PROTECTION_GUIDE.md",
+    "COLOR_RESTRICTIONS.md",
+    "FINAL_DELIVERABLE.md",
+    "IMPLEMENTATION_SUMMARY.md",
+    "SETUP_INSTRUCTIONS.md",
+    "ADMIN_SETUP.md",
+    "ANIMATION_BIBLE.md",
+    "FOOTER_PROTECTION_GUIDE.md",
+    "SYSTEM_OPTIMIZATION.md",
+    "ANTI_MOCK_SYSTEM.md",
+    "src/lib/colorProtection.ts",
+    "src/components/dev/ColorProtectionStatus.tsx",
+    "src/components/dev/ColorValidationPanel.tsx",
+    "src/components/ui/AnimatedComponents.tsx",
+    "src/components/SystemStatus.tsx",
+    "scripts/footer-guardian.js",
+    "scripts/check-footer.js",
+    "scripts/validateColors.cjs",
+    "scripts/anti-mock-detector.cjs",
+    "scripts/setup-real-data.cjs",
+    "supabase-setup.sql",
+    "supabase-auth-setup.sql",
+    "tailwind.config.ts",
+    "package.json",
+    "vite.config.ts"
+  ],
+  "totalFiles": 25
+}
