@@ -14,12 +14,6 @@ export * from './animations';
 export { default as ANIMATION_SYSTEM } from './animations';
 
 // ============================================================================
-// VALIDACIÓN DE COLORES
-// ============================================================================
-export * from './colorValidator';
-export { default as COLOR_VALIDATOR } from './colorValidator';
-
-// ============================================================================
 // UTILIDADES GENERALES
 // ============================================================================
-// Nota: utils.ts se puede agregar en el futuro si es necesario
+export * from './utils';

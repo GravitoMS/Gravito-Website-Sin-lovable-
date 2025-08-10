@@ -40,10 +40,9 @@ const NotFound = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          href="/" 
           className="text-info hover:text-info underline"
         >
-          Return to Home
+          <a href="/">Return to Home</a>
         </FadeInUp>
       </FadeInUp>
     </div>

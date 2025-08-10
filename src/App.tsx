@@ -17,8 +17,6 @@ import GravitoVsTemplate from "./pages/GravitoVsTemplate";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import { NavigationProvider } from "./components/NavigationProvider";
-import { FooterColorStatus } from "./components/dev/FooterColorStatus";
-import { EditModeToggle } from "./components/EditModeToggle";
 import { AuthProvider } from "./contexts/AuthContext";
 
 const queryClient = new QueryClient();
@@ -40,11 +38,6 @@ const AppContent = () => {
         <Route path="*" element={<NotFound />} />
       </Routes>
       
-      {/* Botón de modo de edición (solo visible para admins) */}
-      <EditModeToggle />
-      
-      {/* Estado de protección de colores (solo en desarrollo) */}
-      <FooterColorStatus />
     </NavigationProvider>
   );
 };

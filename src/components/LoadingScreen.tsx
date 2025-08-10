@@ -59,7 +59,9 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
                   repeat: Infinity,
                   delay: dot.delay,
                 }}
-              />
+              >
+                <span></span>
+              </FadeInUp>
             ))}
           </div>
         </div>
@@ -100,7 +102,9 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
                   repeat: Infinity,
                   delay: i * 0.2,
                 }}
-              />
+              >
+                <span></span>
+              </FadeInUp>
             ))}
           </FadeInUp>
         </div>
@@ -120,7 +124,9 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-        />
+        >
+          <span></span>
+        </FadeInUp>
       </FadeInUp>
     </AnimatePresence>
   );
