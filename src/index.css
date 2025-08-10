@@ -148,6 +148,10 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
   .stats-card {
     @apply rounded-3xl p-8 transition-all duration-300 hover:scale-105 relative overflow-hidden;
     background: linear-gradient(135deg, 

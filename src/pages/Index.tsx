@@ -5,6 +5,7 @@ import { Mouse, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
 import { FadeIn, HoverScale } from "@/components/ui/SimpleAnimations";
+import { EditableFadeIn, EditableHeading, EditableText } from "@/components/ui/EditableAnimations";
 import ServicesCarousel from "@/components/ServicesCarousel";
 
 const Index = () => {
@@ -49,16 +50,16 @@ const Index = () => {
           <div className="container mx-auto px-6 py-20 lg:py-32">
             <FadeIn className="flex flex-col items-center text-center gap-12">
               <div className="max-w-4xl">
-                <FadeIn delay={0.1} className="text-5xl lg:text-7xl font-black text-foreground mb-8 leading-none">
+                <EditableHeading level={1} className="text-5xl lg:text-7xl font-black text-foreground mb-8 leading-none" delay={0.1}>
                   GESTIÓN
                   <br />
                   INTEGRAL DE TU
                   <br />
                   <span className="text-primary">PRESENCIA DIGITAL</span>
-                </FadeIn>
-                <FadeIn delay={0.2} className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto">
+                </EditableHeading>
+                <EditableText className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto" delay={0.2}>
                   Ahorras tiempo y dinero para tu negocio, mientras nosotros nos encargamos de todo.
-                </FadeIn>
+                </EditableText>
                 <FadeIn delay={0.3} className="flex flex-col sm:flex-row justify-center gap-6">
                   <Link to="/estrategia">
                     <Button variant="hero-yellow" size="lg" className="text-lg px-10 py-8">
@@ -92,19 +93,19 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
-              <h2 className="text-6xl lg:text-8xl font-black text-foreground mb-8 leading-none">
+              <EditableHeading level={2} className="text-6xl lg:text-8xl font-black text-foreground mb-8 leading-none">
                 ¿QUIÉNES
                 <br />
                 SOMOS?
-              </h2>
+              </EditableHeading>
               <div className="space-y-6 mb-12 max-w-xl">
-                <p className="text-xl lg:text-2xl text-muted-foreground">Somos la agencia de consultoría y gestión digital que actúa como tu departamento de marketing externo.</p>
+                <EditableText className="text-xl lg:text-2xl text-muted-foreground">Somos la agencia de consultoría y gestión digital que actúa como tu departamento de marketing externo.</EditableText>
                 
                 <div className="flex justify-center">
                   <div className="w-16 h-px bg-border"></div>
                 </div>
                 
-                <p className="text-xl lg:text-2xl text-muted-foreground">No solo gestionamos tus redes. Integramos nuestra consultoría estratégica con un ecosistema de servicios de valor y tecnología de IA, para ejecutar y entregar una hoja de ruta clara que impulse el crecimiento de tu negocio.</p>
+                <EditableText className="text-xl lg:text-2xl text-muted-foreground">No solo gestionamos tus redes. Integramos nuestra consultoría estratégica con un ecosistema de servicios de valor y tecnología de IA, para ejecutar y entregar una hoja de ruta clara que impulse el crecimiento de tu negocio.</EditableText>
               </div>
               <div className="flex flex-col sm:flex-row gap-6">
                 <Link to="/nosotros">
@@ -147,10 +148,10 @@ const Index = () => {
 
       {/* Services Section */}
       <section className="container mx-auto px-6 py-20">
-        <FadeIn className="text-4xl lg:text-6xl font-black text-center mb-16">
+        <EditableHeading level={2} className="text-4xl lg:text-6xl font-black text-center mb-16">
           LO QUE HACEMOS POR TI
           <div className="w-32 h-1 bg-secondary rounded-full mx-auto mt-4"></div>
-        </FadeIn>
+        </EditableHeading>
         <ServicesCarousel />
       </section>
 
@@ -159,14 +160,14 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <FadeIn className="text-center max-w-4xl mx-auto">
             {/* Encabezado - El Reaseguro */}
-            <FadeIn delay={0.1} className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6">
+            <EditableHeading level={2} className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6" delay={0.1}>
               Comienza sin Riesgo
-            </FadeIn>
+            </EditableHeading>
 
             {/* Subtítulo - La Guía */}
-            <FadeIn delay={0.2} className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
+            <EditableText className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed" delay={0.2}>
               Sabemos que es mucha información. Por eso diseñamos la manera perfecta y sin riesgo para que obtengas eso que tanto te hace falta: <span className="font-bold">Tranquilidad</span>
-            </FadeIn>
+            </EditableText>
 
             {/* Botón Único - Clon del Hero Section */}
             <FadeIn delay={0.3} className="flex justify-center">
