@@ -1,0 +1,226 @@
+{
+  "project": {
+    "name": "Gravito Website",
+    "version": "1.0.0",
+    "description": "Sitio web profesional para Gravito Media Solutions",
+    "url": "https://lovable.dev/projects/098fea07-8a53-40f6-9df1-bb981e6a695a",
+    "repository": "https://github.com/GravitoMS/gravito-website-10202-35.git",
+    "vercel_url": "https://gravito-website-10202-35-gpbl1zuj3-gravitoms-projects.vercel.app"
+  },
+  "technologies": {
+    "frontend": {
+      "framework": "React 18.3.1",
+      "language": "TypeScript 5.8.3",
+      "build_tool": "Vite 5.4.19",
+      "styling": "Tailwind CSS 3.4.17",
+      "ui_components": "shadcn/ui",
+      "routing": "React Router DOM 6.30.1",
+      "animations": "Framer Motion 12.23.12",
+      "state_management": "React Query 5.83.0"
+    },
+    "backend": {
+      "database": "Supabase",
+      "authentication": "Supabase Auth",
+      "storage": "Supabase Storage"
+    },
+    "deployment": {
+      "platform": "Vercel",
+      "auto_deploy": true,
+      "domain": "gravito-website-10202-35.vercel.app"
+    }
+  },
+  "development_rules": {
+    "absolute_prohibitions": [
+      "Crear archivos duplicados (ComponentName 2.tsx, ComponentName 3.tsx)",
+      "Crear sistemas de validación complejos para funcionalidades simples",
+      "Crear componentes de desarrollo (EditModeToggle, DevTools)",
+      "Usar motion.div directamente (solo componentes centralizados)",
+      "Usar colores hardcodeados (solo sistema de colores HSL)",
+      "Crear carpetas backups/, dev/, old/"
+    ],
+    "mandatory_practices": [
+      "Usar componentes centralizados de SimpleAnimations",
+      "Usar EditableHeading/EditableText para Visual Edits",
+      "Seguir el sistema de colores del designSystem",
+      "Mantener archivos bajo 500 líneas",
+      "Documentar cambios significativos"
+    ],
+    "animation_components": {
+      "allowed": [
+        "FadeIn",
+        "HoverScale", 
+        "SlideIn",
+        "EditableHeading",
+        "EditableText"
+      ],
+      "forbidden": [
+        "motion.div directo",
+        "import { motion } from 'framer-motion'"
+      ]
+    }
+  },
+  "communication_protocol": {
+    "lovable_responsibilities": [
+      "Visual Edits - Edición directa de contenido",
+      "Prototipado rápido - Pruebas de conceptos", 
+      "Feedback visual - Verificación de cambios",
+      "Testing de UX - Experiencia de usuario"
+    ],
+    "cursor_responsibilities": [
+      "Desarrollo de código - Implementación técnica",
+      "Optimización - Mejoras de performance",
+      "Refactorización - Limpieza de código",
+      "Integración - Conexión con APIs y servicios"
+    ],
+    "workflow": {
+      "content_changes": [
+        "Lovable → Hacer cambios visuales",
+        "Lovable → Verificar que funciona",
+        "Lovable → Comentar en GitHub",
+        "Cursor → Revisar cambios",
+        "Cursor → Optimizar si es necesario",
+        "Cursor → Push a repositorio",
+        "Vercel → Deploy automático"
+      ],
+      "technical_changes": [
+        "Cursor → Desarrollar funcionalidad",
+        "Cursor → Test local",
+        "Cursor → Push a repositorio", 
+        "Vercel → Deploy automático",
+        "Lovable → Verificar en producción",
+        "Lovable → Feedback si hay problemas"
+      ]
+    }
+  },
+  "file_structure": {
+    "src": {
+      "components": {
+        "ui": "Componentes básicos (Button, Card, Input)",
+        "feature": "Componentes específicos por funcionalidad"
+      },
+      "pages": "Páginas principales de la aplicación",
+      "lib": "Utilidades esenciales y configuraciones",
+      "hooks": "Hooks básicos de React"
+    },
+    "scripts": {
+      "complexity-monitor.cjs": "Monitoreo de complejidad del código",
+      "document-protection.cjs": "Protección de documentación",
+      "validateColors.cjs": "Validación de colores"
+    }
+  },
+  "scripts": {
+    "development": {
+      "dev": "Iniciar servidor de desarrollo",
+      "build": "Build para producción",
+      "preview": "Preview del build"
+    },
+    "quality": {
+      "complexity:check": "Verificar complejidad del código",
+      "quality:check": "Verificación completa (complejidad + lint + colores)",
+      "pre-commit": "Verificaciones antes de commit"
+    },
+    "protection": {
+      "protect:check": "Verificar protección de documentos",
+      "protect:backup": "Crear backup de documentación",
+      "protect:restore": "Restaurar documentación"
+    }
+  },
+  "visual_edits": {
+    "status": "funcional",
+    "components": [
+      "EditableHeading",
+      "EditableText"
+    ],
+    "requirements": [
+      "data-editable='true'",
+      "z-index correcto",
+      "pointer-events habilitados"
+    ],
+    "known_issues": [
+      "Iframes de Spline pueden interferir (solución: pointer-events-none)"
+    ]
+  },
+  "deployment": {
+    "platform": "Vercel",
+    "auto_deploy": true,
+    "url": "https://gravito-website-10202-35-gpbl1zuj3-gravitoms-projects.vercel.app",
+    "setup_required": [
+      "Configurar webhooks de GitHub a Vercel",
+      "Habilitar auto-deploy en rama main",
+      "Configurar dominio personalizado (opcional)"
+    ]
+  },
+  "color_system": {
+    "primary": "hsl(var(--primary)) - Verde principal",
+    "secondary": "hsl(var(--secondary)) - Naranja secundario", 
+    "background": "hsl(var(--background)) - Fondo principal",
+    "foreground": "hsl(var(--foreground)) - Texto principal",
+    "muted": "hsl(var(--muted)) - Texto atenuado",
+    "border": "hsl(var(--border)) - Bordes",
+    "card": "hsl(var(--card)) - Fondo de tarjetas"
+  },
+  "animation_system": {
+    "duration_constants": {
+      "FAST": "0.3s",
+      "NORMAL": "0.5s", 
+      "SLOW": "0.8s",
+      "VERY_SLOW": "1.2s"
+    },
+    "delay_constants": {
+      "NONE": "0s",
+      "SMALL": "0.1s",
+      "MEDIUM": "0.2s",
+      "LARGE": "0.3s",
+      "XLARGE": "0.4s",
+      "XXLARGE": "0.6s"
+    },
+    "css_classes": {
+      "fade-in": "animate-fade-in",
+      "slide-in-left": "animate-slide-in-left", 
+      "slide-in-right": "animate-slide-in-right",
+      "hover-scale": "hover-scale"
+    }
+  },
+  "troubleshooting": {
+    "visual_edits_not_working": [
+      "Verificar z-index de elementos",
+      "Asegurar pointer-events habilitados",
+      "Revisar conflictos con iframes",
+      "Verificar data-editable='true'"
+    ],
+    "deploy_not_automatic": [
+      "Verificar webhooks de GitHub",
+      "Revisar configuración de Vercel",
+      "Confirmar rama main configurada",
+      "Verificar permisos del repositorio"
+    ],
+    "complexity_issues": [
+      "Ejecutar npm run complexity:check",
+      "Revisar archivos duplicados",
+      "Verificar tamaño de archivos",
+      "Eliminar carpetas prohibidas"
+    ]
+  },
+  "maintenance": {
+    "daily": [
+      "Verificar estado del repositorio",
+      "Revisar deploys recientes",
+      "Ejecutar complexity:check"
+    ],
+    "weekly": [
+      "Limpiar código innecesario",
+      "Actualizar documentación",
+      "Revisar issues abiertos"
+    ],
+    "monthly": [
+      "Auditar dependencias",
+      "Revisar performance",
+      "Actualizar reglas de desarrollo"
+    ]
+  },
+  "contact": {
+    "lovable_project": "https://lovable.dev/projects/098fea07-8a53-40f6-9df1-bb981e6a695a",
+    "github_repository": "https://github.com/GravitoMS/gravito-website-10202-35",
+    "vercel_dashboard": "https://vercel.com/gravitoms-projects/gravito-website-10202-35"
+  }
+}

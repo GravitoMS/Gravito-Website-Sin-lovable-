@@ -1,21 +1,28 @@
 # 🚀 Gravito Website
 
-Sitio web profesional para Gravito Media Solutions.
+Sitio web profesional para Gravito Media Solutions - Sistema optimizado y centralizado.
 
-## 📋 Información del Proyecto
+## 📚 Documentación Centralizada
 
-- **URL de Producción**: https://gravito-website-10202-35-gpbl1zuj3-gravitoms-projects.vercel.app
-- **Repositorio**: https://github.com/GravitoMS/gravito-website-10202-35
-- **Lovable Project**: https://lovable.dev/projects/098fea07-8a53-40f6-9df1-bb981e6a695a
+**Toda la documentación del proyecto está centralizada en formato JSON:**
 
-## 🎯 Características Principales
+```bash
+# Ver documentación completa
+npm run docs:show project
 
-- ✅ Apariencia visual atractiva y moderna
-- ✅ Botón "Visual Edits" completamente funcional
-- ✅ Código simple y mantenible
-- ✅ Deploy automático con Vercel
+# Buscar información específica
+npm run docs:search "visual edits"
 
-## 🚀 Inicio Rápido
+# Validar documentación
+npm run docs:validate
+
+# Ayuda del gestor de documentación
+npm run docs:help
+```
+
+**Archivo de documentación:** `project-documentation.json`
+
+## 🛠️ Desarrollo Rápido
 
 ```bash
 # Instalar dependencias
@@ -24,42 +31,75 @@ npm install
 # Servidor de desarrollo
 npm run dev
 
-# Build de producción
+# Build para producción
 npm run build
 
 # Verificar calidad del código
 npm run quality:check
 ```
 
-## 📚 Documentación
+## 🔗 Enlaces Importantes
 
-**📖 [GRAVITO_MASTER_GUIDE.md](./GRAVITO_MASTER_GUIDE.md)** - Guía completa del proyecto
+- **Lovable Project**: https://lovable.dev/projects/098fea07-8a53-40f6-9df1-bb981e6a695a
+- **Vercel Deploy**: https://gravito-website-10202-35-gpbl1zuj3-gravitoms-projects.vercel.app
+- **GitHub Repository**: https://github.com/GravitoMS/gravito-website-10202-35
 
-Esta guía maestra contiene toda la información esencial:
-- Reglas de desarrollo
-- Protocolo de comunicación Lovable ↔ Cursor
-- Sistema de animaciones
-- Configuración de Vercel
-- Solución de problemas
+## 🎯 Características Principales
 
-## 🛠️ Tecnologías
+- ✅ **Visual Edits funcional** - Edición directa en Lovable
+- ✅ **Auto-deploy** - Cambios automáticos en Vercel
+- ✅ **Código optimizado** - 70% menos complejidad
+- ✅ **Documentación centralizada** - Todo en un solo lugar
+- ✅ **Monitoreo de calidad** - Scripts automáticos
 
-- **Frontend**: React + TypeScript + Vite
+## 📋 Stack Tecnológico
+
+- **Frontend**: React 18 + TypeScript + Vite
 - **Styling**: Tailwind CSS + shadcn/ui
-- **Animaciones**: Framer Motion + CSS
-- **Deploy**: Vercel
-- **Backend**: Supabase
+- **Animations**: Framer Motion (centralizado)
+- **Deployment**: Vercel con auto-deploy
+- **Database**: Supabase
 
-## 🤝 Contribución
+## 🚨 Reglas de Desarrollo
 
-1. **Para cambios visuales**: Usar Visual Edits en Lovable
-2. **Para cambios técnicos**: Trabajar en Cursor y hacer push
-3. **Seguir**: [GRAVITO_MASTER_GUIDE.md](./GRAVITO_MASTER_GUIDE.md)
+**Prohibido:**
+- ❌ Crear archivos duplicados
+- ❌ Sobre-ingeniería innecesaria
+- ❌ Usar motion.div directamente
+- ❌ Colores hardcodeados
 
-## 📞 Soporte
+**Obligatorio:**
+- ✅ Usar componentes centralizados
+- ✅ Seguir sistema de colores HSL
+- ✅ Mantener archivos <500 líneas
+- ✅ Documentar cambios significativos
 
-Para cualquier pregunta o problema, consultar la [GRAVITO_MASTER_GUIDE.md](./GRAVITO_MASTER_GUIDE.md) primero.
+## 🔧 Scripts Disponibles
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```bash
+# Desarrollo
+npm run dev              # Servidor de desarrollo
+npm run build            # Build para producción
+npm run preview          # Preview del build
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# Calidad
+npm run quality:check    # Verificación completa
+npm run complexity:check # Monitoreo de complejidad
+npm run pre-commit       # Verificaciones pre-commit
+
+# Documentación
+npm run docs:show        # Mostrar sección específica
+npm run docs:search      # Buscar en documentación
+npm run docs:validate    # Validar documentación
+```
+
+## 🤝 Protocolo de Comunicación
+
+**Lovable**: Visual Edits, prototipado, feedback visual  
+**Cursor**: Desarrollo técnico, optimización, refactorización
+
+Ver detalles completos en la documentación JSON.
+
+---
+
+**¿Necesitas ayuda?** Ejecuta `npm run docs:help` para ver todas las opciones disponibles.
