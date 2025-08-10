@@ -1,105 +1,112 @@
-# 🚀 Gravito Website
+# 🚀 GRAVITO WEBSITE - SISTEMA SIMPLIFICADO
 
-Sitio web profesional para Gravito Media Solutions - Sistema optimizado y centralizado.
+## 🎯 PRINCIPIOS FUNDAMENTALES
 
-## 📚 Documentación Centralizada
+### SIMPLICIDAD RADICAL
+Este proyecto sigue el principio de **simplicidad radical**. Cualquier cambio debe:
+- ✅ Mantener la apariencia visual 100% idéntica
+- ✅ Ser compatible con Visual Edits de Lovable
+- ✅ No agregar complejidad innecesaria
+- ✅ Seguir las reglas de la CONSTITUCIÓN DE DESARROLLO
 
-**Toda la documentación del proyecto está centralizada en formato JSON:**
+### LOVABLE INTEGRATION
+- 🔄 Auto-deploy configurado con webhooks
+- ✅ Componentes editables optimizados
+- 🎯 Visual Edits como prioridad #1
+- 📱 Compatibilidad total con Lovable
 
-```bash
-# Ver documentación completa
-npm run docs:show project
+## 📚 DOCUMENTACIÓN ESENCIAL
 
-# Buscar información específica
-npm run docs:search "visual edits"
+### REGLAS ABSOLUTAS:
+- [DEVELOPMENT_CONSTITUTION.md](./DEVELOPMENT_CONSTITUTION.md) - Reglas fundamentales
+- [LOVABLE_INTEGRATION_GUIDE.md](./LOVABLE_INTEGRATION_GUIDE.md) - Guía de integración
+- [SIMPLICITY_ENFORCEMENT.md](./SIMPLICITY_ENFORCEMENT.md) - Control de simplicidad
 
-# Validar documentación
-npm run docs:validate
+### DOCUMENTACIÓN TÉCNICA:
+- [ANIMATION_BIBLE.md](./ANIMATION_BIBLE.md) - Sistema de animaciones
+- [COLOR_PROTECTION_GUIDE.md](./COLOR_PROTECTION_GUIDE.md) - Sistema de colores
+- [ADMIN_SETUP.md](./ADMIN_SETUP.md) - Sistema de administración
+- [SYSTEM_IMPROVEMENTS.md](./SYSTEM_IMPROVEMENTS.md) - Mejoras del sistema
+- [COLOR_RESTRICTIONS.md](./COLOR_RESTRICTIONS.md) - Restricciones de colores
+- [FINAL_DELIVERABLE.md](./FINAL_DELIVERABLE.md) - Entregable final
+- [IMPLEMENTATION_SUMMARY.md](./IMPLEMENTATION_SUMMARY.md) - Resumen de implementación
+- [SETUP_INSTRUCTIONS.md](./SETUP_INSTRUCTIONS.md) - Instrucciones de configuración
+- [FOOTER_PROTECTION_GUIDE.md](./FOOTER_PROTECTION_GUIDE.md) - Protección del footer
+- [SYSTEM_OPTIMIZATION.md](./SYSTEM_OPTIMIZATION.md) - Optimización del sistema
 
-# Ayuda del gestor de documentación
-npm run docs:help
-```
+## ⚠️ ANTES DE CUALQUIER CAMBIO
 
-**Archivo de documentación:** `project-documentation.json`
+1. **Leer** DEVELOPMENT_CONSTITUTION.md
+2. **Verificar** compatibilidad con Lovable
+3. **Seguir** el checklist de simplicidad
+4. **Documentar** cualquier cambio significativo
 
-## 🛠️ Desarrollo Rápido
+## 🔧 DESARROLLO RÁPIDO
 
 ```bash
 # Instalar dependencias
 npm install
 
-# Servidor de desarrollo
+# Desarrollo local
 npm run dev
 
 # Build para producción
 npm run build
 
-# Verificar calidad del código
-npm run quality:check
+# Análisis de simplicidad
+node scripts/complexity-analyzer.cjs
+
+# Verificación de compatibilidad Lovable
+node scripts/lovable-compatibility-check.cjs
 ```
 
-## 🔗 Enlaces Importantes
+## 🌐 DEPLOY Y INTEGRACIÓN
 
-- **Lovable Project**: https://lovable.dev/projects/098fea07-8a53-40f6-9df1-bb981e6a695a
-- **Vercel Deploy**: https://gravito-website-10202-35-gpbl1zuj3-gravitoms-projects.vercel.app
-- **GitHub Repository**: https://github.com/GravitoMS/gravito-website-10202-35
+### URL de Producción:
+**Vercel**: https://gravito-website-10202-35-gpbl1zuj3-gravitoms-projects.vercel.app
 
-## 🎯 Características Principales
+### Lovable Project:
+**URL**: https://lovable.dev/projects/098fea07-8a53-40f6-9df1-bb981e6a695a
 
-- ✅ **Visual Edits funcional** - Edición directa en Lovable
-- ✅ **Auto-deploy** - Cambios automáticos en Vercel
-- ✅ **Código optimizado** - 70% menos complejidad
-- ✅ **Documentación centralizada** - Todo en un solo lugar
-- ✅ **Monitoreo de calidad** - Scripts automáticos
+### Auto-Deploy:
+- ✅ Webhooks configurados para deploy automático
+- ✅ Push a `main` dispara deploy automático
+- ✅ Cambios se reflejan en 30-60 segundos
 
-## 📋 Stack Tecnológico
+## 🛠️ TECNOLOGÍAS
 
-- **Frontend**: React 18 + TypeScript + Vite
-- **Styling**: Tailwind CSS + shadcn/ui
-- **Animations**: Framer Motion (centralizado)
-- **Deployment**: Vercel con auto-deploy
-- **Database**: Supabase
+Este proyecto está construido con:
+- **Vite** - Build tool ultra-rápido
+- **TypeScript** - Tipado estático
+- **React** - Framework de UI
+- **shadcn-ui** - Componentes de UI
+- **Tailwind CSS** - Framework de estilos
+- **Framer Motion** - Animaciones simples
 
-## 🚨 Reglas de Desarrollo
+## 📞 SOPORTE
 
-**Prohibido:**
-- ❌ Crear archivos duplicados
-- ❌ Sobre-ingeniería innecesaria
-- ❌ Usar motion.div directamente
-- ❌ Colores hardcodeados
+- **Problemas de simplicidad**: Revisar SIMPLICITY_ENFORCEMENT.md
+- **Problemas con Lovable**: Revisar LOVABLE_INTEGRATION_GUIDE.md
+- **Problemas de reglas**: Revisar DEVELOPMENT_CONSTITUTION.md
+- **Problemas de animaciones**: Revisar ANIMATION_BIBLE.md
 
-**Obligatorio:**
-- ✅ Usar componentes centralizados
-- ✅ Seguir sistema de colores HSL
-- ✅ Mantener archivos <500 líneas
-- ✅ Documentar cambios significativos
+## 🚨 REGLAS CRÍTICAS
 
-## 🔧 Scripts Disponibles
+### NUNCA ELIMINAR:
+- ❌ Cualquier archivo de documentación protegida
+- ❌ Componentes editables sin reemplazo
+- ❌ Sistemas esenciales sin justificación
 
-```bash
-# Desarrollo
-npm run dev              # Servidor de desarrollo
-npm run build            # Build para producción
-npm run preview          # Preview del build
-
-# Calidad
-npm run quality:check    # Verificación completa
-npm run complexity:check # Monitoreo de complejidad
-npm run pre-commit       # Verificaciones pre-commit
-
-# Documentación
-npm run docs:show        # Mostrar sección específica
-npm run docs:search      # Buscar en documentación
-npm run docs:validate    # Validar documentación
-```
-
-## 🤝 Protocolo de Comunicación
-
-**Lovable**: Visual Edits, prototipado, feedback visual  
-**Cursor**: Desarrollo técnico, optimización, refactorización
-
-Ver detalles completos en la documentación JSON.
+### SIEMPRE VERIFICAR:
+- ✅ Compatibilidad con Visual Edits
+- ✅ Mantenimiento de apariencia visual
+- ✅ Simplicidad del código
+- ✅ Documentación actualizada
 
 ---
 
-**¿Necesitas ayuda?** Ejecuta `npm run docs:help` para ver todas las opciones disponibles.
+**Este proyecto mantiene simplicidad radical y compatibilidad total con Lovable.**
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
