@@ -51,7 +51,7 @@ const Index = () => {
             <FadeIn className="flex flex-col items-center text-center gap-12">
               <div className="max-w-4xl">
                 <EditableHeading level={1} className="text-5xl lg:text-7xl font-black text-foreground mb-8 leading-none" delay={0.1}>
-                  GESTIÓN
+                  MANEJO
                   <br />
                   INTEGRAL DE TU
                   <br />
