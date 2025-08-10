@@ -5,8 +5,7 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-import { ANIMATION_DURATIONS, ANIMATION_DELAYS, EASING_FUNCTIONS } from '@/lib/animations';
-// Sistema centralizado importado desde @/lib
+// Animations removed for simplicity
 
 const Sheet = SheetPrimitive.Root
 

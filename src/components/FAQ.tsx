@@ -1,8 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
-import { ANIMATION_DURATIONS, ANIMATION_DELAYS, EASING_FUNCTIONS } from '@/lib/animations';
-
 const FAQ = () => {
   return (
     <section className="py-20">
@@ -29,7 +27,7 @@ const FAQ = () => {
                     <div className="w-6 h-6 flex items-center justify-center">
                       <div className="w-4 h-4 border-2 border-current rounded-full relative">
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-2 h-0.5 bg-current transition-transform duration-fast group-open:rotate-90"></div>
+                          <div className="w-2 h-0.5 bg-current transition-transform duration-300 group-open:rotate-90"></div>
                         </div>
                       </div>
                     </div>
@@ -56,7 +54,7 @@ const FAQ = () => {
                     <div className="w-6 h-6 flex items-center justify-center">
                       <div className="w-4 h-4 border-2 border-current rounded-full relative">
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-2 h-0.5 bg-current transition-transform duration-fast group-open:rotate-90"></div>
+                          <div className="w-2 h-0.5 bg-current transition-transform duration-300 group-open:rotate-90"></div>
                         </div>
                       </div>
                     </div>
@@ -83,7 +81,7 @@ const FAQ = () => {
                     <div className="w-6 h-6 flex items-center justify-center">
                       <div className="w-4 h-4 border-2 border-current rounded-full relative">
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-2 h-0.5 bg-current transition-transform duration-fast group-open:rotate-90"></div>
+                          <div className="w-2 h-0.5 bg-current transition-transform duration-300 group-open:rotate-90"></div>
                         </div>
                       </div>
                     </div>
@@ -110,7 +108,7 @@ const FAQ = () => {
                     <div className="w-6 h-6 flex items-center justify-center">
                       <div className="w-4 h-4 border-2 border-current rounded-full relative">
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-2 h-0.5 bg-current transition-transform duration-fast group-open:rotate-90"></div>
+                          <div className="w-2 h-0.5 bg-current transition-transform duration-300 group-open:rotate-90"></div>
                         </div>
                       </div>
                     </div>

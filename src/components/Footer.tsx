@@ -1,21 +1,14 @@
 import React, { useState } from 'react';
-import { ChevronDown, LogOut } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '@/contexts/AuthContext';
-import AdminLoginModal from './AdminLoginModal';
 
-import { ANIMATION_DURATIONS, ANIMATION_DELAYS, EASING_FUNCTIONS } from '@/lib/animations';
-// Sistema centralizado importado desde @/lib
 const Footer = () => {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-  const [showLoginModal, setShowLoginModal] = useState(false);
-  
-  // Usar el hook de autenticación
-  const { isAdmin, signOut } = useAuth();
   
   const toggleSection = (section: string) => {
     setExpandedSections(prev => prev.includes(section) ? prev.filter(s => s !== section) : [...prev, section]);
   };
+
   return (
     <footer className="relative bg-muted text-white overflow-hidden">
       {/* Glowing Background Effect */}
@@ -23,9 +16,9 @@ const Footer = () => {
       
       {/* Main Footer Container with Glowing Effect */}
       <div className="relative z-10">
-        <div className="backdrop-blur-sm bg-muted/20 border border-muted/50 shadow-2xl rounded-3xl mx-6 my-8 transition-all duration-normal" 
+        <div className="backdrop-blur-sm bg-muted/20 border border-muted/50 shadow-2xl rounded-3xl mx-6 my-8 transition-all duration-300" 
              style={{
-               boxShadow: '0 0 20px -5px hsl(var(--hero-green) / 0.2)',
+               boxShadow: '0 0 20px -5px hsl(162 100% 45% / 0.2)',
                willChange: 'transform, box-shadow'
              }}>
           
@@ -40,7 +33,7 @@ const Footer = () => {
                   {/* Opción principal */}
                   <li className="hover:text-white transition-colors cursor-pointer">
                     <Link to="/gravito-vs-template" className="block w-full">
-                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-fast">
+                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300">
                         Gravito vs Template
                       </span>
                     </Link>
@@ -48,28 +41,18 @@ const Footer = () => {
                   
                   {/* Contenedor para opciones futuras con animación suave */}
                   <div className="overflow-hidden">
-                    <div className={`transition-all duration-normal ease-out ${expandedSections.includes('gravito-vs') ? 'max-h-32 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-4'}`} style={{
-                    transitionProperty: 'max-height, opacity, transform',
-                    transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
-                  }}>
+                    <div className={`transition-all duration-300 ease-out ${expandedSections.includes('gravito-vs') ? 'max-h-32 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-4'}`}>
                       {/* Aquí se pueden agregar más opciones en el futuro */}
-                      {/* Ejemplo de estructura para futuras opciones:
-                      <li className="hover:text-white transition-colors cursor-pointer py-1">
-                        <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-fast">
-                          Nueva Opción
-                        </span>
-                      </li>
-                      */}
                     </div>
                   </div>
                   
                   {/* Botón toggle con animación suave - Mantenido para uso futuro */}
                   <li>
-                    <button onClick={() => toggleSection('gravito-vs')} className="flex items-center justify-between w-full text-left hover:text-white transition-all duration-fast text-sm font-medium group">
-                      <span className="transition-all duration-fast ease-out">
+                    <button onClick={() => toggleSection('gravito-vs')} className="flex items-center justify-between w-full text-left hover:text-white transition-all duration-300 text-sm font-medium group">
+                      <span className="transition-all duration-300 ease-out">
                         {expandedSections.includes('gravito-vs') ? 'Ver menos' : 'Ver más'}
                       </span>
-                      <div className={`transition-all duration-normal ease-out ${expandedSections.includes('gravito-vs') ? 'rotate-180' : 'rotate-0'}`}>
+                      <div className={`transition-all duration-300 ease-out ${expandedSections.includes('gravito-vs') ? 'rotate-180' : 'rotate-0'}`}>
                         <ChevronDown className="w-4 h-4" />
                       </div>
                     </button>
@@ -83,35 +66,35 @@ const Footer = () => {
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="hover:text-white transition-colors cursor-pointer">
                     <Link to="/nosotros" className="block w-full">
-                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-fast">
+                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300">
                         Nosotros
                       </span>
                     </Link>
                   </li>
                   <li className="hover:text-white transition-colors cursor-pointer">
                     <Link to="/blog" className="block w-full">
-                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-fast">
+                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300">
                         Blog GMS
                       </span>
                     </Link>
                   </li>
                   <li className="hover:text-white transition-colors cursor-pointer">
                     <Link to="/contacto" className="block w-full">
-                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-fast">
+                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300">
                         Contacto
                       </span>
                     </Link>
                   </li>
                   <li className="hover:text-white transition-colors cursor-pointer">
                     <Link to="/estrategia" className="block w-full">
-                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-fast">
+                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300">
                         Impulso GMS
                       </span>
                     </Link>
                   </li>
                   <li className="hover:text-white transition-colors cursor-pointer">
                     <Link to="/suscripciones" className="block w-full">
-                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-fast">
+                      <span className="relative hover:after:w-full after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300">
                         Suscripciones
                       </span>
                     </Link>
@@ -153,40 +136,12 @@ const Footer = () => {
           {/* Separator Line */}
           <div className="border-t border-muted/50 mx-6"></div>
 
-          {/* Bottom Section - Ahora dentro del contenedor con glow */}
+          {/* Bottom Section */}
           <div className="bg-muted text-white rounded-b-3xl">
             <div className="container mx-auto px-6 py-6">
               <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
                 
-                {/* Admin Login/Logout */}
-                <div className="text-muted-foreground text-sm flex items-center gap-4">
-                  {isAdmin ? (
-                    <>
-                      <Link 
-                        to="/admin"
-                        className="hover:text-white transition-colors cursor-pointer font-medium"
-                      >
-                        CMS
-                      </Link>
-                      <button 
-                        className="hover:text-white transition-colors cursor-pointer font-medium flex items-center gap-2"
-                        onClick={signOut}
-                      >
-                        <LogOut className="w-4 h-4" />
-                        Cerrar Sesión
-                      </button>
-                    </>
-                  ) : (
-                    <button 
-                      className="hover:text-white transition-colors cursor-pointer font-medium"
-                      onClick={() => setShowLoginModal(true)}
-                    >
-                      Admin Login
-                    </button>
-                  )}
-                </div>
-
-                {/* Copyright - Ahora centrado */}
+                {/* Copyright - Centrado */}
                 <div className="text-center text-muted-foreground text-sm flex-1">
                   <p>© 2025 Gravito Media Solutions | Todos los Derechos Reservados</p>
                 </div>
@@ -202,12 +157,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      
-      {/* Admin Login Modal */}
-      <AdminLoginModal 
-        isOpen={showLoginModal} 
-        onClose={() => setShowLoginModal(false)} 
-      />
     </footer>
   );
 };

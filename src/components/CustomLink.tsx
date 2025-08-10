@@ -1,25 +1,14 @@
 import React from 'react';
 import { Link as RouterLink, LinkProps } from 'react-router-dom';
-import { useNavigation } from './NavigationProvider';
 
-interface CustomLinkProps extends Omit<LinkProps, 'to'> {
-  to: string;
+interface CustomLinkProps extends LinkProps {
   children: React.ReactNode;
   className?: string;
 }
 
-const CustomLink: React.FC<CustomLinkProps> = ({ to, children, className, ...props }) => {
-  const { navigateWithLoading } = useNavigation();
-
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    navigateWithLoading(to);
-  };
-
+const CustomLink: React.FC<CustomLinkProps> = ({ children, className, ...props }) => {
   return (
     <RouterLink
-      to={to}
-      onClick={handleClick}
       className={className}
       {...props}
     >

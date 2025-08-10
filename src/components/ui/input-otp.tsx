@@ -4,7 +4,7 @@ import { Dot } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-import { ANIMATION_DURATIONS, ANIMATION_DELAYS, EASING_FUNCTIONS } from '@/lib/animations';
+// Animations removed for simplicity
 
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>,

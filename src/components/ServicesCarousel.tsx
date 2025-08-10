@@ -1,5 +1,5 @@
 import React from 'react';
-import { FadeInUp, HoverScale } from '@/components/ui/AnimatedComponents';
+import { FadeIn, HoverScale } from '@/components/ui/SimpleAnimations';
 import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Map, Puzzle, MessageCircle } from 'lucide-react';
 
@@ -43,16 +43,10 @@ const ServicesCarousel: React.FC = () => {
       <div className="flex space-x-8 animate-[slide_42s_linear_infinite]">
         {/* Primera ronda de tarjetas */}
         {services.map((service, index) => (
-          <FadeInUp 
+          <FadeIn 
             key={index} 
             className="flex-shrink-0 w-80 ml-6"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 0.7, 
-              delay: index * 0.1 
-            }}
-            viewport={{ once: true }}
+            delay={index * 0.1}
           >
             <Card className="border border-primary/20 bg-card hover:shadow-lg transition-all duration-300 hover:border-primary/40 h-full group">
               <CardContent className="p-8 h-full flex flex-col">
@@ -69,21 +63,15 @@ const ServicesCarousel: React.FC = () => {
                 </p>
               </CardContent>
             </Card>
-          </FadeInUp>
+          </FadeIn>
         ))}
         
         {/* Segunda ronda de tarjetas (para el carrusel infinito) */}
         {services.map((service, index) => (
-          <FadeInUp 
+          <FadeIn 
             key={`duplicate-${index}`} 
             className="flex-shrink-0 w-80 ml-6"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 0.7, 
-              delay: (index + services.length) * 0.1 
-            }}
-            viewport={{ once: true }}
+            delay={(index + services.length) * 0.1}
           >
             <Card className="border border-primary/20 bg-card hover:shadow-lg transition-all duration-300 hover:border-primary/40 h-full group">
               <CardContent className="p-8 h-full flex flex-col">
@@ -100,7 +88,7 @@ const ServicesCarousel: React.FC = () => {
                 </p>
               </CardContent>
             </Card>
-          </FadeInUp>
+          </FadeIn>
         ))}
       </div>
     </div>
