@@ -36,17 +36,18 @@ const Index = () => {
             frameBorder="0" 
             width="100%" 
             height="100%" 
-            className="absolute inset-0" 
+            className="absolute inset-0 pointer-events-none" 
             style={{
-              border: 'none'
+              border: 'none',
+              zIndex: 1
             }} 
           />
           {/* Subtle blur overlay to reduce competition with text */}
-          <div className="absolute inset-0 bg-muted/20 backdrop-blur-[1px]"></div>
+          <div className="absolute inset-0 bg-muted/20 backdrop-blur-[1px] z-[2]"></div>
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 min-h-screen flex items-center">
+        <div className="relative z-20 min-h-screen flex items-center">
           <div className="container mx-auto px-6 py-20 lg:py-32">
             <FadeIn className="flex flex-col items-center text-center gap-12">
               <div className="max-w-4xl">
@@ -77,7 +78,7 @@ const Index = () => {
           </div>
           
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 pointer-events-none">
             <div className="flex flex-col items-center animate-bounce" style={{ animationDuration: '2s' }}>
               <Mouse className="w-8 h-8 text-muted-foreground animate-pulse" style={{ animationDuration: '3s' }} />
             </div>
