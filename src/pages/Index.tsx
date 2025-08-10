@@ -4,11 +4,8 @@ import Footer from "@/components/Footer";
 import { Mouse, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
-import { FadeInUp, FadeInUpStaggered, FadeInSide, FadeInScale, HoverScale, HoverLift, HoverGlow, FadeInOnScroll, SlideInOnScroll, LoadingPulse, LoadingBounce, FadeInUpWithHover, StaggeredGroup } from "@/components/ui/AnimatedComponents";
+import { FadeIn, HoverScale } from "@/components/ui/SimpleAnimations";
 import ServicesCarousel from "@/components/ServicesCarousel";
-
-import { ANIMATION_DURATIONS, ANIMATION_DELAYS, EASING_FUNCTIONS } from '@/lib/animations';
-// Sistema centralizado importado desde @/lib
 
 const Index = () => {
   // Memoizar los datos de servicios para evitar re-creaciones
@@ -50,39 +47,19 @@ const Index = () => {
         {/* Hero Content */}
         <div className="relative z-10 min-h-screen flex items-center">
           <div className="container mx-auto px-6 py-20 lg:py-32">
-            <FadeInUp 
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col items-center text-center gap-12"
-            >
+            <FadeIn className="flex flex-col items-center text-center gap-12">
               <div className="max-w-4xl">
-                <FadeInUp 
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-5xl lg:text-7xl font-black text-foreground mb-8 leading-none"
-                >
+                <FadeIn delay={0.1} className="text-5xl lg:text-7xl font-black text-foreground mb-8 leading-none">
                   GESTIÓN
                   <br />
                   INTEGRAL DE TU
                   <br />
                   <span className="text-primary">PRESENCIA DIGITAL</span>
-                </FadeInUp>
-                <FadeInUp 
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto"
-                >
+                </FadeIn>
+                <FadeIn delay={0.2} className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto">
                   Ahorras tiempo y dinero para tu negocio, mientras nosotros nos encargamos de todo.
-                </FadeInUp>
-                <FadeInUp 
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                  className="flex flex-col sm:flex-row justify-center gap-6"
-                >
+                </FadeIn>
+                <FadeIn delay={0.3} className="flex flex-col sm:flex-row justify-center gap-6">
                   <Link to="/estrategia">
                     <Button variant="hero-yellow" size="lg" className="text-lg px-10 py-8">
                       Descubre tu Estrategia
@@ -93,9 +70,9 @@ const Index = () => {
                       Ver Nuestros Servicios
                     </Button>
                   </Link>
-                </FadeInUp>
+                </FadeIn>
               </div>
-            </FadeInUp>
+            </FadeIn>
           </div>
           
           {/* Scroll Indicator */}
@@ -114,12 +91,7 @@ const Index = () => {
       <section className="bg-background py-20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <FadeInUp
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <FadeIn>
               <h2 className="text-6xl lg:text-8xl font-black text-foreground mb-8 leading-none">
                 ¿QUIÉNES
                 <br />
@@ -146,125 +118,65 @@ const Index = () => {
                   </Button>
                 </Link>
               </div>
-            </FadeInUp>
+            </FadeIn>
             
-            <FadeInUp 
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
-            >
-              <FadeInUp 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="stats-card highlight-primary"
-              >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <FadeIn delay={0.1} className="stats-card highlight-primary">
                 <h3 className="text-lg font-semibold mb-2">Retención del 2024</h3>
                 <div className="text-6xl font-black">87%</div>
-              </FadeInUp>
+              </FadeIn>
               
-              <FadeInUp 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="stats-card"
-              >
+              <FadeIn delay={0.2} className="stats-card">
                 <h3 className="text-lg font-semibold mb-2 text-muted-foreground">Experiencia Combinada</h3>
                 <div className="text-6xl font-black">16 años</div>
-              </FadeInUp>
+              </FadeIn>
               
-              <FadeInUp 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="stats-card highlight-secondary"
-              >
+              <FadeIn delay={0.3} className="stats-card highlight-secondary">
                 <h3 className="text-lg font-semibold mb-2">Servicios Incluidos</h3>
                 <div className="text-6xl font-black">+18</div>
-              </FadeInUp>
+              </FadeIn>
               
-              <FadeInUp 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="stats-card"
-              >
+              <FadeIn delay={0.4} className="stats-card">
                 <h3 className="text-lg font-semibold mb-2 text-muted-foreground">Expertos por Cliente</h3>
                 <div className="text-6xl font-black">+4</div>
-              </FadeInUp>
-            </FadeInUp>
+              </FadeIn>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
       <section className="container mx-auto px-6 py-20">
-        <FadeInUp 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-4xl lg:text-6xl font-black text-center mb-16"
-        >
+        <FadeIn className="text-4xl lg:text-6xl font-black text-center mb-16">
           LO QUE HACEMOS POR TI
           <div className="w-32 h-1 bg-secondary rounded-full mx-auto mt-4"></div>
-        </FadeInUp>
+        </FadeIn>
         <ServicesCarousel />
       </section>
 
       {/* Sección CTA Final - Cerrador de Ventas Experto */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-6">
-          <FadeInUp 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
-          >
+          <FadeIn className="text-center max-w-4xl mx-auto">
             {/* Encabezado - El Reaseguro */}
-            <FadeInUp 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6"
-            >
+            <FadeIn delay={0.1} className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6">
               Comienza sin Riesgo
-            </FadeInUp>
+            </FadeIn>
 
             {/* Subtítulo - La Guía */}
-            <FadeInUp 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed"
-            >
+            <FadeIn delay={0.2} className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
               Sabemos que es mucha información. Por eso diseñamos la manera perfecta y sin riesgo para que obtengas eso que tanto te hace falta: <span className="font-bold">Tranquilidad</span>
-            </FadeInUp>
+            </FadeIn>
 
             {/* Botón Único - Clon del Hero Section */}
-            <FadeInUp 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="flex justify-center"
-            >
+            <FadeIn delay={0.3} className="flex justify-center">
               <Link to="/estrategia">
                 <Button variant="hero-yellow" size="lg" className="text-lg px-10 py-8">
                   Descubre tu Estrategia
                 </Button>
               </Link>
-            </FadeInUp>
-          </FadeInUp>
+            </FadeIn>
+          </FadeIn>
         </div>
       </section>
 

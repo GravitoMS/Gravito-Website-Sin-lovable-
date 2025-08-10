@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FadeInUp, FadeInUpStaggered, FadeInSide, FadeInScale, HoverScale, HoverLift, HoverGlow, FadeInOnScroll, SlideInOnScroll, LoadingPulse, LoadingBounce, FadeInUpWithHover, StaggeredGroup } from '@/components/ui/AnimatedComponents';
+import { FadeIn, HoverScale, FadeInScale } from '@/components/ui/SimpleAnimations';
 import { ArrowRight, CheckCircle, ChevronDown, Star, Users, Target, Zap, Shield, TrendingUp, Globe, Smartphone, Palette, Brain, Map, Puzzle, MessageCircle, Mouse, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -7,9 +7,6 @@ import Footer from '../components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-
-import { ANIMATION_DURATIONS, ANIMATION_DELAYS, EASING_FUNCTIONS } from '@/lib/animations';
-// Sistema centralizado importado desde @/lib
 
 const Servicios = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -70,19 +67,9 @@ const Servicios = () => {
       {/* Hero Section - Declaración de Principios */}
       <section className="pt-40 pb-20 relative overflow-hidden min-h-screen flex items-center">
         <div className="container mx-auto px-6">
-          <FadeInUp 
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-6xl mx-auto"
-          >
+          <FadeIn className="text-center max-w-6xl mx-auto">
             {/* Título Principal - Declaración de Principios */}
-            <FadeInUp 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-8 leading-tight"
-            >
+            <FadeIn delay={0.1} className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-8 leading-tight">
               Tu{' '}
               <span className="text-primary" style={{
                 background: 'linear-gradient(135deg, hsl(162 100% 45%) 0%, hsl(162 100% 55%) 100%)',
@@ -94,42 +81,23 @@ const Servicios = () => {
                 crecimiento
               </span>{' '}
               no debería depender de tu tiempo.
-            </FadeInUp>
+            </FadeIn>
             
             {/* Párrafo de Contexto */}
-            <FadeInUp 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12"
-            >
+            <FadeIn delay={0.2} className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
               En Gravito, hemos diseñado nuestros servicios para hacer esto una realidad alcanzable. A continuación, encontrarás los planes que te devolverán tu tiempo y potenciarán tu crecimiento.
-            </FadeInUp>
+            </FadeIn>
             
             {/* Llamada a la Acción - Scroll */}
-            <FadeInUp 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-16"
-            >
+            <FadeIn delay={0.3} className="mt-16">
               <div className="flex flex-col items-center space-y-4">
-                <FadeInUp
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="text-foreground font-medium text-lg"
-                >
+                <div className="text-foreground font-medium text-lg">
                   ▼ Compara los Planes ▼
-                </FadeInUp>
-                <FadeInUp
-                  animate={{ y: [0, 5, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                >
-                  <ChevronDown className="h-6 w-6 text-muted-foreground" />
-                </FadeInUp>
+                </div>
+                <ChevronDown className="h-6 w-6 text-muted-foreground" />
               </div>
-            </FadeInUp>
-          </FadeInUp>
+            </FadeIn>
+          </FadeIn>
         </div>
         
         {/* Scroll Indicator */}
@@ -140,35 +108,22 @@ const Servicios = () => {
         </div>
       </section>
 
-
-
       {/* Sección Get Started con Tarjetas */}
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-6">
-          <FadeInUp 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto mb-16"
-          >
+          <FadeIn className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
               Nuestros Servicios Principales
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Descubre las opciones que hemos diseñado para acompañar tu crecimiento digital de manera estratégica y sin riesgo.
             </p>
-          </FadeInUp>
+          </FadeIn>
 
           {/* Tarjetas de Servicios */}
           <div className="max-w-6xl mx-auto space-y-8">
             {/* Tarjeta Impulso Estratégico */}
-            <FadeInUp
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <FadeIn>
               <Card className="border border-primary/20 bg-card hover:shadow-lg transition-shadow">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between p-8">
                   <div className="flex-1 lg:pr-8">
@@ -211,15 +166,10 @@ const Servicios = () => {
                   </div>
                 </div>
               </Card>
-            </FadeInUp>
+            </FadeIn>
 
             {/* Tarjeta Suscripciones */}
-            <FadeInUp
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <FadeIn>
               <Card className="border border-secondary/20 bg-card hover:shadow-lg transition-shadow">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between p-8">
                   <div className="flex-1 lg:pr-8">
@@ -258,7 +208,7 @@ const Servicios = () => {
                   </div>
                 </div>
               </Card>
-            </FadeInUp>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -266,13 +216,7 @@ const Servicios = () => {
       {/* Sección de Testimonios - Carrusel */}
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-6">
-          <FadeInUp 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+          <FadeIn className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
               Historias de Éxito de Nuestros Clientes Felices
             </h2>
@@ -290,7 +234,7 @@ const Servicios = () => {
                 />
               ))}
             </div>
-          </FadeInUp>
+          </FadeIn>
 
           {/* Carrusel de Testimonios */}
           <div className="max-w-4xl mx-auto relative">
@@ -310,13 +254,7 @@ const Servicios = () => {
             </button>
 
             {/* Contenido del Testimonio */}
-            <FadeInScale
-              key={currentTestimonial}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="bg-card border border-border rounded-2xl p-8 lg:p-12 shadow-lg"
-            >
+            <FadeInScale key={currentTestimonial} className="bg-card border border-border rounded-2xl p-8 lg:p-12 shadow-lg">
               {/* Testimonio */}
               <div className="text-center mb-8">
                 <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
@@ -366,149 +304,35 @@ const Servicios = () => {
         </div>
       </section>
 
-      {/* Sección FAQ */}
-      <section className="py-20 bg-muted/20">
-        <div className="container mx-auto px-6">
-          <FadeInUp 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-              FAQ
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Hemos respondido las preguntas más comunes para ayudarte a obtener claridad—rápida y confiadamente.
-            </p>
-          </FadeInUp>
-
-          <div className="max-w-4xl mx-auto space-y-6">
-            {[
-              {
-                question: "¿Qué servicios ofrecen?",
-                answer: "Ofrecemos una gama completa de servicios digitales incluyendo marketing digital, gestión de redes sociales, diseño y branding, y consultoría estratégica. Cada servicio está diseñado para impulsar tu presencia online y maximizar tu ROI."
-              },
-              {
-                question: "¿Cómo funciona el Impulso Estratégico?",
-                answer: "El Impulso Estratégico es tu punto de entrada sin riesgo al mundo del marketing digital. Realizamos un análisis profundo de tu presencia digital actual y te proporcionamos una estrategia personalizada. El costo se descuenta 100% de tu primera factura si decides continuar con nuestros servicios."
-              },
-              {
-                question: "¿Puedo cambiar de plan en cualquier momento?",
-                answer: "Sí, ofrecemos total flexibilidad. Puedes cambiar de plan en cualquier momento, sin contratos a largo plazo. Si tu negocio crece y necesitas más servicios, puedes subir de plan fácilmente."
-              },
-              {
-                question: "¿Qué incluyen los planes de suscripción?",
-                answer: "Nuestros planes incluyen gestión de redes sociales, diseño de contenido, análisis de métricas, reportes mensuales, y soporte dedicado. Cada plan está diseñado para acompañar tu negocio en diferentes etapas de crecimiento."
-              }
-            ].map((faq, index) => (
-              <FadeInUp
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="border border-border hover:border-primary/30 transition-colors">
-                  <CardContent className="p-6">
-                    <details className="group">
-                      <summary className="flex items-center justify-between cursor-pointer list-none">
-                        <h3 className="text-lg font-semibold text-foreground group-open:text-primary transition-colors">
-                          {faq.question}
-                        </h3>
-                        <div className="flex-shrink-0 ml-4">
-                          <div className="w-6 h-6 flex items-center justify-center">
-                            <div className="w-4 h-4 border-2 border-current rounded-full relative">
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-2 h-0.5 bg-current transition-transform duration-fast group-open:rotate-90"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </summary>
-                      <div className="mt-4 pt-4 border-t border-border">
-                        <p className="text-muted-foreground leading-relaxed">
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </details>
-                  </CardContent>
-                </Card>
-              </FadeInUp>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sección CTA Final - Cerrador de Ventas Experto */}
+      {/* CTA Final */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-6">
-          <FadeInUp 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            {/* Encabezado - El Reaseguro */}
-            <FadeInUp 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6"
-            >
-              Ahorra Tiempo Dinero y Esfuerzo
-            </FadeInUp>
-
-            {/* Subtítulo - La Guía */}
-            <FadeInUp 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed"
-            >
-              Nuestros productos están específicamente diseñados para eliminar los dolores de cabeza que pueden llevarte a perder tiempo y dinero.
-            </FadeInUp>
-
-            {/* Botones - La Decisión Final */}
-            <FadeInUp 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-            >
-              {/* Botón Primario - Naranja sólido con texto oscuro */}
+          <FadeIn className="text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6">
+              ¿Listo para transformar tu presencia digital?
+            </h2>
+            <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
+              Comienza con nuestro Impulso Estratégico y descubre el poder de una estrategia digital bien estructurada.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link to="/estrategia">
-                <Button 
-                  size="lg" 
-                  className="bg-warning hover:bg-warning text-foreground px-8 py-4 text-lg font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-fast border-0"
-                >
-                  Comenzar con mi Impulso Estratégico
+                <Button variant="hero-yellow" size="lg" className="text-lg px-10 py-8">
+                  Descubre tu Estrategia
                 </Button>
               </Link>
-
-              {/* Botón Secundario - Outline blanco con texto blanco (Ghost Mode) */}
               <Link to="/contacto">
-                <Button 
-                  variant="outline"
-                  size="lg" 
-                  className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-lg font-bold rounded-2xl transition-all duration-fast bg-transparent"
-                >
-                  Tengo una Pregunta
+                <Button variant="outline" size="lg" className="text-lg px-10 py-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                  Habla con Nosotros
                 </Button>
               </Link>
-            </FadeInUp>
-          </FadeInUp>
+            </div>
+          </FadeIn>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );
 };
 
-export default Servicios; 
+export default Servicios;

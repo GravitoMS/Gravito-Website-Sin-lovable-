@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { FadeInUp, FadeInUpStaggered, FadeInSide, FadeInScale, HoverScale, HoverLift, HoverGlow, FadeInOnScroll, SlideInOnScroll, LoadingPulse, LoadingBounce, FadeInUpWithHover, StaggeredGroup } from '@/components/ui/AnimatedComponents';
+import { FadeIn } from '@/components/ui/SimpleAnimations';
 import { useEffect } from "react";
 
 const NotFound = () => {
@@ -11,37 +11,17 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-muted">
-      <FadeInUp 
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center"
-      >
-        <FadeInUp 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl font-bold mb-4"
-        >
+      <FadeIn className="text-center">
+        <FadeIn delay={0.1} className="text-4xl font-bold mb-4">
           404
-        </FadeInUp>
-        <FadeInUp 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl text-muted-foreground mb-4"
-        >
+        </FadeIn>
+        <FadeIn delay={0.2} className="text-xl text-muted-foreground mb-4">
           Oops! Page not found
-        </FadeInUp>
-        <FadeInUp 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-info hover:text-info underline"
-        >
+        </FadeIn>
+        <FadeIn delay={0.3} className="text-info hover:text-info underline">
           <a href="/">Return to Home</a>
-        </FadeInUp>
-      </FadeInUp>
+        </FadeIn>
+      </FadeIn>
     </div>
   );
 };
