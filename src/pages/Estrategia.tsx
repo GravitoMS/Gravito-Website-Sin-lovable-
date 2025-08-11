@@ -22,6 +22,13 @@ const Estrategia = () => {
     );
   };
 
+  // Estado para manejar los acordeones de FAQ
+  const [expandedFAQ, setExpandedFAQ] = React.useState<number>(0);
+
+  const toggleFAQ = (index: number) => {
+    setExpandedFAQ(expandedFAQ === index ? -1 : index);
+  };
+
   // Datos para la tabla de comparación
   const impulsoPlans = [
     {
@@ -72,6 +79,34 @@ const Estrategia = () => {
       icon: "💰",
       basic: "$1,899 (Pago Único)",
       advanced: "$2,790 (Pago Único)"
+    }
+  ];
+
+  // Datos para las preguntas frecuentes
+  const faqData = [
+    {
+      question: "¿Hay contratos o compromisos a largo plazo?",
+      answer: "No, no hay contratos ni compromisos a largo plazo. Con Gravito, puedes cancelar tu cuenta en cualquier momento, sin importar el plan que hayas elegido. Nuestro enfoque es la flexibilidad total para tu negocio."
+    },
+    {
+      question: "¿Qué opciones de pago ofrecen?",
+      answer: "Ofrecemos múltiples opciones de pago para tu comodidad: tarjetas de crédito/débito, transferencias bancarias y pagos en línea seguros. Todos los pagos se procesan de forma segura y puedes cambiar tu método de pago en cualquier momento."
+    },
+    {
+      question: "¿Puedo cambiar mi plan más adelante?",
+      answer: "¡Absolutamente! Puedes cambiar tu plan en cualquier momento. Si necesitas más servicios, puedes actualizar a un plan superior. Si necesitas reducir costos, puedes cambiar a un plan más básico. Los cambios se aplican inmediatamente."
+    },
+    {
+      question: "¿Qué tipo de soporte ofrecen?",
+      answer: "Ofrecemos soporte completo a través de múltiples canales: chat en vivo, email prioritario, llamadas telefónicas y reuniones virtuales. Nuestro equipo está disponible para resolver cualquier duda o problema que tengas con tu estrategia digital."
+    },
+    {
+      question: "¿El costo del Impulso Estratégico se descuenta realmente?",
+      answer: "Sí, el 100% del costo del Impulso Estratégico se descuenta de tu primer mes de suscripción. Es nuestra forma de demostrar el valor que podemos generar para tu negocio sin ningún riesgo para ti."
+    },
+    {
+      question: "¿Cuánto tiempo toma completar el Impulso Estratégico?",
+      answer: "El Impulso Estratégico se completa en aproximadamente 7-10 días hábiles. Incluye el análisis completo, la creación de la línea del tiempo, los videos explicativos y la reunión de presentación de resultados."
     }
   ];
 
@@ -474,6 +509,58 @@ const Estrategia = () => {
                   Te sugerimos el plan perfecto basado en tu análisis y objetivos específicos.
                 </p>
               </FadeIn>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección de Preguntas Frecuentes */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <FadeIn className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              Preguntas Frecuentes
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Resolvemos las dudas más comunes sobre nuestros servicios y el Impulso Estratégico.
+            </p>
+          </FadeIn>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-4">
+              {faqData.map((faq, index) => (
+                <FadeIn key={index} delay={index * 0.1}>
+                  <Card className="border-primary/20 bg-card/50 backdrop-blur-sm">
+                    <button
+                      onClick={() => toggleFAQ(index)}
+                      className="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-lg"
+                    >
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-lg lg:text-xl font-semibold text-foreground pr-4">
+                          {faq.question}
+                        </h3>
+                        <div className="flex-shrink-0">
+                          <ChevronDown 
+                            className={`h-5 w-5 text-primary transition-transform duration-200 ${
+                              expandedFAQ === index ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </div>
+                      </div>
+                    </button>
+                    
+                    {expandedFAQ === index && (
+                      <div className="px-6 pb-6">
+                        <div className="border-t border-border/50 pt-4">
+                          <p className="text-muted-foreground leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </Card>
+                </FadeIn>
+              ))}
             </div>
           </div>
         </div>
