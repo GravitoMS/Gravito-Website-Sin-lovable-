@@ -244,7 +244,7 @@ const Estrategia = () => {
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <h2 
-              className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-6"
+              className="text-5xl lg:text-7xl xl:text-8xl font-black text-foreground mb-6"
               style={{
                 textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
                 willChange: 'text-shadow'
