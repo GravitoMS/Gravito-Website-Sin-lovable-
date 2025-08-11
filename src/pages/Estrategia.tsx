@@ -516,11 +516,7 @@ const Estrategia = () => {
           </FadeIn>
           
           <div className="max-w-6xl mx-auto">
-            <div className="relative">
-              {/* Línea verde horizontal */}
-              <div className="absolute top-8 left-0 right-0 h-0.5 bg-primary/30 hidden lg:block"></div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8">
               <FadeIn delay={0.1} className="text-center">
                 <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-primary">1</span>
@@ -530,6 +526,11 @@ const Estrategia = () => {
                   Evaluamos tu presencia digital actual, métricas clave y competencia directa.
                 </p>
               </FadeIn>
+              
+              {/* Flecha verde */}
+              <div className="hidden lg:block">
+                <ArrowRight className="w-8 h-8 text-primary" />
+              </div>
               
               <FadeIn delay={0.2} className="text-center">
                 <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -541,6 +542,11 @@ const Estrategia = () => {
                 </p>
               </FadeIn>
               
+              {/* Flecha verde */}
+              <div className="hidden lg:block">
+                <ArrowRight className="w-8 h-8 text-primary" />
+              </div>
+              
               <FadeIn delay={0.3} className="text-center">
                 <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-primary">3</span>
@@ -551,6 +557,11 @@ const Estrategia = () => {
                 </p>
               </FadeIn>
               
+              {/* Flecha verde */}
+              <div className="hidden lg:block">
+                <ArrowRight className="w-8 h-8 text-primary" />
+              </div>
+              
               <FadeIn delay={0.4} className="text-center">
                 <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-primary">4</span>
@@ -560,7 +571,6 @@ const Estrategia = () => {
                   Te sugerimos el plan perfecto basado en tu análisis y objetivos específicos.
                 </p>
               </FadeIn>
-              </div>
             </div>
           </div>
         </div>
