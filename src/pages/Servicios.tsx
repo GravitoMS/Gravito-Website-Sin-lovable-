@@ -322,7 +322,7 @@ const Servicios = () => {
                 </Button>
               </Link>
               <Link to="/contacto">
-                <Button variant="outline" size="lg" className="text-lg px-10 py-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button variant="outline" size="lg" className="text-lg px-10 py-8 border-hero-yellow text-hero-yellow hover:bg-hero-yellow hover:text-hero-yellow-foreground transition-all duration-fast">
                   Habla con Nosotros
                 </Button>
               </Link>
