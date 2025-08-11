@@ -85,28 +85,28 @@ const Estrategia = () => {
   // Datos para las preguntas frecuentes
   const faqData = [
     {
-      question: "¿Hay contratos o compromisos a largo plazo?",
-      answer: "No, no hay contratos ni compromisos a largo plazo. Con Gravito, puedes cancelar tu cuenta en cualquier momento, sin importar el plan que hayas elegido. Nuestro enfoque es la flexibilidad total para tu negocio."
+      question: "¿Qué recibo exactamente con el Impulso Estratégico?",
+      answer: "Recibes dos entregables principales: un Diagnóstico Inicial completo de tu negocio y una Línea del Tiempo con la hoja de ruta estratégica para tu primer mes. Ambos van acompañados del \"Sistema de Dos Videos Personales (Loom)\" de Gravito Media Solutions (GMS), donde un estratega de GMS te explica personalmente los hallazgos y el plan de acción para tu negocio. Es una consultoría completa, no solo un simple reporte."
     },
     {
-      question: "¿Qué opciones de pago ofrecen?",
-      answer: "Ofrecemos múltiples opciones de pago para tu comodidad: tarjetas de crédito/débito, transferencias bancarias y pagos en línea seguros. Todos los pagos se procesan de forma segura y puedes cambiar tu método de pago en cualquier momento."
+      question: "El descuento del 100%, ¿cómo funciona en la práctica?",
+      answer: "Es muy simple. El costo total (sin IVA) que pagas por tu Impulso Estratégico se acredita como descuento directo en el primer pago mensual si decides suscribirte a cualquiera de nuestros planes de suscripción mensual. Por ejemplo, si adquieres el Impulso Estratégico GMS (Gravito Media Solutions) por $2,790 y decides suscribirte al Plan Nivel 1 ($6,490, que ya incluye IVA), tu primer pago mensual será solo de $3,700 (ya incluye IVA)."
     },
     {
-      question: "¿Puedo cambiar mi plan más adelante?",
-      answer: "¡Absolutamente! Puedes cambiar tu plan en cualquier momento. Si necesitas más servicios, puedes actualizar a un plan superior. Si necesitas reducir costos, puedes cambiar a un plan más básico. Los cambios se aplican inmediatamente."
+      question: "¿Estoy obligado a contratar una suscripción mensual después?",
+      answer: "Para nada. Esa es la belleza del Impulso Estratégico. Está diseñado para ser una inversión 100% segura para ti. Si decides continuar con nosotros, perfecto, el costo se acredita a tu primer mes. Y si decides que no es el momento, te quedas con un plan de inmenso valor que puedes implementar por tu cuenta. En ambos escenarios, ganas."
     },
     {
-      question: "¿Qué tipo de soporte ofrecen?",
-      answer: "Ofrecemos soporte completo a través de múltiples canales: chat en vivo, email prioritario, llamadas telefónicas y reuniones virtuales. Nuestro equipo está disponible para resolver cualquier duda o problema que tengas con tu estrategia digital."
+      question: "¿Cuánto tiempo tardan en entregar el análisis?",
+      answer: "Una vez que completas nuestro briefing inicial (donde nos proporcionas contexto sobre tu negocio), nuestro equipo de estrategas comienza a trabajar. Recibirás tu Impulso Estratégico completo, incluyendo videos personales, en 3 a 5 días hábiles."
     },
     {
-      question: "¿El costo del Impulso Estratégico se descuenta realmente?",
-      answer: "Sí, el 100% del costo del Impulso Estratégico se descuenta de tu primer mes de suscripción. Es nuestra forma de demostrar el valor que podemos generar para tu negocio sin ningún riesgo para ti."
+      question: "¿Es esto solo un reporte automatizado o genérico?",
+      answer: "Todo lo contrario. Tu análisis es realizado personalmente por un Estratega de GMS (Gravito Media Solutions). No utilizamos plantillas genéricas. Cada recomendación e insight se basa en un análisis manual de tu negocio, tus competidores y tus objetivos. La video-consultoría es prueba de que un experto humano está detrás de cada palabra."
     },
     {
-      question: "¿Cuánto tiempo toma completar el Impulso Estratégico?",
-      answer: "El Impulso Estratégico se completa en aproximadamente 7-10 días hábiles. Incluye el análisis completo, la creación de la línea del tiempo, los videos explicativos y la reunión de presentación de resultados."
+      question: "¿Qué necesitan de mí para empezar?",
+      answer: "El proceso es muy simple. Una vez que adquieres tu Impulso, te enviaremos un enlace a nuestro briefing inicial. Es un formulario guiado donde nos contarás sobre los objetivos de tu negocio, tu público objetivo, tus competidores y nos darás acceso a tus perfiles. Con esa información, nuestro equipo tiene todo lo necesario para comenzar."
     }
   ];
 
