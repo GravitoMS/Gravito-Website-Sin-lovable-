@@ -219,7 +219,7 @@ const Servicios = () => {
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-16">
             <EditableHeading level={2} className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-              La Tranquilidad de Nuestros Clientes
+              Historias de Éxito de Nuestros Clientes Felices
             </EditableHeading>
             
             {/* Sistema de Calificación con Estrellas */}
@@ -322,7 +322,7 @@ const Servicios = () => {
                 </Button>
               </Link>
               <Link to="/contacto">
-                <Button variant="outline" size="lg" className="text-lg px-10 py-8 border-hero-yellow text-hero-yellow hover:bg-hero-yellow hover:text-hero-yellow-foreground transition-all duration-fast">
+                <Button variant="outline" size="lg" className="text-lg px-10 py-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                   Habla con Nosotros
                 </Button>
               </Link>

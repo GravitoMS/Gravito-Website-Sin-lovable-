@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { COLORS } from '@/lib/designSystem';
 import { FadeIn, HoverScale } from '@/components/ui/SimpleAnimations';
+import { EditableHeading, EditableText } from '@/components/ui/EditableAnimations';
 
 const Estrategia = () => {
   // Estado para manejar los dropdowns de beneficios
@@ -27,12 +28,12 @@ const Estrategia = () => {
     {
       name: "Impulso GMS",
       subtitle: "Impulso Básico",
-      isPopular: true
+      isPopular: false
     },
     {
       name: "Impulso Estratégico GMS +",
       subtitle: "Impulso Avanzado",
-      isPopular: false
+      isPopular: true
     }
   ];
 
@@ -194,18 +195,19 @@ const Estrategia = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
-            <h2 
+            <EditableHeading 
+              level={2}
               className="text-3xl lg:text-4xl font-bold text-foreground mb-6"
               style={{
                 textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
                 willChange: 'text-shadow'
               }}
             >
-              Compara Nuestros Niveles de Impulso Estratégico
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Esta tabla contiene exactamente lo que incluye cada nivel de Impulso Estratégico para que puedas comparar y tomar la mejor decisión para tu negocio.
-            </p>
+              Nuestros Impulsos
+            </EditableHeading>
+            <EditableText className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Aquí encontrarás exactamente lo que incluyen nuestros niveles de Impulso para que puedas compararlos y tomar la mejor decisión para tu negocio.
+            </EditableText>
           </FadeIn>
 
           <div className="bg-card rounded-lg shadow-lg overflow-x-auto">
@@ -257,12 +259,12 @@ const Estrategia = () => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center p-6 bg-primary/5">
+                      <td className="text-center p-6">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
                           {service.basic}
                         </div>
                       </td>
-                      <td className="text-center p-6">
+                      <td className="text-center p-6 bg-primary/5">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
                           {service.advanced}
                         </div>
