@@ -132,7 +132,7 @@ const Estrategia = () => {
               delay={0.2}
               className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8"
             >
-              Este es el primer paso inteligente para tu precencia digital. Recibirás un análisis completo de tu negocio y una hoja de ruta estratégica y lo mejor de todo es que es 100% descontable.
+              Este es el primer paso inteligente para tu presencia digital. Recibirás un análisis completo de tu negocio y una hoja de ruta estratégica. Y lo mejor de todo: Es 100% descontable.
             </FadeIn>
             <FadeIn 
               delay={0.3}
@@ -229,16 +229,15 @@ const Estrategia = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
-            <FadeIn 
-              delay={0.1}
-              className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-6"
+            <h2 
+              className="text-3xl lg:text-4xl font-bold text-foreground mb-6"
               style={{
                 textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
                 willChange: 'text-shadow'
               }}
             >
-              Nuestros Impulsos
-            </FadeIn>
+              Compara Nuestros Niveles de Impulso Estratégico
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Esta tabla contiene exactamente lo que incluye cada nivel de Impulso Estratégico para que puedas comparar y tomar la mejor decisión para tu negocio.
             </p>
