@@ -36,18 +36,17 @@ const Index = () => {
             frameBorder="0" 
             width="100%" 
             height="100%" 
-            className="absolute inset-0 pointer-events-none" 
+            className="absolute inset-0" 
             style={{
-              border: 'none',
-              zIndex: 1
+              border: 'none'
             }} 
           />
           {/* Subtle blur overlay to reduce competition with text */}
-          <div className="absolute inset-0 bg-muted/20 backdrop-blur-[1px] z-[2]"></div>
+          <div className="absolute inset-0 bg-muted/20 backdrop-blur-[1px]"></div>
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-20 min-h-screen flex items-center">
+        <div className="relative z-10 min-h-screen flex items-center">
           <div className="container mx-auto px-6 py-20 lg:py-32">
             <FadeIn className="flex flex-col items-center text-center gap-12">
               <div className="max-w-4xl">
@@ -59,7 +58,7 @@ const Index = () => {
                   <span className="text-primary">PRESENCIA DIGITAL</span>
                 </EditableHeading>
                 <EditableText className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto" delay={0.2}>
-                  Nos encargamos de tu crecimiento digital devolviendote tu tiempo para que lo dediques en tu negocio.
+                  Ahorras tiempo y dinero para tu negocio, mientras nosotros nos encargamos de todo.
                 </EditableText>
                 <FadeIn delay={0.3} className="flex flex-col sm:flex-row justify-center gap-6">
                   <Link to="/estrategia">
@@ -78,7 +77,7 @@ const Index = () => {
           </div>
           
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 pointer-events-none">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
             <div className="flex flex-col items-center animate-bounce" style={{ animationDuration: '2s' }}>
               <Mouse className="w-8 h-8 text-muted-foreground animate-pulse" style={{ animationDuration: '3s' }} />
             </div>
@@ -100,13 +99,13 @@ const Index = () => {
                 SOMOS?
               </EditableHeading>
               <div className="space-y-6 mb-12 max-w-xl">
-                <EditableText className="text-xl lg:text-2xl text-muted-foreground">Somos la agencia de consultoría y gestión digital que actúa como tu propio departamento de marketing externo.</EditableText>
+                <EditableText className="text-xl lg:text-2xl text-muted-foreground">Somos la agencia de consultoría y gestión digital que actúa como tu departamento de marketing externo.</EditableText>
                 
                 <div className="flex justify-center">
                   <div className="w-16 h-px bg-border"></div>
                 </div>
                 
-                <EditableText className="text-xl lg:text-2xl text-muted-foreground">No solo gestionamos tus redes. Integramos nuestra consultoría estratégica con un ecosistema de servicios de valor y tecnología de IA, para entregar y  ejecutar una hoja de ruta clara con el objetivo de  impulsar el crecimiento de tu negocio.</EditableText>
+                <EditableText className="text-xl lg:text-2xl text-muted-foreground">No solo gestionamos tus redes. Integramos nuestra consultoría estratégica con un ecosistema de servicios de valor y tecnología de IA, para ejecutar y entregar una hoja de ruta clara que impulse el crecimiento de tu negocio.</EditableText>
               </div>
               <div className="flex flex-col sm:flex-row gap-6">
                 <Link to="/nosotros">
@@ -166,9 +165,9 @@ const Index = () => {
             </EditableHeading>
 
             {/* Subtítulo - La Guía */}
-                          <EditableText className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed" delay={0.2}>
-                Sabemos que es mucha información. Por eso diseñamos la manera perfecta y sin riesgo para que recuperes lo que tanto te hace falta: <span className="font-bold">Tiempo y Tranquilidad</span>
-              </EditableText>
+            <EditableText className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed" delay={0.2}>
+              Sabemos que es mucha información. Por eso diseñamos la manera perfecta y sin riesgo para que obtengas eso que tanto te hace falta: <span className="font-bold">Tranquilidad</span>
+            </EditableText>
 
             {/* Botón Único - Clon del Hero Section */}
             <FadeIn delay={0.3} className="flex justify-center">

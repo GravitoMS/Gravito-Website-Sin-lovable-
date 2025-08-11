@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FadeIn, HoverScale, FadeInScale } from '@/components/ui/SimpleAnimations';
+import { EditableHeading, EditableText } from '@/components/ui/EditableAnimations';
 import { ArrowRight, CheckCircle, ChevronDown, Star, Users, Target, Zap, Shield, TrendingUp, Globe, Smartphone, Palette, Brain, Map, Puzzle, MessageCircle, Mouse, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -69,7 +70,7 @@ const Servicios = () => {
         <div className="container mx-auto px-6">
           <FadeIn className="text-center max-w-6xl mx-auto">
             {/* Título Principal - Declaración de Principios */}
-            <FadeIn delay={0.1} className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-8 leading-tight">
+            <EditableHeading level={1} delay={0.1} className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-8 leading-tight">
               Tu{' '}
               <span className="text-primary" style={{
                 background: 'linear-gradient(135deg, hsl(162 100% 45%) 0%, hsl(162 100% 55%) 100%)',
@@ -81,12 +82,12 @@ const Servicios = () => {
                 crecimiento
               </span>{' '}
               no debería depender de tu tiempo.
-            </FadeIn>
+            </EditableHeading>
             
             {/* Párrafo de Contexto */}
-            <FadeIn delay={0.2} className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
+            <EditableText delay={0.2} className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
               En Gravito, hemos diseñado nuestros servicios para hacer esto una realidad alcanzable. A continuación, encontrarás los planes que te devolverán tu tiempo y potenciarán tu crecimiento.
-            </FadeIn>
+            </EditableText>
             
             {/* Llamada a la Acción - Scroll */}
             <FadeIn delay={0.3} className="mt-16">
@@ -112,12 +113,12 @@ const Servicios = () => {
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center max-w-4xl mx-auto mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+            <EditableHeading level={2} className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
               Nuestros Servicios Principales
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            </EditableHeading>
+            <EditableText className="text-lg text-muted-foreground mb-8">
               Descubre las opciones que hemos diseñado para acompañar tu crecimiento digital de manera estratégica y sin riesgo.
-            </p>
+            </EditableText>
           </FadeIn>
 
           {/* Tarjetas de Servicios */}
@@ -128,12 +129,12 @@ const Servicios = () => {
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between p-8">
                   <div className="flex-1 lg:pr-8">
                     <div className="mb-4">
-                      <h3 className="text-2xl font-bold text-foreground mb-2">Impulso Estratégico</h3>
-                      <p className="text-muted-foreground font-medium">Análisis inicial sin riesgo</p>
+                      <EditableHeading level={3} className="text-2xl font-bold text-foreground mb-2">Impulso Estratégico</EditableHeading>
+                      <EditableText className="text-muted-foreground font-medium">Análisis inicial sin riesgo</EditableText>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed mb-6">
+                    <EditableText className="text-muted-foreground leading-relaxed mb-6">
                       El punto de entrada más inteligente para tu mundo de presencia digital. Este es un análisis profundo que evalúa y busca mejorar tu presencia digital para identificar la mejor manera de acelerar el crecimiento de tu negocio. La Ventaja Clave: Su costo se descuenta al 100%.
-                    </p>
+                    </EditableText>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
@@ -174,12 +175,12 @@ const Servicios = () => {
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between p-8">
                   <div className="flex-1 lg:pr-8">
                     <div className="mb-4">
-                      <h3 className="text-2xl font-bold text-foreground mb-2">Suscripciones</h3>
-                      <p className="text-muted-foreground font-medium">Planes mensuales escalables</p>
+                      <EditableHeading level={3} className="text-2xl font-bold text-foreground mb-2">Suscripciones</EditableHeading>
+                      <EditableText className="text-muted-foreground font-medium">Planes mensuales escalables</EditableText>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed mb-6">
+                    <EditableText className="text-muted-foreground leading-relaxed mb-6">
                       Hemos diseñado tres niveles de servicio para acompañar a tu negocio en cada etapa de su crecimiento digital. Ya sea que busques aliviar tu carga de trabajo o un socio estratégico para tu expansión, aquí encontrarás la solución perfecta.
-                    </p>
+                    </EditableText>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0" />
@@ -217,9 +218,9 @@ const Servicios = () => {
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+            <EditableHeading level={2} className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
               Historias de Éxito de Nuestros Clientes Felices
-            </h2>
+            </EditableHeading>
             
             {/* Sistema de Calificación con Estrellas */}
             <div className="flex justify-center items-center space-x-1 mb-8">
@@ -308,12 +309,12 @@ const Servicios = () => {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6">
+            <EditableHeading level={2} className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6">
               ¿Listo para transformar tu presencia digital?
-            </h2>
-            <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
+            </EditableHeading>
+            <EditableText className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
               Comienza con nuestro Impulso Estratégico y descubre el poder de una estrategia digital bien estructurada.
-            </p>
+            </EditableText>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link to="/estrategia">
                 <Button variant="hero-yellow" size="lg" className="text-lg px-10 py-8">
