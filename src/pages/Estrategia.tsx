@@ -303,33 +303,34 @@ const Estrategia = () => {
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-                        Impulso GMS
+                        Análisis inicial básico
                       </h3>
-                      <p className="text-muted-foreground font-medium">
-                        Impulso Básico
-                      </p>
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
-                      Análisis inicial sin riesgo. Recibirás un análisis completo de tu negocio y una hoja de ruta estratégica. Su costo se descuenta al 100%.
+                      Para los dueños de negocios que necesitan recibir un análisis de la presencia digital de su negocio y una manera sencilla para probar nuestros servicios. Descontable al 100%.
                     </p>
                   </CardHeader>
                   <CardContent className="space-y-4 flex-1 flex flex-col">
                     <div className="space-y-3 flex-1">
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Análisis profundo de tu presencia digital</span>
+                        <span className="text-foreground">Diagnóstico Inicial Completo</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Estrategia personalizada</span>
+                        <span className="text-foreground">Planeación en forma de Línea del Tiempo</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">100% Descontable</span>
+                        <span className="text-foreground">Explicación con Videos Personales (Loom)</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Recomendación de plan ideal</span>
+                        <span className="text-foreground">Recomendación de Plan de Suscripción Ideal</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">100% Descontable del costo de nuestras suscripciones</span>
                       </div>
                     </div>
                     <div className="pt-4 mt-auto">
@@ -353,36 +354,33 @@ const Estrategia = () => {
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-                        Impulso Estratégico GMS +
+                        Análisis Avanzado
                       </h3>
-                      <p className="text-muted-foreground font-medium">
-                        Impulso Avanzado
-                      </p>
                       <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2">
                         Recomendado
                       </Badge>
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
-                      Análisis avanzado con FODA completo. Incluye benchmarking extendido y estrategia derivada. Su costo se descuenta al 100%.
+                      Para dueños de negocio que necesitan una ventaja competitiva desde el día uno. Descontable al 100%.
                     </p>
                   </CardHeader>
                   <CardContent className="space-y-4 flex-1 flex flex-col">
                     <div className="space-y-3 flex-1">
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
-                        <span className="text-foreground">Análisis FODA completo</span>
+                        <span className="text-foreground">Todo lo de Impulso GMS Más:</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
-                        <span className="text-foreground">Benchmarking extendido</span>
+                        <span className="text-foreground">Análisis FODA y Estrategia Derivada</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
-                        <span className="text-foreground">Estrategia derivada avanzada</span>
+                        <span className="text-foreground">Benchmarking con Múltiples Competidores</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
-                        <span className="text-foreground">100% Descontable</span>
+                        <span className="text-foreground">100% Descontable del costo de nuestras suscripciones</span>
                       </div>
                     </div>
                     <div className="pt-4 mt-auto">
