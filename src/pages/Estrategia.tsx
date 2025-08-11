@@ -312,7 +312,7 @@ const Estrategia = () => {
       </section>
 
       {/* Tarjetas de Resumen de Impulsos */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-muted/30" data-section="nuestros-impulsos">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <FadeIn 
@@ -567,6 +567,29 @@ const Estrategia = () => {
               ))}
             </div>
           </div>
+          
+          {/* Botones de acción al final de FAQ */}
+          <FadeIn delay={0.6} className="text-center mt-12">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <button
+                onClick={() => {
+                  const impulsosSection = document.querySelector('[data-section="nuestros-impulsos"]');
+                  if (impulsosSection) {
+                    impulsosSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl flex items-center justify-center"
+              >
+                Solicítalo Ahora
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <Link to="/contacto">
+                <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl">
+                  Tengo Otra Pregunta
+                </Button>
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
