@@ -51,7 +51,7 @@ const Estrategia = () => {
       basic: "Análisis GMS",
       advanced: "Nivel Básico + Análisis GMS Avanzado",
       basicTooltip: "Análisis de métricas clave, contenido y competidores principales. Incluye \"Quick Wins\" y definición de objetivos.",
-      advancedTooltip: "Nivel Básico + Análisis FODA completo y estrategia derivada. Benchmarking y comparación con un mayor número de competidores."
+      advancedTooltip: "Impulso Básico + Análisis FODA completo y estrategia derivada. Benchmarking y comparación con un mayor número de competidores."
     },
     {
       name: "Planeación Estratégica",
@@ -82,8 +82,8 @@ const Estrategia = () => {
       icon: "⭐",
       basic: "checkmark",
       advanced: "checkmark",
-      basicTooltip: "Basándonos en nuestros hallazgos y las necesidades que encontremos, te daremos una recomendación Honesta desde nuestra perspectiva de analistas.",
-      advancedTooltip: "Basándonos en nuestros hallazgos y las necesidades que encontremos, te daremos una recomendación Honesta desde nuestra perspectiva de analistas."
+      basicTooltip: "Basándonos en nuestros hallazgos y las necesidades que encontremos, te daremos una recomendación Honesta desde nuestra perspectiva como analistas.",
+      advancedTooltip: "Basándonos en nuestros hallazgos y las necesidades que encontremos, te daremos una recomendación Honesta desde nuestra perspectiva comoanalistas."
     },
     {
       name: "Beneficio Clave",
@@ -395,7 +395,7 @@ const Estrategia = () => {
                           $1,899 Pago Único
                         </div>
                         <div className="text-sm text-muted-foreground">
-                          Precio sin IVA
+                          Precio en MXN sin IVA
                         </div>
                       </div>
                     </div>
@@ -457,7 +457,7 @@ const Estrategia = () => {
                           $2,790 Pago Único
                         </div>
                         <div className="text-sm text-muted-foreground">
-                          Precio sin IVA
+                          Precio en MXN sin IVA
                         </div>
                       </div>
                     </div>
@@ -511,51 +511,56 @@ const Estrategia = () => {
               Proceso del Impulso Estratégico
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Un proceso estructurado de 4 pasos que te dará claridad total sobre tu estrategia digital.
+              Si tuviermaos que resumir lo que son los Impulsos GMS, serían los siguientes 4 pasos.
             </p>
           </FadeIn>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <FadeIn delay={0.1} className="text-center">
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">1</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Diagnóstico Inicial</h3>
-                <p className="text-muted-foreground">
-                  Evaluamos tu presencia digital actual, métricas clave y competencia directa.
-                </p>
-              </FadeIn>
+            <div className="relative">
+              {/* Línea verde horizontal */}
+              <div className="absolute top-8 left-0 right-0 h-0.5 bg-primary/30 hidden lg:block"></div>
               
-              <FadeIn delay={0.2} className="text-center">
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">2</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Análisis FODA</h3>
-                <p className="text-muted-foreground">
-                  Identificamos fortalezas, oportunidades, debilidades y amenazas de tu negocio.
-                </p>
-              </FadeIn>
-              
-              <FadeIn delay={0.3} className="text-center">
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">3</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Estrategia Personalizada</h3>
-                <p className="text-muted-foreground">
-                  Desarrollamos una hoja de ruta clara y accionable para tu crecimiento digital.
-                </p>
-              </FadeIn>
-              
-              <FadeIn delay={0.4} className="text-center">
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">4</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Recomendación de Plan</h3>
-                <p className="text-muted-foreground">
-                  Te sugerimos el plan perfecto basado en tu análisis y objetivos específicos.
-                </p>
-              </FadeIn>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <FadeIn delay={0.1} className="text-center relative">
+                  <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 relative z-10">
+                    <span className="text-2xl font-bold text-primary">1</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Diagnóstico Inicial</h3>
+                  <p className="text-muted-foreground">
+                    Evaluamos tu presencia digital actual, métricas clave y competencia directa.
+                  </p>
+                </FadeIn>
+                
+                <FadeIn delay={0.2} className="text-center relative">
+                  <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 relative z-10">
+                    <span className="text-2xl font-bold text-primary">2</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Análisis FODA</h3>
+                  <p className="text-muted-foreground">
+                    Identificamos fortalezas, oportunidades, debilidades y amenazas de tu negocio.
+                  </p>
+                </FadeIn>
+                
+                <FadeIn delay={0.3} className="text-center relative">
+                  <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 relative z-10">
+                    <span className="text-2xl font-bold text-primary">3</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Estrategia Personalizada</h3>
+                  <p className="text-muted-foreground">
+                    Desarrollamos una hoja de ruta clara y accionable para tu crecimiento digital.
+                  </p>
+                </FadeIn>
+                
+                <FadeIn delay={0.4} className="text-center relative">
+                  <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 relative z-10">
+                    <span className="text-2xl font-bold text-primary">4</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Recomendación de Plan</h3>
+                  <p className="text-muted-foreground">
+                    Te sugerimos el plan perfecto basado en tu análisis y objetivos específicos.
+                  </p>
+                </FadeIn>
+              </div>
             </div>
           </div>
         </div>
