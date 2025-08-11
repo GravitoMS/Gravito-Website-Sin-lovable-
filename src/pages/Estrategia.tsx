@@ -578,10 +578,12 @@ const Estrategia = () => {
                     impulsosSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl flex items-center justify-center w-full sm:w-48"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl w-full sm:w-48"
               >
-                Solicítalo Ahora
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <span className="flex items-center justify-center">
+                  Solicítalo Ahora
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </span>
               </button>
               <Link to="/contacto" className="w-full sm:w-48">
                 <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl w-full">
