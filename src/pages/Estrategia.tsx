@@ -280,9 +280,16 @@ const Estrategia = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+            <FadeIn 
+              delay={0.1}
+              className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-6"
+              style={{
+                textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
+                willChange: 'text-shadow'
+              }}
+            >
               Resumen de Nuestros Impulsos
-            </h2>
+            </FadeIn>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Descubre cuál es el impulso perfecto para tu negocio y comienza tu transformación digital.
             </p>
@@ -292,7 +299,7 @@ const Estrategia = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Tarjeta Impulso GMS (Básico) */}
               <FadeIn delay={0.1}>
-                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm">
+                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
@@ -306,8 +313,8 @@ const Estrategia = () => {
                       Análisis inicial sin riesgo. Recibirás un análisis completo de tu negocio y una hoja de ruta estratégica. Su costo se descuenta al 100%.
                     </p>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="space-y-3">
+                  <CardContent className="space-y-4 flex-1 flex flex-col">
+                    <div className="space-y-3 flex-1">
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                         <span className="text-foreground">Análisis profundo de tu presencia digital</span>
@@ -325,7 +332,7 @@ const Estrategia = () => {
                         <span className="text-foreground">Recomendación de plan ideal</span>
                       </div>
                     </div>
-                    <div className="pt-4">
+                    <div className="pt-4 mt-auto">
                       <Link to="/contacto?servicio=impulso-gms">
                         <Button 
                           size="lg" 
@@ -342,7 +349,7 @@ const Estrategia = () => {
 
               {/* Tarjeta Impulso Estratégico GMS + (Avanzado) */}
               <FadeIn delay={0.2}>
-                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm">
+                <Card className="border-hero-yellow/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
@@ -351,7 +358,7 @@ const Estrategia = () => {
                       <p className="text-muted-foreground font-medium">
                         Impulso Avanzado
                       </p>
-                      <Badge className="bg-primary text-primary-foreground mt-2">
+                      <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2">
                         Recomendado
                       </Badge>
                     </div>
@@ -359,30 +366,30 @@ const Estrategia = () => {
                       Análisis avanzado con FODA completo. Incluye benchmarking extendido y estrategia derivada. Su costo se descuenta al 100%.
                     </p>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="space-y-3">
+                  <CardContent className="space-y-4 flex-1 flex flex-col">
+                    <div className="space-y-3 flex-1">
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Análisis FODA completo</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Benchmarking extendido</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Estrategia derivada avanzada</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">100% Descontable</span>
                       </div>
                     </div>
-                    <div className="pt-4">
+                    <div className="pt-4 mt-auto">
                       <Link to="/contacto?servicio=impulso-estrategico">
                         <Button 
                           size="lg" 
-                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
+                          className="w-full bg-hero-yellow hover:bg-hero-yellow/90 text-hero-yellow-foreground px-8 py-4 text-lg font-semibold rounded-xl"
                         >
                           Descubre tu Estrategia
                           <ArrowRight className="ml-2 h-5 w-5" />
