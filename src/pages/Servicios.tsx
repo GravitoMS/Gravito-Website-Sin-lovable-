@@ -219,7 +219,7 @@ const Servicios = () => {
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-16">
             <EditableHeading level={2} className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-              Historias de Éxito de Nuestros Clientes Felices
+              La Tranquilidad de Nuestros Clientes
             </EditableHeading>
             
             {/* Sistema de Calificación con Estrellas */}
