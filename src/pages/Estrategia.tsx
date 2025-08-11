@@ -541,7 +541,7 @@ const Estrategia = () => {
                         </h3>
                         <div className="flex-shrink-0">
                           <ChevronDown 
-                            className={`h-5 w-5 text-primary transition-transform duration-200 ${
+                            className={`h-5 w-5 text-primary transition-transform duration-500 ease-out ${
                               expandedFAQ === index ? 'rotate-180' : ''
                             }`}
                           />
@@ -550,7 +550,7 @@ const Estrategia = () => {
                     </button>
                     
                     <div 
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      className={`overflow-hidden transition-all duration-500 ease-out ${
                         expandedFAQ === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                       }`}
                     >
