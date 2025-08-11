@@ -82,8 +82,8 @@ const Estrategia = () => {
       icon: "⭐",
       basic: "checkmark",
       advanced: "checkmark",
-      basicTooltip: "",
-      advancedTooltip: ""
+      basicTooltip: "Basándonos en nuestros hallazgos y las necesidades que encontremos, te daremos una recomendación Honesta desde nuestra perspectiva de analistas.",
+      advancedTooltip: "Basándonos en nuestros hallazgos y las necesidades que encontremos, te daremos una recomendación Honesta desde nuestra perspectiva de analistas."
     },
     {
       name: "Beneficio Clave",
