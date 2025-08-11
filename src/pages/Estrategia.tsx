@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 import { COLORS } from '@/lib/designSystem';
 import { FadeIn, HoverScale } from '@/components/ui/SimpleAnimations';
@@ -46,33 +47,45 @@ const Estrategia = () => {
   const impulsoServices = [
     {
       name: "Auditoría Inicial",
+      icon: "🔍",
       basic: "Análisis GMS",
-      advanced: "Nivel Básico + Análisis GMS Avanzado"
+      advanced: "Nivel Básico + Análisis GMS Avanzado",
+      tooltip: "Análisis completo de tu presencia digital actual"
     },
     {
       name: "Planeación Estratégica",
+      icon: "📋",
       basic: "Planeación en forma de Línea del Tiempo",
-      advanced: "Planeación y Estrategia en forma de Línea del Tiempo"
+      advanced: "Planeación y Estrategia en forma de Línea del Tiempo",
+      tooltip: "Hoja de ruta visual con plan de acción detallado"
     },
     {
       name: "Video-Consultoría Personal",
+      icon: "🎥",
       basic: "Explicación con Videos Personales (Loom)",
-      advanced: "Explicación con Videos Personales (Loom)"
+      advanced: "Explicación con Videos Personales (Loom)",
+      tooltip: "Videos explicativos personalizados de tu estrategia"
     },
     {
       name: "Reunión de Arranque",
-      basic: "[Icono de Check Mark]",
-      advanced: "[Icono de Check Mark]"
+      icon: "🤝",
+      basic: <CheckCircle className="h-5 w-5 text-primary" />,
+      advanced: <CheckCircle className="h-5 w-5 text-primary" />,
+      tooltip: "Sesión inicial para alinear objetivos y expectativas"
     },
     {
       name: "Recomendación de Suscripción Ideal",
-      basic: "[Icono de Check Mark]",
-      advanced: "[Icono de Check Mark]"
+      icon: "💎",
+      basic: <CheckCircle className="h-5 w-5 text-primary" />,
+      advanced: <CheckCircle className="h-5 w-5 text-primary" />,
+      tooltip: "Sugerencia del plan de suscripción más adecuado para tu negocio"
     },
     {
       name: "Beneficio Clave",
-      basic: "[Icono de Check Mark]",
-      advanced: "[Icono de Check Mark]"
+      icon: "💰",
+      basic: <CheckCircle className="h-5 w-5 text-primary" />,
+      advanced: <CheckCircle className="h-5 w-5 text-primary" />,
+      tooltip: "El costo se descuenta 100% de tu primer mes de suscripción"
     }
   ];
 
@@ -252,7 +265,8 @@ const Estrategia = () => {
           </FadeIn>
 
           <div className="bg-card rounded-lg shadow-lg overflow-x-auto">
-            <table className="w-full">
+            <TooltipProvider>
+              <table className="w-full">
                 <thead className="sticky top-0 bg-card z-10 shadow-sm">
                   <tr className="border-b border-border">
                     <th className="text-center p-6 font-semibold text-foreground bg-card">
@@ -282,7 +296,22 @@ const Estrategia = () => {
                       className={`${service.name === "Beneficio Clave" ? "border-b-2 border-primary/20 bg-primary/5" : "border-b border-border"} hover:bg-muted/50`}
                     >
                       <td className="p-6">
-                        <span className="font-medium text-foreground">{service.name}</span>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-lg">{service.icon}</span>
+                          <div className="flex items-center space-x-2">
+                            <span className="font-medium text-foreground">{service.name}</span>
+                            <Tooltip delayDuration={300}>
+                              <TooltipTrigger asChild>
+                                <button className="inline-flex">
+                                  <Info className="w-4 h-4 text-primary hover:text-primary/80 cursor-help transition-colors" />
+                                </button>
+                              </TooltipTrigger>
+                              <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
+                                <p>{service.tooltip}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </div>
+                        </div>
                       </td>
                       <td className="text-center p-6">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
@@ -298,6 +327,7 @@ const Estrategia = () => {
                   ))}
                 </tbody>
               </table>
+            </TooltipProvider>
           </div>
         </div>
       </section>
