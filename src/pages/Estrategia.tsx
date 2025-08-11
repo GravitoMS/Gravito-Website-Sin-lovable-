@@ -140,7 +140,7 @@ const Estrategia = () => {
             >
               <Button 
                 onClick={() => {
-                  const paraQuienSection = document.querySelector('[data-section="para-quien-es"]');
+                  const paraQuienSection = document.querySelector('[data-section="para-quien-impulso"]');
                   if (paraQuienSection) {
                     paraQuienSection.scrollIntoView({ behavior: 'smooth' });
                   }
@@ -172,7 +172,7 @@ const Estrategia = () => {
       <div className="h-32 bg-gradient-to-b from-background via-background/80 to-muted/30"></div>
 
       {/* ¿Qué es el Impulso Estratégico? */}
-      <section className="py-16 bg-muted/30" data-section="para-quien-es">
+      <section className="py-16 bg-muted/30" data-section="para-quien-impulso">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <FadeIn className="text-center mb-12">
