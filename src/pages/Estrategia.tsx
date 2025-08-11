@@ -195,8 +195,8 @@ const Estrategia = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
-            <EditableHeading 
-              level={2}
+            <FadeIn 
+              delay={0.1}
               className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-6"
               style={{
                 textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
@@ -204,7 +204,7 @@ const Estrategia = () => {
               }}
             >
               Nuestros Impulsos
-            </EditableHeading>
+            </FadeIn>
             <EditableText className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Aquí encontrarás exactamente lo que incluyen nuestros niveles de Impulso para que puedas compararlos y tomar la mejor decisión para tu negocio.
             </EditableText>
