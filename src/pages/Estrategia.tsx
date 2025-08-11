@@ -584,9 +584,9 @@ const Estrategia = () => {
                 Solicítalo Ahora
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Link to="/contacto" className="w-full sm:w-48">
-                <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl w-full">
-                  Tengo Otra Pregunta
+              <Link to="/servicios" className="w-full sm:w-48">
+                <Button size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl w-full bg-card border-primary text-primary hover:bg-card/80">
+                  Ver Nuestros Servicios
                 </Button>
               </Link>
             </div>
