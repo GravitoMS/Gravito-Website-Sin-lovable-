@@ -288,7 +288,7 @@ const Estrategia = () => {
                 willChange: 'text-shadow'
               }}
             >
-              Resumen de Nuestros Impulsos
+              Nuestros Impulsos
             </FadeIn>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Descubre cuál es el impulso perfecto para tu negocio y comienza tu transformación digital.
