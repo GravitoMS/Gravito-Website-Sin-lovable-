@@ -549,7 +549,11 @@ const Estrategia = () => {
                       </div>
                     </button>
                     
-                    {expandedFAQ === index && (
+                    <div 
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        expandedFAQ === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                    >
                       <div className="px-6 pb-6">
                         <div className="border-t border-border/50 pt-4">
                           <p className="text-muted-foreground leading-relaxed">
@@ -557,7 +561,7 @@ const Estrategia = () => {
                           </p>
                         </div>
                       </div>
-                    )}
+                    </div>
                   </Card>
                 </FadeIn>
               ))}
