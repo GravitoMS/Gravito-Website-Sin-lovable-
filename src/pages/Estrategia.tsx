@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+
 import { COLORS } from '@/lib/designSystem';
 import { FadeIn, HoverScale } from '@/components/ui/SimpleAnimations';
 
@@ -247,8 +247,7 @@ const Estrategia = () => {
           </FadeIn>
 
           <div className="bg-card rounded-lg shadow-lg overflow-x-auto">
-            <TooltipProvider>
-              <table className="w-full">
+            <table className="w-full">
                 <thead className="sticky top-0 bg-card z-10 shadow-sm">
                   <tr className="border-b border-border">
                     <th className="text-center p-6 font-semibold text-foreground bg-card">
@@ -294,7 +293,6 @@ const Estrategia = () => {
                   ))}
                 </tbody>
               </table>
-            </TooltipProvider>
           </div>
         </div>
       </section>
