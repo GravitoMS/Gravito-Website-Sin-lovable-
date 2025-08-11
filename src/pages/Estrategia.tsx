@@ -145,7 +145,7 @@ const Estrategia = () => {
                 </Button>
               </Link>
               <Link to="/servicios">
-                <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl">
+                <Button variant="ghost" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl border border-primary text-primary hover:bg-primary/10">
                   Ver Todos los Servicios
                 </Button>
               </Link>
