@@ -197,7 +197,7 @@ const Estrategia = () => {
           <FadeIn className="text-center mb-12">
             <EditableHeading 
               level={2}
-              className="text-3xl lg:text-4xl font-bold text-foreground mb-6"
+              className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-6"
               style={{
                 textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
                 willChange: 'text-shadow'
