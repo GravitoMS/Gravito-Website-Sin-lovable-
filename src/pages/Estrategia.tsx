@@ -305,6 +305,9 @@ const Estrategia = () => {
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
                         Análisis inicial básico
                       </h3>
+                      <Badge className="bg-primary text-primary-foreground mb-4">
+                        Básico
+                      </Badge>
                       <div className="mb-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
                           $1,899 Pago Único
