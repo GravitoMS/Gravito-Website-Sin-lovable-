@@ -305,6 +305,14 @@ const Estrategia = () => {
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
                         Análisis inicial básico
                       </h3>
+                      <div className="mb-4">
+                        <div className="text-xl lg:text-2xl font-bold text-foreground">
+                          $1,899 Pago Único
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          Precio sin IVA
+                        </div>
+                      </div>
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
                       Para los dueños de negocios que necesitan recibir un análisis de la presencia digital de su negocio y una manera sencilla para probar nuestros servicios. Descontable al 100%.
@@ -359,6 +367,14 @@ const Estrategia = () => {
                       <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2">
                         Recomendado
                       </Badge>
+                      <div className="mb-4 mt-4">
+                        <div className="text-xl lg:text-2xl font-bold text-foreground">
+                          $2,790 Pago Único
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          Precio sin IVA
+                        </div>
+                      </div>
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
                       Para dueños de negocio que necesitan una ventaja competitiva desde el día uno. Descontable al 100%.
