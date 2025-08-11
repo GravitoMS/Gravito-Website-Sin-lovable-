@@ -46,28 +46,33 @@ const Estrategia = () => {
   const impulsoServices = [
     {
       name: "Auditoría Inicial",
-      basic: "Análisis de métricas clave, contenido y competidores principales. Incluye \"Quick Wins\" y definición de objetivos.",
-      advanced: "Nivel Básico + Análisis FODA completo y estrategia derivada. Benchmarking con un mayor número de competidores."
+      basic: "Análisis GMS",
+      advanced: "Nivel Básico + Análisis GMS Avanzado"
     },
     {
       name: "Planeación Estratégica",
-      basic: "Entrega de una Línea del Tiempo visual y completa con el plan de acción detallado para el primer mes.",
-      advanced: "Entrega de una Línea del Tiempo visual y completa con el plan de acción detallado para el primer mes."
+      basic: "Planeación en forma de Línea del Tiempo",
+      advanced: "Planeación y Estrategia en forma de Línea del Tiempo"
     },
     {
       name: "Video-Consultoría Personal",
-      basic: "Sistema de Dos Videos Personales (Loom): 1. Video-análisis del Diagnóstico. 2. Video-explicación de la Línea del Tiempo.",
-      advanced: "Sistema de Dos Videos Personales (Loom): 1. Video-análisis del Diagnóstico Avanzado. 2. Video-explicación de la Línea del Tiempo."
+      basic: "Explicación con Videos Personales (Loom)",
+      advanced: "Explicación con Videos Personales (Loom)"
     },
     {
       name: "Reunión de Arranque",
-      basic: "Incluye la comunicación y reuniones necesarias para completar el briefing y presentar los resultados.",
-      advanced: "Incluye la comunicación y reuniones necesarias para completar el briefing y presentar los resultados."
+      basic: "[Icono de Check Mark]",
+      advanced: "[Icono de Check Mark]"
+    },
+    {
+      name: "Recomendación de Suscripción Ideal",
+      basic: "[Icono de Check Mark]",
+      advanced: "[Icono de Check Mark]"
     },
     {
       name: "Beneficio Clave",
-      basic: "El costo de este servicio se descuenta íntegramente de tu primer mes de suscripción.",
-      advanced: "El costo de este servicio se descuenta íntegramente de tu primer mes de suscripción."
+      basic: "[Icono de Check Mark]",
+      advanced: "[Icono de Check Mark]"
     }
   ];
 
