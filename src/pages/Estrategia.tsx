@@ -50,42 +50,48 @@ const Estrategia = () => {
       icon: "🔍",
       basic: "Análisis GMS",
       advanced: "Nivel Básico + Análisis GMS Avanzado",
-      tooltip: "Análisis completo de tu presencia digital actual"
+      basicTooltip: "Análisis de métricas clave, contenido y competidores principales. Incluye \"Quick Wins\" y definición de objetivos.",
+      advancedTooltip: "Nivel Básico + Análisis FODA completo y estrategia derivada. Benchmarking y comparación con un mayor número de competidores."
     },
     {
       name: "Planeación Estratégica",
       icon: "📋",
       basic: "Planeación en forma de Línea del Tiempo",
       advanced: "Planeación y Estrategia en forma de Línea del Tiempo",
-      tooltip: "Hoja de ruta visual con plan de acción detallado"
+      basicTooltip: "Entrega de una Línea del Tiempo visual y completa con el plan de acción detallado para el mes.",
+      advancedTooltip: "Entrega de un plan de implementación y estrategia detallado para el mes utilizando nuestros hallazgos en forma de una Línea del Tiempo visual."
     },
     {
       name: "Video-Consultoría Personal",
       icon: "🎥",
       basic: "Explicación con Videos Personales (Loom)",
       advanced: "Explicación con Videos Personales (Loom)",
-      tooltip: "Videos explicativos personalizados de tu estrategia"
+      basicTooltip: "Sistema de Dos Videos Personales (Loom): 1. Video-análisis del Diagnóstico. 2. Video-explicación de la Línea del Tiempo.",
+      advancedTooltip: "Sistema de Dos Videos Personales (Loom): 1. Video-análisis del Diagnóstico Avanzado. 2. Video-explicación de la Línea del Tiempo."
     },
     {
       name: "Reunión de Arranque",
       icon: "🤝",
-      basic: <CheckCircle className="h-5 w-5 text-primary" />,
-      advanced: <CheckCircle className="h-5 w-5 text-primary" />,
-      tooltip: "Sesión inicial para alinear objetivos y expectativas"
+      basic: "checkmark",
+      advanced: "checkmark",
+      basicTooltip: "Incluye la comunicación y reuniones necesarias para completar el briefing, presentar los resultados y resolver dudas antes y después de la entrega.",
+      advancedTooltip: "Incluye la comunicación y reuniones necesarias para completar el briefing, presentar los resultados y resolver dudas antes y después de la entrega."
     },
     {
       name: "Recomendación de Suscripción Ideal",
-      icon: "💎",
-      basic: <CheckCircle className="h-5 w-5 text-primary" />,
-      advanced: <CheckCircle className="h-5 w-5 text-primary" />,
-      tooltip: "Sugerencia del plan de suscripción más adecuado para tu negocio"
+      icon: "⭐",
+      basic: "checkmark",
+      advanced: "checkmark",
+      basicTooltip: "",
+      advancedTooltip: ""
     },
     {
       name: "Beneficio Clave",
-      icon: "💰",
-      basic: <CheckCircle className="h-5 w-5 text-primary" />,
-      advanced: <CheckCircle className="h-5 w-5 text-primary" />,
-      tooltip: "El costo se descuenta 100% de tu primer mes de suscripción"
+      icon: "💎",
+      basic: "checkmark",
+      advanced: "checkmark",
+      basicTooltip: "Si decides adquirir alguna suscripción, el costo de este servicio se descuenta completamente del costo de cualquier suscripción.",
+      advancedTooltip: "Si decides adquirir alguna suscripción, el costo de este servicio se descuenta completamente del costo de cualquier suscripción."
     }
   ];
 
@@ -298,8 +304,17 @@ const Estrategia = () => {
                       <td className="p-6">
                         <div className="flex items-center space-x-2">
                           <span className="text-lg">{service.icon}</span>
-                          <div className="flex items-center space-x-2">
-                            <span className="font-medium text-foreground">{service.name}</span>
+                          <span className="font-medium text-foreground">{service.name}</span>
+                        </div>
+                      </td>
+                      <td className="text-center p-6">
+                        <div className="flex items-center justify-center space-x-2">
+                          {service.basic === "checkmark" ? (
+                            <CheckCircle className="h-5 w-5 text-primary" />
+                          ) : (
+                            <span className="text-sm text-foreground max-w-xs mx-auto">{service.basic}</span>
+                          )}
+                          {service.basicTooltip && (
                             <Tooltip delayDuration={300}>
                               <TooltipTrigger asChild>
                                 <button className="inline-flex">
@@ -307,20 +322,31 @@ const Estrategia = () => {
                                 </button>
                               </TooltipTrigger>
                               <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
-                                <p>{service.tooltip}</p>
+                                <p>{service.basicTooltip}</p>
                               </TooltipContent>
                             </Tooltip>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-center p-6">
-                        <div className="text-sm text-foreground max-w-xs mx-auto">
-                          {service.basic}
+                          )}
                         </div>
                       </td>
                       <td className="text-center p-6 bg-primary/5">
-                        <div className="text-sm text-foreground max-w-xs mx-auto">
-                          {service.advanced}
+                        <div className="flex items-center justify-center space-x-2">
+                          {service.advanced === "checkmark" ? (
+                            <CheckCircle className="h-5 w-5 text-primary" />
+                          ) : (
+                            <span className="text-sm text-foreground max-w-xs mx-auto">{service.advanced}</span>
+                          )}
+                          {service.advancedTooltip && (
+                            <Tooltip delayDuration={300}>
+                              <TooltipTrigger asChild>
+                                <button className="inline-flex">
+                                  <Info className="w-4 h-4 text-primary hover:text-primary/80 cursor-help transition-colors" />
+                                </button>
+                              </TooltipTrigger>
+                              <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
+                                <p>{service.advancedTooltip}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          )}
                         </div>
                       </td>
                     </tr>
