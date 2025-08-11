@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Target, TrendingUp, Users, Zap, Info, ChevronDown, ChevronRight } from 'lucide-react';
+import { ArrowRight, CheckCircle, Target, TrendingUp, Users, Zap, Info, ChevronDown, ChevronRight, Mouse } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -34,12 +34,12 @@ const Estrategia = () => {
     {
       name: "Impulso GMS",
       subtitle: "Impulso Básico",
-      isPopular: false
+      isPopular: true
     },
     {
       name: "Impulso Estratégico GMS +",
       subtitle: "Impulso Avanzado",
-      isPopular: true
+      isPopular: false
     }
   ];
 
@@ -115,7 +115,7 @@ const Estrategia = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-32">
+      <section className="pt-40 pb-32 relative">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center">
             <FadeIn 
@@ -138,19 +138,33 @@ const Estrategia = () => {
               delay={0.3}
               className="flex flex-col sm:flex-row justify-center gap-4"
             >
-              <Link to="/contacto?servicio=impulso-estrategico">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl">
-                  Solicítalo Ahora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
+              <Button 
+                onClick={() => {
+                  const paraQuienSection = document.querySelector('[data-section="para-quien-es"]');
+                  if (paraQuienSection) {
+                    paraQuienSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
+              >
+                Solicítalo Ahora
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
               <Link to="/servicios">
-                <Button variant="ghost" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl border border-primary text-primary hover:bg-primary/10">
+                <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl">
                   Ver Todos los Servicios
                 </Button>
               </Link>
             </FadeIn>
           </FadeIn>
+          
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+            <div className="flex flex-col items-center animate-bounce" style={{ animationDuration: '2s' }}>
+              <Mouse className="w-8 h-8 text-muted-foreground animate-pulse" style={{ animationDuration: '3s' }} />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -158,7 +172,7 @@ const Estrategia = () => {
       <div className="h-32 bg-gradient-to-b from-background via-background/80 to-muted/30"></div>
 
       {/* ¿Qué es el Impulso Estratégico? */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30" data-section="para-quien-es">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <FadeIn className="text-center mb-12">
@@ -230,13 +244,13 @@ const Estrategia = () => {
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <h2 
-              className="text-3xl lg:text-4xl font-bold text-foreground mb-6"
+              className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-6"
               style={{
                 textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
                 willChange: 'text-shadow'
               }}
             >
-              Nuestros Niveles de Impulso
+              Compara Nuestros Niveles de Impulso Estratégico
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Esta tabla contiene exactamente lo que incluye cada nivel de Impulso Estratégico para que puedas comparar y tomar la mejor decisión para tu negocio.
@@ -292,12 +306,12 @@ const Estrategia = () => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center p-6">
+                      <td className="text-center p-6 bg-primary/5">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
                           {service.basic}
                         </div>
                       </td>
-                      <td className="text-center p-6 bg-primary/5">
+                      <td className="text-center p-6">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
                           {service.advanced}
                         </div>
@@ -338,7 +352,7 @@ const Estrategia = () => {
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-                        Impulso GMS
+                        Análisis inicial básico
                       </h3>
                       <Badge className="bg-primary text-primary-foreground mb-4">
                         Básico
@@ -400,7 +414,7 @@ const Estrategia = () => {
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-                        Impulso Estratégico GMS +
+                        Análisis Avanzado
                       </h3>
                       <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2">
                         Recomendado
@@ -570,7 +584,7 @@ const Estrategia = () => {
           
           {/* Botones de acción al final de FAQ */}
           <FadeIn delay={0.6} className="text-center mt-12">
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
                 onClick={() => {
                   const impulsosSection = document.querySelector('[data-section="nuestros-impulsos"]');
@@ -579,14 +593,14 @@ const Estrategia = () => {
                   }
                 }}
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-4 text-lg font-semibold rounded-xl w-full sm:w-56"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl w-full sm:w-48"
               >
                 Solicítalo Ahora
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Link to="/contacto" className="w-full sm:w-56">
-                <Button variant="ghost" size="lg" className="px-10 py-4 text-lg font-semibold rounded-xl w-full text-primary border border-primary hover:bg-primary/10">
-                  Tengo Otra Pregunta
+              <Link to="/servicios" className="w-full sm:w-48">
+                <Button size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl w-full bg-card border-primary text-primary hover:bg-card/80">
+                  Ver Nuestros Servicios
                 </Button>
               </Link>
             </div>
