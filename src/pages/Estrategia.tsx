@@ -292,12 +292,12 @@ const Estrategia = () => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center p-6 bg-primary/5">
+                      <td className="text-center p-6">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
                           {service.basic}
                         </div>
                       </td>
-                      <td className="text-center p-6">
+                      <td className="text-center p-6 bg-primary/5">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
                           {service.advanced}
                         </div>
