@@ -59,7 +59,7 @@ const Index = () => {
                   <span className="text-primary">PRESENCIA DIGITAL</span>
                 </EditableHeading>
                 <EditableText className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto" delay={0.2}>
-                  Ahorras tiempo y dinero para tu negocio, mientras nosotros nos encargamos de todo.
+                  Nosotros nos encargamos de tu crecimiento digital devolviendote tu tiempo para que lo dediques en tu negocio.
                 </EditableText>
                 <FadeIn delay={0.3} className="flex flex-col sm:flex-row justify-center gap-6">
                   <Link to="/estrategia">
