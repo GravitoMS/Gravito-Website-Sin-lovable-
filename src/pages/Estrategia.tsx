@@ -9,7 +9,6 @@ import { Badge } from '@/components/ui/badge';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { COLORS } from '@/lib/designSystem';
 import { FadeIn, HoverScale } from '@/components/ui/SimpleAnimations';
-import { EditableHeading, EditableText } from '@/components/ui/EditableAnimations';
 
 const Estrategia = () => {
   // Estado para manejar los dropdowns de beneficios
@@ -28,12 +27,12 @@ const Estrategia = () => {
     {
       name: "Impulso GMS",
       subtitle: "Impulso Básico",
-      isPopular: false
+      isPopular: true
     },
     {
       name: "Impulso Estratégico GMS +",
       subtitle: "Impulso Avanzado",
-      isPopular: true
+      isPopular: false
     }
   ];
 
@@ -195,19 +194,18 @@ const Estrategia = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
-            <FadeIn 
-              delay={0.1}
-              className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-6"
+            <h2 
+              className="text-3xl lg:text-4xl font-bold text-foreground mb-6"
               style={{
                 textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
                 willChange: 'text-shadow'
               }}
             >
-              Nuestros Impulsos
-            </FadeIn>
-            <EditableText className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Aquí encontrarás exactamente lo que incluyen nuestros niveles de Impulso para que puedas compararlos y tomar la mejor decisión para tu negocio.
-            </EditableText>
+              Compara Nuestros Niveles de Impulso Estratégico
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Esta tabla contiene exactamente lo que incluye cada nivel de Impulso Estratégico para que puedas comparar y tomar la mejor decisión para tu negocio.
+            </p>
           </FadeIn>
 
           <div className="bg-card rounded-lg shadow-lg overflow-x-auto">
@@ -259,12 +257,12 @@ const Estrategia = () => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center p-6">
+                      <td className="text-center p-6 bg-primary/5">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
                           {service.basic}
                         </div>
                       </td>
-                      <td className="text-center p-6 bg-primary/5">
+                      <td className="text-center p-6">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
                           {service.advanced}
                         </div>
@@ -274,6 +272,127 @@ const Estrategia = () => {
                 </tbody>
               </table>
             </TooltipProvider>
+          </div>
+        </div>
+      </section>
+
+      {/* Tarjetas de Resumen de Impulsos */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <FadeIn className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              Resumen de Nuestros Impulsos
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Descubre cuál es el impulso perfecto para tu negocio y comienza tu transformación digital.
+            </p>
+          </FadeIn>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Tarjeta Impulso GMS (Básico) */}
+              <FadeIn delay={0.1}>
+                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm">
+                  <CardHeader className="text-center pb-4">
+                    <div className="mb-4">
+                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
+                        Impulso GMS
+                      </h3>
+                      <p className="text-muted-foreground font-medium">
+                        Impulso Básico
+                      </p>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Análisis inicial sin riesgo. Recibirás un análisis completo de tu negocio y una hoja de ruta estratégica. Su costo se descuenta al 100%.
+                    </p>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">Análisis profundo de tu presencia digital</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">Estrategia personalizada</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">100% Descontable</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">Recomendación de plan ideal</span>
+                      </div>
+                    </div>
+                    <div className="pt-4">
+                      <Link to="/contacto?servicio=impulso-gms">
+                        <Button 
+                          size="lg" 
+                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
+                        >
+                          Descubre tu Estrategia
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              </FadeIn>
+
+              {/* Tarjeta Impulso Estratégico GMS + (Avanzado) */}
+              <FadeIn delay={0.2}>
+                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm">
+                  <CardHeader className="text-center pb-4">
+                    <div className="mb-4">
+                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
+                        Impulso Estratégico GMS +
+                      </h3>
+                      <p className="text-muted-foreground font-medium">
+                        Impulso Avanzado
+                      </p>
+                      <Badge className="bg-primary text-primary-foreground mt-2">
+                        Recomendado
+                      </Badge>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Análisis avanzado con FODA completo. Incluye benchmarking extendido y estrategia derivada. Su costo se descuenta al 100%.
+                    </p>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">Análisis FODA completo</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">Benchmarking extendido</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">Estrategia derivada avanzada</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">100% Descontable</span>
+                      </div>
+                    </div>
+                    <div className="pt-4">
+                      <Link to="/contacto?servicio=impulso-estrategico">
+                        <Button 
+                          size="lg" 
+                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
+                        >
+                          Descubre tu Estrategia
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              </FadeIn>
+            </div>
           </div>
         </div>
       </section>
