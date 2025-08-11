@@ -14,35 +14,35 @@ const Servicios = () => {
 
   const testimonials = [
     {
-      name: "Carlos Mendoza",
-      title: "Fundador de TechFlow",
-      rating: 5,
-      quote: "Nuestro marketing estaba disperso, con baja participación en redes sociales, tráfico web deficiente y alcance por email inefectivo. Desde que nos suscribimos, hemos experimentado un **incremento del 300%** en alcance orgánico, y las interacciones con clientes han sido más significativas que nunca.",
-      highlight: "incremento del 300%",
+      name: "Carlos Méndez",
+      title: "Dueño, La Mesa Dorada, Restaurante",
+      rating: 4,
+      quote: "Antes de Gravito, teníamos nuestras redes sociales super descuidadas y no teníamos presencia en Google Maps para nada. Cuando recién nos suscribimos, nos recomendaron actualizar todo el material antiguo que teníamos y específicamente gracias a las sesiones de fotografía que coordinaron e implementaron, nuestro perfil de Google está siempre lleno de reviews de clientes nuevos y las reservas han subido bastante. Literalmente no nos cuesta la suscripción!",
+      highlight: "reservas han subido bastante",
       avatar: "👨‍💼"
     },
     {
-      name: "Ana Rodríguez",
-      title: "Directora de Marketing en InnovateCorp",
+      name: "Sofía Chen",
+      title: "Fundadora, Le Chen Chic, Boutique",
       rating: 5,
-      quote: "Antes de Gravito, perdíamos tiempo en tareas repetitivas y no teníamos una estrategia clara. Ahora hemos logrado un **aumento del 250%** en conversiones y hemos reducido nuestro tiempo de gestión en un 70%. ¡Es increíble!",
-      highlight: "aumento del 250%",
+      quote: "Digo, como es común, nosotras también teníamos horas de video relacionadas con nuestro negocio como eventos o pasarelas que se quedaron guardadas en el fondo de mi compu volviendolas inútiles. Pero si hubo algo que me encantó, fue el servicio de post-producción de Gravito, ósea nos salvó. Tomaron nuestro material en crudo y lo convirtieron en Reels y contenido semanal como el que se ve en instagram o tiktok. Nuestro engagement se disparó y ya no tengo que pasar mis fines buscando que sí y que no puedo utilizar. ¡Recomendado al 1000!",
+      highlight: "engagement se disparó",
       avatar: "👩‍💼"
     },
     {
-      name: "Miguel Torres",
-      title: "CEO de DigitalGrowth",
+      name: "Dr. Alejandro Vega",
+      title: "Profesionista, ¿Estoy Bien?, Psicología y Bienestar",
       rating: 5,
-      quote: "Nuestra presencia digital era inconsistente y no generaba resultados. Con Gravito, hemos visto un **crecimiento del 400%** en seguidores orgánicos y un incremento del 180% en leads calificados. ¡Superaron todas nuestras expectativas!",
-      highlight: "crecimiento del 400%",
-      avatar: "👨‍💻"
+      quote: "Mira, en su tiempo yo mismo hacía los diseños para mi consultorio y la verdad es que sí se notaba. El problema es que mi marca no proyectaba esa confianza que necesito en mi campo. Ahora tengo todo, o sea desde mantener mi instagram profesional y tener diseños para mi consultorio hasta tener buena presencia y reviews en Google Maps.",
+      highlight: "buena presencia y reviews en Google Maps",
+      avatar: "👨‍⚕️"
     },
     {
-      name: "Laura Sánchez",
-      title: "Emprendedora Digital",
-      rating: 5,
-      quote: "Como emprendedora, no tenía tiempo para gestionar todo el marketing. Gravito transformó completamente nuestro negocio con un **incremento del 350%** en ventas online y una mejora del 200% en engagement. ¡Son simplemente excepcionales!",
-      highlight: "incremento del 350%",
+      name: "Laura Torres",
+      title: "Gerente, LogiListo, Servicios de Logística",
+      rating: 4,
+      quote: "Cuando recién inicié, lo que hacíamos era publicar por publicar, no teníamos rumbo fijo y tampoco sabíamos si servía de algo. No estaba muy convencida, pero probamos el 'Impulso GMS' y por primera vez, entendimos qué estábamos haciendo y por qué. Ahora los documentos que nos entregan prácticamente se convirtieron en nuestro norte y de verdad que ya son parte de nuestro equipo.",
+      highlight: "se convirtieron en nuestro norte",
       avatar: "👩‍💻"
     }
   ];
