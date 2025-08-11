@@ -539,13 +539,13 @@ const Estrategia = () => {
                         <h3 className="text-lg lg:text-xl font-semibold text-foreground pr-4">
                           {faq.question}
                         </h3>
-                        <div className="flex-shrink-0">
-                          <ChevronDown 
-                            className={`h-5 w-5 text-primary transition-transform duration-500 ease-out ${
-                              expandedFAQ === index ? 'rotate-180' : ''
-                            }`}
-                          />
-                        </div>
+                                                  <div className="flex-shrink-0">
+                            <ChevronDown 
+                              className={`h-5 w-5 text-primary transition-transform duration-500 ease-out ${
+                                expandedFAQ === index ? 'rotate-180' : ''
+                              }`}
+                            />
+                          </div>
                       </div>
                     </button>
                     
