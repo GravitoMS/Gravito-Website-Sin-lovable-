@@ -43,7 +43,7 @@ const Servicios = () => {
       rating: 4,
       quote: "Cuando recién inicié, lo que hacíamos era publicar por publicar, no teníamos rumbo fijo y tampoco sabíamos si servía de algo. No estaba muy convencida, pero probamos el 'Impulso GMS' y por primera vez, entendimos qué estábamos haciendo y por qué. Ahora los documentos que nos entregan prácticamente se convirtieron en nuestro norte y de verdad que ya son parte de nuestro equipo.",
       highlight: "se convirtieron en nuestro norte",
-      avatar: "👩‍💻"
+      avatar: "👩‍💼"
     }
   ];
 
