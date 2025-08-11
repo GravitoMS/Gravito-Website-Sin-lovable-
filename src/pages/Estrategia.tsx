@@ -250,7 +250,7 @@ const Estrategia = () => {
                 willChange: 'text-shadow'
               }}
             >
-              Compara Nuestros Niveles de Impulso Estratégico
+              Nuestros Niveles de Impulso
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Esta tabla contiene exactamente lo que incluye cada nivel de Impulso Estratégico para que puedas comparar y tomar la mejor decisión para tu negocio.
@@ -306,12 +306,12 @@ const Estrategia = () => {
                           </div>
                         </div>
                       </td>
-                      <td className="text-center p-6 bg-primary/5">
+                      <td className="text-center p-6">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
                           {service.basic}
                         </div>
                       </td>
-                      <td className="text-center p-6">
+                      <td className="text-center p-6 bg-primary/5">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
                           {service.advanced}
                         </div>
