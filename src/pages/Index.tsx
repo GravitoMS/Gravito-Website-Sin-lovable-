@@ -58,7 +58,7 @@ const Index = () => {
                   <span className="text-primary">PRESENCIA DIGITAL</span>
                 </EditableHeading>
                 <EditableText className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto" delay={0.2}>
-                  Ahorras tiempo y dinero para tu negocio, mientras nosotros nos encargamos de todo.
+                  Nos encargamos de tu crecimiento digital devolviendote tu tiempo para que lo dediques en tu negocio.
                 </EditableText>
                 <FadeIn delay={0.3} className="flex flex-col sm:flex-row justify-center gap-6">
                   <Link to="/estrategia">
@@ -99,13 +99,13 @@ const Index = () => {
                 SOMOS?
               </EditableHeading>
               <div className="space-y-6 mb-12 max-w-xl">
-                <EditableText className="text-xl lg:text-2xl text-muted-foreground">Somos la agencia de consultoría y gestión digital que actúa como tu departamento de marketing externo.</EditableText>
+                <EditableText className="text-xl lg:text-2xl text-muted-foreground">Somos la agencia de consultoría y gestión digital que actúa como tu propio departamento de marketing externo.</EditableText>
                 
                 <div className="flex justify-center">
                   <div className="w-16 h-px bg-border"></div>
                 </div>
                 
-                <EditableText className="text-xl lg:text-2xl text-muted-foreground">No solo gestionamos tus redes. Integramos nuestra consultoría estratégica con un ecosistema de servicios de valor y tecnología de IA, para ejecutar y entregar una hoja de ruta clara que impulse el crecimiento de tu negocio.</EditableText>
+                <EditableText className="text-xl lg:text-2xl text-muted-foreground">No solo gestionamos tus redes. Integramos nuestra consultoría estratégica con un ecosistema de servicios de valor y tecnología de IA, para entregar y ejecutar una hoja de ruta clara con el objetivo de impulsar el crecimiento de tu negocio.</EditableText>
               </div>
               <div className="flex flex-col sm:flex-row gap-6">
                 <Link to="/nosotros">
@@ -166,7 +166,7 @@ const Index = () => {
 
             {/* Subtítulo - La Guía */}
             <EditableText className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed" delay={0.2}>
-              Sabemos que es mucha información. Por eso diseñamos la manera perfecta y sin riesgo para que obtengas eso que tanto te hace falta: <span className="font-bold">Tranquilidad</span>
+              Sabemos que es mucha información. Por eso diseñamos la manera perfecta y sin riesgo para que recuperes lo que tanto te hace falta: <span className="font-bold">Tiempo y Tranquilidad</span>
             </EditableText>
 
             {/* Botón Único - Clon del Hero Section */}
