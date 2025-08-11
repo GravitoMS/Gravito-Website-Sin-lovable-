@@ -571,20 +571,19 @@ const Estrategia = () => {
           {/* Botones de acción al final de FAQ */}
           <FadeIn delay={0.6} className="text-center mt-12">
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button
+              <Button
                 onClick={() => {
                   const impulsosSection = document.querySelector('[data-section="nuestros-impulsos"]');
                   if (impulsosSection) {
                     impulsosSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
+                size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl w-full sm:w-48"
               >
-                <span className="flex items-center justify-center">
-                  Solicítalo Ahora
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </span>
-              </button>
+                Solicítalo Ahora
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
               <Link to="/contacto" className="w-full sm:w-48">
                 <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl w-full">
                   Tengo Otra Pregunta
