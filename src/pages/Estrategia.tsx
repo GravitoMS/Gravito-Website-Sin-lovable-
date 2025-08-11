@@ -236,7 +236,7 @@ const Estrategia = () => {
                 willChange: 'text-shadow'
               }}
             >
-              Compara Nuestros Niveles de Impulso Estratégico
+              Nuestros Niveles de Impulso
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Esta tabla contiene exactamente lo que incluye cada nivel de Impulso Estratégico para que puedas comparar y tomar la mejor decisión para tu negocio.
@@ -338,7 +338,7 @@ const Estrategia = () => {
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-                        Análisis inicial básico
+                        Impulso GMS
                       </h3>
                       <Badge className="bg-primary text-primary-foreground mb-4">
                         Básico
@@ -400,7 +400,7 @@ const Estrategia = () => {
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-                        Análisis Avanzado
+                        Impulso Estratégico GMS +
                       </h3>
                       <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2">
                         Recomendado
@@ -585,7 +585,7 @@ const Estrategia = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Link to="/servicios" className="w-full sm:w-48">
-                <Button size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl w-full bg-card border-primary text-primary hover:bg-card/80">
+                <Button variant="ghost" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl w-full text-primary border border-primary hover:bg-primary/10">
                   Ver Nuestros Servicios
                 </Button>
               </Link>
