@@ -34,12 +34,12 @@ const Estrategia = () => {
     {
       name: "Impulso GMS",
       subtitle: "Impulso Básico",
-      isPopular: true
+      isPopular: false
     },
     {
       name: "Impulso Estratégico GMS +",
       subtitle: "Impulso Avanzado",
-      isPopular: false
+      isPopular: true
     }
   ];
 
