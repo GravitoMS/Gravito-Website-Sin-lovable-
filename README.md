@@ -1,111 +1,72 @@
-# 🚀 GRAVITO WEBSITE - SISTEMA SIMPLIFICADO
+# Welcome to your Lovable project
 
-## 🎯 PRINCIPIOS FUNDAMENTALES
+## Project info
 
-### SIMPLICIDAD RADICAL
-Este proyecto sigue el principio de **simplicidad radical**. Cualquier cambio debe:
-- ✅ Mantener la apariencia visual 100% idéntica
-- ✅ Ser compatible con Visual Edits de Lovable
-- ✅ No agregar complejidad innecesaria
-- ✅ Seguir las reglas de la CONSTITUCIÓN DE DESARROLLO
-
-### LOVABLE INTEGRATION
-- 🔄 Auto-deploy configurado con webhooks
-- ✅ Componentes editables optimizados
-- 🎯 Visual Edits como prioridad #1
-- 📱 Compatibilidad total con Lovable
-
-## 📚 DOCUMENTACIÓN ESENCIAL
-
-### REGLAS ABSOLUTAS:
-- [DEVELOPMENT_CONSTITUTION.md](./DEVELOPMENT_CONSTITUTION.md) - Reglas fundamentales
-- [LOVABLE_INTEGRATION_GUIDE.md](./LOVABLE_INTEGRATION_GUIDE.md) - Guía de integración
-- [SIMPLICITY_ENFORCEMENT.md](./SIMPLICITY_ENFORCEMENT.md) - Control de simplicidad
-
-### DOCUMENTACIÓN TÉCNICA:
-- [ANIMATION_BIBLE.md](./ANIMATION_BIBLE.md) - Sistema de animaciones
-- [COLOR_PROTECTION_GUIDE.md](./COLOR_PROTECTION_GUIDE.md) - Sistema de colores
-- [ADMIN_SETUP.md](./ADMIN_SETUP.md) - Sistema de administración
-- [SYSTEM_IMPROVEMENTS.md](./SYSTEM_IMPROVEMENTS.md) - Mejoras del sistema
-- [COLOR_RESTRICTIONS.md](./COLOR_RESTRICTIONS.md) - Restricciones de colores
-- [FINAL_DELIVERABLE.md](./FINAL_DELIVERABLE.md) - Entregable final
-- [IMPLEMENTATION_SUMMARY.md](./IMPLEMENTATION_SUMMARY.md) - Resumen de implementación
-- [SETUP_INSTRUCTIONS.md](./SETUP_INSTRUCTIONS.md) - Instrucciones de configuración
-- [FOOTER_PROTECTION_GUIDE.md](./FOOTER_PROTECTION_GUIDE.md) - Protección del footer
-- [SYSTEM_OPTIMIZATION.md](./SYSTEM_OPTIMIZATION.md) - Optimización del sistema
-
-## ⚠️ ANTES DE CUALQUIER CAMBIO
-
-1. **Leer** DEVELOPMENT_CONSTITUTION.md
-2. **Verificar** compatibilidad con Lovable
-3. **Seguir** el checklist de simplicidad
-4. **Documentar** cualquier cambio significativo
-
-## 🔧 DESARROLLO RÁPIDO
-
-```bash
-# Instalar dependencias
-npm install
-
-# Desarrollo local
-npm run dev
-
-# Build para producción
-npm run build
-
-# Análisis de simplicidad
-node scripts/complexity-analyzer.cjs
-
-# Verificación de compatibilidad Lovable
-node scripts/lovable-compatibility-check.cjs
-```
-
-## 🌐 DEPLOY Y INTEGRACIÓN
-
-### URL de Producción:
-**Vercel**: https://gravito-website-10202-35-gpbl1zuj3-gravitoms-projects.vercel.app
-
-### Lovable Project:
 **URL**: https://lovable.dev/projects/098fea07-8a53-40f6-9df1-bb981e6a695a
 
-### Auto-Deploy:
-- ✅ Webhooks configurados para deploy automático
-- ✅ Push a `main` dispara deploy automático
-- ✅ Cambios se reflejan en 30-60 segundos
+## How can I edit this code?
 
-## 🛠️ TECNOLOGÍAS
+There are several ways of editing your application.
 
-Este proyecto está construido con:
-- **Vite** - Build tool ultra-rápido
-- **TypeScript** - Tipado estático
-- **React** - Framework de UI
-- **shadcn-ui** - Componentes de UI
-- **Tailwind CSS** - Framework de estilos
-- **Framer Motion** - Animaciones simples
+**Use Lovable**
 
-## 📞 SOPORTE
+Simply visit the [Lovable Project](https://lovable.dev/projects/098fea07-8a53-40f6-9df1-bb981e6a695a) and start prompting.
 
-- **Problemas de simplicidad**: Revisar SIMPLICITY_ENFORCEMENT.md
-- **Problemas con Lovable**: Revisar LOVABLE_INTEGRATION_GUIDE.md
-- **Problemas de reglas**: Revisar DEVELOPMENT_CONSTITUTION.md
-- **Problemas de animaciones**: Revisar ANIMATION_BIBLE.md
+Changes made via Lovable will be committed automatically to this repo.
 
-## 🚨 REGLAS CRÍTICAS
+**Use your preferred IDE**
 
-### NUNCA ELIMINAR:
-- ❌ Cualquier archivo de documentación protegida
-- ❌ Componentes editables sin reemplazo
-- ❌ Sistemas esenciales sin justificación
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-### SIEMPRE VERIFICAR:
-- ✅ Compatibilidad con Visual Edits
-- ✅ Mantenimiento de apariencia visual
-- ✅ Simplicidad del código
-- ✅ Documentación actualizada
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
----
+Follow these steps:
 
-**Este proyecto mantiene simplicidad radical y compatibilidad total con Lovable.**
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
+
+**Edit a file directly in GitHub**
+
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
+
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/098fea07-8a53-40f6-9df1-bb981e6a695a) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
