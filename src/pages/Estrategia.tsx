@@ -46,39 +46,28 @@ const Estrategia = () => {
   const impulsoServices = [
     {
       name: "Auditoría Inicial",
-      icon: "🔍",
       basic: "Análisis de métricas clave, contenido y competidores principales. Incluye \"Quick Wins\" y definición de objetivos.",
       advanced: "Nivel Básico + Análisis FODA completo y estrategia derivada. Benchmarking con un mayor número de competidores."
     },
     {
       name: "Planeación Estratégica",
-      icon: "📋",
       basic: "Entrega de una Línea del Tiempo visual y completa con el plan de acción detallado para el primer mes.",
       advanced: "Entrega de una Línea del Tiempo visual y completa con el plan de acción detallado para el primer mes."
     },
     {
       name: "Video-Consultoría Personal",
-      icon: "🎥",
       basic: "Sistema de Dos Videos Personales (Loom): 1. Video-análisis del Diagnóstico. 2. Video-explicación de la Línea del Tiempo.",
       advanced: "Sistema de Dos Videos Personales (Loom): 1. Video-análisis del Diagnóstico Avanzado. 2. Video-explicación de la Línea del Tiempo."
     },
     {
       name: "Reunión de Arranque",
-      icon: "🤝",
       basic: "Incluye la comunicación y reuniones necesarias para completar el briefing y presentar los resultados.",
       advanced: "Incluye la comunicación y reuniones necesarias para completar el briefing y presentar los resultados."
     },
     {
       name: "Beneficio Clave",
-      icon: "💎",
       basic: "El costo de este servicio se descuenta íntegramente de tu primer mes de suscripción.",
       advanced: "El costo de este servicio se descuenta íntegramente de tu primer mes de suscripción."
-    },
-    {
-      name: "Costo (Sin IVA)",
-      icon: "💰",
-      basic: "$1,899 (Pago Único)",
-      advanced: "$2,790 (Pago Único)"
     }
   ];
 
@@ -286,25 +275,10 @@ const Estrategia = () => {
                   {impulsoServices.map((service, index) => (
                     <tr 
                       key={index} 
-                      className="border-b border-border hover:bg-muted/50"
+                      className={`${service.name === "Beneficio Clave" ? "border-b-2 border-primary/20 bg-primary/5" : "border-b border-border"} hover:bg-muted/50`}
                     >
                       <td className="p-6">
-                        <div className="flex items-center space-x-2">
-                          <span className="text-lg">{service.icon}</span>
-                          <div className="flex items-center space-x-2">
-                            <span className="font-medium text-foreground">{service.name}</span>
-                            <Tooltip delayDuration={300}>
-                              <TooltipTrigger asChild>
-                                <button className="inline-flex">
-                                  <Info className="w-4 h-4 text-primary hover:text-primary/80 cursor-help transition-colors" />
-                                </button>
-                              </TooltipTrigger>
-                              <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
-                                <p>{service.name === "Costo (Sin IVA)" ? "Precios sin impuestos incluidos" : "Información detallada del servicio"}</p>
-                              </TooltipContent>
-                            </Tooltip>
-                          </div>
-                        </div>
+                        <span className="font-medium text-foreground">{service.name}</span>
                       </td>
                       <td className="text-center p-6">
                         <div className="text-sm text-foreground max-w-xs mx-auto">
