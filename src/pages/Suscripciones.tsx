@@ -719,6 +719,32 @@ const Suscripciones = () => {
           </FadeIn>
           
           <div className="max-w-6xl mx-auto">
+            {/* Switch de Precios */}
+            <div className="flex justify-center mb-8">
+              <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-xl p-1 flex items-center space-x-2">
+                <button
+                  onClick={() => setBillingCycle('monthly')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    billingCycle === 'monthly'
+                      ? 'bg-primary text-primary-foreground shadow-sm'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  Mensual
+                </button>
+                <button
+                  onClick={() => setBillingCycle('yearly')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    billingCycle === 'yearly'
+                      ? 'bg-primary text-primary-foreground shadow-sm'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  Anual
+                </button>
+              </div>
+            </div>
+            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Tarjeta Nivel 1 */}
               <FadeIn delay={0.1}>
@@ -733,7 +759,7 @@ const Suscripciones = () => {
                       </Badge>
                       <div className="mb-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          $6,490/mes
+                          {billingCycle === 'monthly' ? '$6,490/mes' : '$5,408.34/mes'}
                         </div>
                         <div className="text-sm text-muted-foreground">
                         Precio en MXN, ya incluye IVA
@@ -795,7 +821,7 @@ const Suscripciones = () => {
                       </Badge>
                       <div className="mb-4 mt-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          $12,395/mes
+                          {billingCycle === 'monthly' ? '$12,395/mes' : '$10,328.75/mes'}
                         </div>
                         <div className="text-sm text-muted-foreground">
                         Precio en MXN, ya incluye IVA
@@ -857,7 +883,7 @@ const Suscripciones = () => {
                       </Badge>
                       <div className="mb-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          $15,780/mes
+                          {billingCycle === 'monthly' ? '$15,780/mes' : '$13,150/mes'}
                         </div>
                         <div className="text-sm text-muted-foreground">
                           Precio en MXN, ya incluye IVA
