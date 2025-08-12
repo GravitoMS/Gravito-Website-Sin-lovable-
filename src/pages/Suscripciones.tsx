@@ -1,5 +1,5 @@
 import React, { useState, useMemo, lazy, Suspense } from 'react';
-import { Info, Check, ArrowRight, CheckCircle, X, ChevronDown, Mouse } from 'lucide-react';
+import { Info, Check, ArrowRight, CheckCircle, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -554,7 +554,7 @@ const Suscripciones = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-32 relative">
+      <section className="pt-60 pb-32 relative">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center">
             <FadeIn 
@@ -579,9 +579,9 @@ const Suscripciones = () => {
             >
               <Button 
                 onClick={() => {
-                  const planSection = document.querySelector('[data-section="plan-perfecto"]');
-                  if (planSection) {
-                    planSection.scrollIntoView({ behavior: 'smooth' });
+                  const tableSection = document.querySelector('[data-section="comparison-table"]');
+                  if (tableSection) {
+                    tableSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
                 size="lg" 
@@ -595,16 +595,8 @@ const Suscripciones = () => {
         </div>
       </section>
 
-      {/* Espaciado con difuminado */}
-      <div className="h-72 bg-gradient-to-b from-background to-muted/30 flex items-center justify-center">
-        <div className="text-center">
-          <Mouse className="h-8 w-8 text-muted-foreground/60 animate-bounce mx-auto mb-2" />
-          <p className="text-sm text-muted-foreground/60">Desliza para continuar</p>
-        </div>
-      </div>
-
       {/* Nueva Sección: Elige el Plan Perfecto */}
-      <section className="py-95 bg-muted/30" data-section="plan-perfecto">
+      <section className="py-75 bg-muted/30" data-section="plan-perfecto">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <h2 
@@ -691,7 +683,7 @@ const Suscripciones = () => {
       </section>
 
       {/* Espaciado con difuminado entre secciones */}
-      <div className="h-60 bg-gradient-to-b from-muted/30 to-background"></div>
+      <div className="h-47 bg-gradient-to-b from-muted/30 to-background"></div>
 
       {/* Features Table */}
       <section className="py-20" data-section="comparison-table">
@@ -704,7 +696,7 @@ const Suscripciones = () => {
                 willChange: 'text-shadow'
               }}
             >
-              Compara Características Entre Planes
+              Compara Nuestros Planes
             </h2>
           </div>
 
@@ -818,40 +810,6 @@ const Suscripciones = () => {
           </FadeIn>
           
           <div className="max-w-6xl mx-auto">
-            {/* Switch de Precios */}
-            <div className="flex justify-center mb-8">
-              <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-full p-1 flex items-center relative">
-                {/* Slider animado */}
-                <div 
-                  className={`absolute top-1 bottom-1 bg-primary rounded-full transition-all duration-300 ease-in-out ${
-                    billingCycle === 'monthly' 
-                      ? 'left-1 w-20' 
-                      : 'left-20 w-20'
-                  }`}
-                />
-                <button
-                  onClick={() => setBillingCycle('monthly')}
-                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 z-10 ${
-                    billingCycle === 'monthly'
-                      ? 'text-primary-foreground'
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
-                >
-                  Mensual
-                </button>
-                <button
-                  onClick={() => setBillingCycle('yearly')}
-                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 z-10 ${
-                    billingCycle === 'yearly'
-                      ? 'text-primary-foreground'
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
-                >
-                  Anual
-                </button>
-              </div>
-            </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Tarjeta Nivel 1 */}
               <FadeIn delay={0.1}>
@@ -866,7 +824,7 @@ const Suscripciones = () => {
                       </Badge>
                       <div className="mb-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          {billingCycle === 'monthly' ? '$6,490/mes' : '$5,408.34/mes'}
+                          $6,490/mes
                         </div>
                         <div className="text-sm text-muted-foreground">
                         Precio en MXN, ya incluye IVA
@@ -928,7 +886,7 @@ const Suscripciones = () => {
                       </Badge>
                       <div className="mb-4 mt-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          {billingCycle === 'monthly' ? '$12,395/mes' : '$10,328.75/mes'}
+                          $12,395/mes
                         </div>
                         <div className="text-sm text-muted-foreground">
                         Precio en MXN, ya incluye IVA
@@ -990,7 +948,7 @@ const Suscripciones = () => {
                       </Badge>
                       <div className="mb-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          {billingCycle === 'monthly' ? '$15,780/mes' : '$13,150/mes'}
+                          $15,780/mes
                         </div>
                         <div className="text-sm text-muted-foreground">
                           Precio en MXN, ya incluye IVA
