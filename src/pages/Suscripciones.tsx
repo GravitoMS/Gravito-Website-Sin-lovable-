@@ -998,62 +998,63 @@ const Suscripciones = () => {
               </FadeIn>
             </div>
             
-            {/* Tarjeta Enterprise - Centrada debajo de las tres tarjetas */}
-            <div className="flex justify-center mt-12">
-              <div className="w-full max-w-2xl">
-                <FadeIn delay={0.4}>
-                  <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
-                    <CardHeader className="text-center pb-4">
-                      <div className="mb-4">
+            {/* Tarjeta Enterprise - Horizontal debajo de las tres tarjetas */}
+            <div className="mt-12">
+              <FadeIn delay={0.4}>
+                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm">
+                  <div className="flex flex-col lg:flex-row items-center lg:items-start p-8">
+                    {/* Contenido izquierdo */}
+                    <div className="flex-1 lg:pr-8 mb-6 lg:mb-0">
+                      <div className="text-center lg:text-left mb-4">
                         <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-                          Impulso Estratégico
+                          Enterprise
                         </h3>
                         <Badge className="bg-primary text-primary-foreground mb-4">
-                          Análisis inicial sin riesgo
+                          Plan Personalizado
                         </Badge>
                       </div>
-                      <p className="text-muted-foreground leading-relaxed">
-                        El punto de entrada más inteligente para tu mundo de presencia digital. Este es un análisis profundo que evalúa y busca mejorar tu presencia digital para identificar la mejor manera de acelerar el crecimiento de tu negocio. La Ventaja Clave: Su costo se descuenta al 100%.
+                      <p className="text-muted-foreground leading-relaxed mb-6">
+                        Para empresas que requieren una solución completamente personalizada. Todos nuestros servicios son adaptados específicamente a tus necesidades, objetivos y presupuesto. Trabajamos como tu departamento de marketing externo con atención prioritaria y estrategias únicas.
                       </p>
-                    </CardHeader>
-                    <CardContent className="space-y-4 flex-1 flex flex-col">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-3">
                           <div className="flex items-center space-x-3">
                             <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                            <span className="text-foreground">Análisis profundo de tu presencia digital</span>
+                            <span className="text-foreground">Servicios 100% personalizados</span>
                           </div>
                           <div className="flex items-center space-x-3">
                             <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                            <span className="text-foreground">Estrategia personalizada</span>
+                            <span className="text-foreground">Atención prioritaria 24/7</span>
                           </div>
                         </div>
                         <div className="space-y-3">
                           <div className="flex items-center space-x-3">
                             <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                            <span className="text-foreground">100% Descontable</span>
+                            <span className="text-foreground">Estrategias únicas por empresa</span>
                           </div>
                           <div className="flex items-center space-x-3">
                             <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                            <span className="text-foreground">Recomendación de plan ideal</span>
+                            <span className="text-foreground">Gestor de cuenta dedicado</span>
                           </div>
                         </div>
                       </div>
-                      <div className="pt-4 mt-auto">
-                        <Link to="/contacto">
-                          <Button 
-                            size="lg" 
-                            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
-                          >
-                            Comenzar Impulso Estratégico
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                          </Button>
-                        </Link>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </FadeIn>
-              </div>
+                    </div>
+                    
+                    {/* Botón derecho */}
+                    <div className="flex-shrink-0">
+                      <Link to="/contacto">
+                        <Button 
+                          size="lg" 
+                          className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
+                        >
+                          Solicitar Plan Enterprise
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </Card>
+              </FadeIn>
             </div>
           </div>
         </div>
