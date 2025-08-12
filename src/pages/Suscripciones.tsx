@@ -571,7 +571,13 @@ const Suscripciones = () => {
               delay={0.2}
               className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8"
             >
-               La competencia no se detiene, tu presencia digital tampoco debería. Nuestros planes son la solución definitiva para quienes buscan resultados consistentes mes a messin la carga de la gestión diaria...
+               La competencia <span 
+                className="text-primary font-bold"
+                style={{
+                  textShadow: '0 0 10px hsl(162 100% 45% / 0.5), 0 0 20px hsl(162 100% 45% / 0.3)',
+                  willChange: 'text-shadow'
+                }}
+              >no se detiene</span>, tu presencia digital tampoco debería. Nuestros planes son la solución definitiva para quienes buscan resultados consistentes mes a messin la carga de la gestión diaria...
             </FadeIn>
             <FadeIn 
               delay={0.3}
