@@ -722,7 +722,7 @@ const Suscripciones = () => {
                   className={`absolute top-1 bottom-1 bg-primary rounded-full transition-all duration-300 ease-in-out ${
                     billingCycle === 'monthly' 
                       ? 'left-1 w-20' 
-                      : 'left-24 w-16'
+                      : 'right-1 w-20'
                   }`}
                 />
                 <button
@@ -944,10 +944,10 @@ const Suscripciones = () => {
         <div className="container mx-auto px-6">
           <FadeIn className="text-center max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6">
-              ¿Prefieres un producto para probar antes de suscribirte?
+              ¿Buscas un producto para probar antes de suscribirte?
             </h2>
             <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
-              Justo por esa razón desarrollamos el producto perfecto, el cual puedes probar antes de suscribirte.
+              Justo por esa razón desarrollamos el producto perfecto para ti: Su precio se descuenta al 100% y es la mejor manera de comenzar.
             </p>
             <div className="flex justify-center">
               <Link to="/estrategia">
