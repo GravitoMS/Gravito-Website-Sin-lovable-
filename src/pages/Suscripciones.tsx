@@ -1,5 +1,5 @@
 import React, { useState, useMemo, lazy, Suspense } from 'react';
-import { Info, Check, ArrowRight, CheckCircle, X, ChevronDown } from 'lucide-react';
+import { Info, Check, ArrowRight, CheckCircle, X, ChevronDown, Mouse } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -594,6 +594,14 @@ const Suscripciones = () => {
           </FadeIn>
         </div>
       </section>
+
+      {/* Espaciado con difuminado */}
+      <div className="h-72 bg-gradient-to-b from-background to-muted/30 flex items-center justify-center">
+        <div className="text-center">
+          <Mouse className="h-8 w-8 text-muted-foreground/60 animate-bounce mx-auto mb-2" />
+          <p className="text-sm text-muted-foreground/60">Desliza para continuar</p>
+        </div>
+      </div>
 
       {/* Nueva Sección: Elige el Plan Perfecto */}
       <section className="py-95 bg-muted/30" data-section="plan-perfecto">
