@@ -17,31 +17,152 @@ const Suscripciones = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
   // Datos de servicios memoizados para evitar re-creaciones
-  const services = useMemo(() => [
-    {
-      name: "Auditoría Inicial",
-      icon: "📋",
-      generalDescription: "Diagnóstico inicial para evaluar la presencia digital, detectar oportunidades y establecer la línea base estratégica.",
-      levels: {
-        "Nivel 1": "Análisis de métricas clave, contenido y competidores principales. Incluye \"Quick Wins\" y definición de objetivos.",
-        "Nivel 2": "Igual que el Nivel 1.",
-        "Nivel 3": "Nivel 2 + Análisis FODA completo y estrategia derivada. Benchmarking con un mayor número de competidores.",
-        "Enterprise": "Personalizado según necesidades específicas."
+  const serviceComparisonTable = useMemo(() => ({
+    levels: [
+      {
+        levelNumber: 1,
+        name: "Presencia Esencial",
+        tierTitle: "Nivel 1"
+      },
+      {
+        levelNumber: 2,
+        name: "Crecimiento y Optimización",
+        tierTitle: "Nivel 2"
+      },
+      {
+        levelNumber: 3,
+        name: "Liderazgo y Expansión",
+        tierTitle: "Nivel 3"
       }
-    },
-    {
-      name: "Gestión de Redes Sociales",
-      icon: "👨‍💻",
-      generalDescription: "Gestión integral del ciclo de vida del contenido y la comunidad en las plataformas seleccionadas.",
-      levels: {
-        "Nivel 1": "Hasta 2 plataformas a elegir.",
-        "Nivel 2": "Hasta 2 plataformas a elegir.",
-        "Nivel 3": "Hasta 3 plataformas a elegir.",
-        "Enterprise": "Personalizado según necesidades específicas."
+    ],
+    services: [
+      {
+        icon: "📋",
+        serviceName: "Auditoría Inicial por Plataforma",
+        serviceDescription: "El Primer Impulso para tu Negocio. Evaluamos la presencia digital del negocio para detectar oportunidades de mejora y establecer una base sólida. Incluye auditoría por canal. Similar a los Impulsos GMS.",
+        levelDetails: [
+          {
+            levelNumber: 1,
+            displayType: "checkmark",
+            displayText: "",
+            tooltipContent: "- Recopilación de datos iniciales y métricas clave por plataforma: Alcance, impresiones, engagement, clics, seguidores adquiridos.\n- Identificación de contenido con mejor y peor rendimiento\n- Observaciones generales del primer mes\n- Calificación general y meta para el mes siguiente\n- Auditoría inicial por plataforma\n- Quick Wins: áreas de oportunidad y acciones inmediatas recomendadas\n- Benchmarking inicial\n- Datos internos: objetivo SMART, insights clave, recomendaciones, etc."
+          },
+          {
+            levelNumber: 2,
+            displayType: "checkmark",
+            displayText: "",
+            tooltipContent: "- Recopilación de datos iniciales y métricas clave por plataforma: Alcance, impresiones, engagement, clics, seguidores adquiridos.\n- Identificación de contenido con mejor y peor rendimiento\n- Observaciones generales del primer mes\n- Calificación general y meta para el mes siguiente\n- Auditoría inicial por plataforma\n- Quick Wins: áreas de oportunidad y acciones inmediatas recomendadas\n- Benchmarking inicial\n- Datos internos: objetivo SMART, insights clave, recomendaciones, etc."
+          },
+          {
+            levelNumber: 3,
+            displayType: "checkmark",
+            displayText: "",
+            tooltipContent: "Todo lo de Nivel 1/2 +\n- Benchmarking exhaustivo\n- Estrategia derivada del análisis FODA (FO, DO, FA, DA)"
+          }
+        ]
+      },
+      {
+        icon: "👨‍💻",
+        serviceName: "Gestión de Redes sociales",
+        serviceDescription: "Una Comunidad Atendida y Comprometida. Nos convertimos en la voz de tu marca, gestionando la interacción para transformar a tu audiencia pasiva en una comunidad activa y leal.",
+        levelDetails: [
+          {
+            levelNumber: 1,
+            displayType: "text",
+            displayText: "Hasta 2 Plataformas a elegir.",
+            tooltipContent: "Gestión integral del ciclo de vida del contenido en las plataformas seleccionadas. Plataformas a elegir: Facebook Pages, Instagram, LinkedIn, Threads, X, Pinterest."
+          },
+          {
+            levelNumber: 2,
+            displayType: "text",
+            displayText: "Hasta 2 Plataformas a elegir.",
+            tooltipContent: "Gestión integral del ciclo de vida del contenido en las plataformas seleccionadas. Plataformas a elegir: Facebook Pages, Instagram, LinkedIn, Threads, X, Pinterest."
+          },
+          {
+            levelNumber: 3,
+            displayType: "text",
+            displayText: "Hasta 3 Plataformas a elegir.",
+            tooltipContent: "Gestión integral del ciclo de vida del contenido en las plataformas seleccionadas. Plataformas a elegir: Facebook Pages, Instagram, LinkedIn, Threads, X, Pinterest."
+          }
+        ]
+      },
+      {
+        icon: "⭐️",
+        serviceName: "Gestión y Reviews en Google my Business Profile",
+        serviceDescription: "Tu Reputación y Visibilidad en Manos de Expertos. Gestión activa del perfil de GMB, incluyendo publicaciones, respuesta a Q&A y estrategias para la generación de reseñas.",
+        levelDetails: [
+          {
+            levelNumber: 1,
+            displayType: "text",
+            displayText: "Setup + Gestión + análisis",
+            tooltipContent: "Incluye un análisis dedicado dentro del Diagnóstico Mensual/Inicial."
+          },
+          {
+            levelNumber: 2,
+            displayType: "text",
+            displayText: "Nivel 1 + Estrategia para reseñas",
+            tooltipContent: "Incluye un análisis dedicado dentro de los informes Trimestrales y Diagnósticos Mensuales/Iniciales."
+          },
+          {
+            levelNumber: 3,
+            displayType: "text",
+            displayText: "Nivel 2 + Estrategia avanzada para reseñas",
+            tooltipContent: "Incluye un análisis dedicado dentro de los informes Trimestrales y Diagnósticos Mensuales/Iniciales."
+          }
+        ]
+      },
+      {
+        icon: "🙋‍♀️",
+        serviceName: "Colaboraciones y UGC",
+        serviceDescription: "Creadores para tu Marca. Creamos colaboraciones con influencers para generar contenido publicitario auténtico y relevante para tu nicho.",
+        levelDetails: [
+          {
+            levelNumber: 1,
+            displayType: "text",
+            displayText: "Acceso a Red de Creadores",
+            tooltipContent: "Recomendamos a los mejores creadores UGC e influencers para crear colaboraciones específicamente para el nicho y el contexto personalizado de tu negocio."
+          },
+          {
+            levelNumber: 2,
+            displayType: "text",
+            displayText: "Nivel 1 + 1 Reel UGC/mes",
+            tooltipContent: "1 Reel UGC/mes creado por un influencer de nuestra red."
+          },
+          {
+            levelNumber: 3,
+            displayType: "text",
+            displayText: "Nivel 2 + Colaboraciones Estratégicas",
+            tooltipContent: "2 Reels UGC adicionales/mes (3 en total) y 1 colaboración bimestral con un influencer recomendado."
+          }
+        ]
+      },
+      {
+        icon: "📊",
+        serviceName: "Informe trimestral",
+        serviceDescription: "Birds View. Cada tres meses, damos un paso atrás para ver el panorama completo y entregarte una hoja de ruta estratégica para los próximos 90 días.",
+        levelDetails: [
+          {
+            levelNumber: 1,
+            displayType: "cross",
+            displayText: "No incluido",
+            tooltipContent: "Este servicio no está incluido en el plan Presencia Esencial."
+          },
+          {
+            levelNumber: 2,
+            displayType: "checkmark",
+            displayText: "Informe Trimestral",
+            tooltipContent: "Resumen general del trimestre con video-análisis Personal, principales logros, datos generales, benchmarking con competidor principal, valoración estratégica y conclusiones."
+          },
+          {
+            levelNumber: 3,
+            displayType: "checkmark",
+            displayText: "Informe Trimestral GMS+",
+            tooltipContent: "Todo lo de Nivel 2 + Resumen ejecutivo, análisis de objetivos SMART, análisis de pruebas A/B, análisis de sentimiento, benchmarking profundo, gap analysis y gestión de bloqueos."
+          }
+        ]
       }
-    }
-    // ... resto de servicios simplificados para evitar problemas
-  ], []);
+    ]
+  }), []);
 
   const pricingPlans = useMemo(() => [
     {
@@ -50,7 +171,7 @@ const Suscripciones = () => {
       price: billingCycle === 'monthly' ? "$6,490" : "$5,516",
       originalPrice: billingCycle === 'monthly' ? "$6,490" : "$6,490",
       description: "Built for businesses who want to establish their digital presence.",
-      features: services.map(service => service.levels["Nivel 1"]),
+      features: serviceComparisonTable.services.map(service => service.levelDetails[0].displayText || "Incluido"),
       isPopular: false,
       cta: "COMENZAR AHORA",
       color: "border-muted"
@@ -61,7 +182,7 @@ const Suscripciones = () => {
       price: billingCycle === 'monthly' ? "$12,395" : "$10,536",
       originalPrice: billingCycle === 'monthly' ? "$12,395" : "$12,395",
       description: "Designed to empower growing businesses and small teams.",
-      features: services.map(service => service.levels["Nivel 2"]),
+      features: serviceComparisonTable.services.map(service => service.levelDetails[1].displayText || "Incluido"),
       isPopular: true,
       cta: "COMENZAR AHORA",
       color: "border-primary"
@@ -72,12 +193,12 @@ const Suscripciones = () => {
       price: billingCycle === 'monthly' ? "$15,780" : "$13,413",
       originalPrice: billingCycle === 'monthly' ? "$15,780" : "$15,780",
       description: "Capabilities built for established businesses who want to scale.",
-      features: services.map(service => service.levels["Nivel 3"]),
+      features: serviceComparisonTable.services.map(service => service.levelDetails[2].displayText || "Incluido"),
       isPopular: false,
       cta: "COMENZAR AHORA",
       color: "border-muted"
     }
-  ], [billingCycle, services]);
+  ], [billingCycle, serviceComparisonTable.services]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -114,12 +235,12 @@ const Suscripciones = () => {
                     <th className="text-center p-6 font-semibold text-foreground bg-card">
                       <span>Características</span>
                     </th>
-                    {pricingPlans.map((plan, index) => (
-                      <th key={index} className={`text-center p-6 font-semibold text-foreground bg-card ${plan.isPopular ? 'bg-primary/10' : ''}`}>
+                    {serviceComparisonTable.levels.map((level, index) => (
+                      <th key={index} className={`text-center p-6 font-semibold text-foreground bg-card ${level.levelNumber === 2 ? 'bg-primary/10' : ''}`}>
                         <div className="space-y-3">
                           <div>
-                            <div className="text-lg font-bold">{plan.name}</div>
-                            <div className="text-sm text-muted-foreground">{plan.subtitle}</div>
+                            <div className="text-lg font-bold">{level.tierTitle}</div>
+                            <div className="text-sm text-muted-foreground">{level.name}</div>
                           </div>
                           <Button
                             size="sm"
@@ -128,7 +249,7 @@ const Suscripciones = () => {
                           >
                             Ver Precio
                           </Button>
-                          {plan.isPopular && (
+                          {level.levelNumber === 2 && (
                             <Badge className="bg-primary text-primary-foreground">
                               Más Popular
                             </Badge>
@@ -139,13 +260,13 @@ const Suscripciones = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {services.map((service, index) => (
+                  {serviceComparisonTable.services.map((service, index) => (
                     <tr key={index} className="border-b border-border hover:bg-muted/50">
                       <td className="p-6">
                         <div className="flex items-center space-x-2">
                           <span className="text-lg">{service.icon}</span>
                           <div className="flex items-center space-x-2">
-                            <span className="font-medium text-foreground">{service.name}</span>
+                            <span className="font-medium text-foreground">{service.serviceName}</span>
                             <Tooltip delayDuration={300}>
                               <TooltipTrigger asChild>
                                 <button className="inline-flex">
@@ -153,16 +274,34 @@ const Suscripciones = () => {
                                 </button>
                               </TooltipTrigger>
                               <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
-                                <p>{service.generalDescription}</p>
+                                <p>{service.serviceDescription}</p>
                               </TooltipContent>
                             </Tooltip>
                           </div>
                         </div>
                       </td>
-                      {pricingPlans.map((plan, planIndex) => (
-                        <td key={planIndex} className={`text-center p-6 ${plan.isPopular ? 'bg-primary/5' : ''}`}>
-                          <div className="text-sm text-foreground max-w-xs mx-auto">
-                            {service.levels[plan.name]}
+                      {service.levelDetails.map((detail, detailIndex) => (
+                        <td key={detailIndex} className={`text-center p-6 ${detail.levelNumber === 2 ? 'bg-primary/5' : ''}`}>
+                          <div className="flex items-center justify-center space-x-2">
+                            {detail.displayType === "checkmark" ? (
+                              <CheckCircle className="h-5 w-5 text-primary" />
+                            ) : detail.displayType === "cross" ? (
+                              <span className="text-red-500 font-semibold">✗</span>
+                            ) : (
+                              <span className="text-sm text-foreground max-w-xs mx-auto">{detail.displayText}</span>
+                            )}
+                            {detail.tooltipContent && (
+                              <Tooltip delayDuration={300}>
+                                <TooltipTrigger asChild>
+                                  <button className="inline-flex">
+                                    <Info className="w-4 h-4 text-primary hover:text-primary/80 cursor-help transition-colors" />
+                                  </button>
+                                </TooltipTrigger>
+                                <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
+                                  <p className="whitespace-pre-line">{detail.tooltipContent}</p>
+                                </TooltipContent>
+                              </Tooltip>
+                            )}
                           </div>
                         </td>
                       ))}
