@@ -723,13 +723,6 @@ const Suscripciones = () => {
                             <div className="text-lg font-bold">{plan.name}</div>
                             <div className="text-sm text-muted-foreground">{plan.subtitle}</div>
                           </div>
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            className="text-xs px-3 py-1"
-                          >
-                            Ver Precio
-                          </Button>
                           {plan.isPopular && (
                             <Badge className="bg-primary text-primary-foreground">
                               Más Popular
@@ -797,6 +790,9 @@ const Suscripciones = () => {
           </div>
         </div>
       </section>
+
+      {/* Espaciado con difuminado entre tabla y planes */}
+      <div className="h-40 bg-gradient-to-b from-background to-muted/30"></div>
 
       {/* Tarjetas de Resumen de Impulsos */}
       <section className="py-20 bg-muted/30" data-section="nuestros-impulsos">
@@ -923,7 +919,7 @@ const Suscripciones = () => {
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
                         Crecimiento y Optimización
                       </h3>
-                      <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2">
+                      <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2 mx-auto">
                         Recomendado
                       </Badge>
                       <div className="mb-4 mt-4">
