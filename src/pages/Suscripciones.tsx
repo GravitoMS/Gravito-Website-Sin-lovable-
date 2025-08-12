@@ -704,7 +704,7 @@ const Suscripciones = () => {
                 willChange: 'text-shadow'
               }}
             >
-              Compara Características Entre Planes
+              Compara Nuestros Planes
             </h2>
           </div>
 
@@ -799,7 +799,7 @@ const Suscripciones = () => {
       </section>
 
       {/* Tarjetas de Resumen de Impulsos */}
-      <section className="py-20 bg-muted/30" data-section="nuestros-impulsos">
+      <section className="py-25 bg-muted/30" data-section="nuestros-impulsos">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <FadeIn 
