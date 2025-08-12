@@ -799,12 +799,12 @@ const Suscripciones = () => {
       </section>
 
       {/* Tarjetas de Resumen de Impulsos */}
-      <section className="py-15 bg-muted/30" data-section="nuestros-impulsos">
+      <section className="py-20 bg-muted/30" data-section="nuestros-impulsos">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <FadeIn 
               delay={0.1}
-              className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-6"
+              className="text-3xl lg:text-5xl xl:text-6xl font-black text-foreground mb-6"
               style={{
                 textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
                 willChange: 'text-shadow'
@@ -812,12 +812,12 @@ const Suscripciones = () => {
             >
               Nuestros Planes
             </FadeIn>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-xl mx-auto">
               Descubre cuál es el plan perfecto para tu negocio y comienza tu transformación digital.
             </p>
           </FadeIn>
           
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             {/* Switch de Precios */}
             <div className="flex justify-center mb-8">
               <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-full p-1 flex items-center relative">
@@ -852,20 +852,20 @@ const Suscripciones = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Tarjeta Nivel 1 */}
               <FadeIn delay={0.1}>
                 <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
+                      <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2">
                         Presencia Esencial
                       </h3>
                       <Badge className="bg-primary text-primary-foreground mb-4">
                         Nivel 1
                       </Badge>
                       <div className="mb-4">
-                        <div className="text-xl lg:text-2xl font-bold text-foreground">
+                        <div className="text-lg lg:text-xl font-bold text-foreground">
                           {billingCycle === 'monthly' ? '$6,490/mes' : '$5,408.34/mes'}
                         </div>
                         <div className="text-sm text-muted-foreground">
@@ -920,14 +920,14 @@ const Suscripciones = () => {
                 <Card className="border-hero-yellow/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
+                      <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2">
                         Crecimiento y Optimización
                       </h3>
                       <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2">
                         Recomendado
                       </Badge>
                       <div className="mb-4 mt-4">
-                        <div className="text-xl lg:text-2xl font-bold text-foreground">
+                        <div className="text-lg lg:text-xl font-bold text-foreground">
                           {billingCycle === 'monthly' ? '$12,395/mes' : '$10,328.75/mes'}
                         </div>
                         <div className="text-sm text-muted-foreground">
@@ -982,14 +982,14 @@ const Suscripciones = () => {
                 <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
+                      <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2">
                         Liderazgo y Expansión
                       </h3>
                       <Badge className="bg-primary text-primary-foreground mb-4">
                         Nivel 3
                       </Badge>
                       <div className="mb-4">
-                        <div className="text-xl lg:text-2xl font-bold text-foreground">
+                        <div className="text-lg lg:text-xl font-bold text-foreground">
                           {billingCycle === 'monthly' ? '$15,780/mes' : '$13,150/mes'}
                         </div>
                         <div className="text-sm text-muted-foreground">
