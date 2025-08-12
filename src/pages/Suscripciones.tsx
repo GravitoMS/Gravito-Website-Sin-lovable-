@@ -1,5 +1,5 @@
 import React, { useState, useMemo, lazy, Suspense } from 'react';
-import { Info, Check, ArrowRight, CheckCircle, X, ChevronDown } from 'lucide-react';
+import { Info, Check, ArrowRight, CheckCircle, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -15,39 +15,6 @@ const EnterpriseSection = lazy(() => import('../components/EnterpriseSection'));
 
 const Suscripciones = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-
-  const toggleFAQ = (index: number) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
-  };
-
-  // Datos para las preguntas frecuentes de suscripciones
-  const faqData = [
-    {
-      question: "¿Qué incluye exactamente cada nivel de suscripción?",
-      answer: "Cada nivel incluye una combinación específica de servicios. El Nivel 1 (Presencia Esencial) incluye servicios básicos como auditoría inicial, gestión de hasta 2 plataformas sociales, y diagnósticos mensuales. El Nivel 2 (Crecimiento y Optimización) añade más plataformas, informes trimestrales, y estrategias avanzadas. El Nivel 3 (Liderazgo y Expansión) incluye todo lo anterior más servicios ilimitados, prioridad de agenda, y análisis más profundos."
-    },
-    {
-      question: "¿Puedo cambiar de nivel durante mi suscripción?",
-      answer: "Sí, puedes cambiar de nivel en cualquier momento. Si subes de nivel, se te cobrará la diferencia proporcional. Si bajas de nivel, el cambio se aplicará en el siguiente ciclo de facturación. Nuestro equipo te ayudará con la transición para asegurar que no pierdas ningún servicio importante."
-    },
-    {
-      question: "¿Qué pasa si no estoy satisfecho con el servicio?",
-      answer: "Ofrecemos una garantía de satisfacción. Si en los primeros 30 días no estás completamente satisfecho con nuestro servicio, te devolvemos tu dinero sin preguntas. Además, puedes cancelar tu suscripción en cualquier momento con un aviso de 30 días."
-    },
-    {
-      question: "¿Los precios incluyen IVA?",
-      answer: "Los precios mostrados son sin IVA. El IVA se aplicará según la legislación fiscal mexicana. Te proporcionaremos facturas detalladas con el desglose correspondiente para que puedas deducir los gastos si aplica."
-    },
-    {
-      question: "¿Cuánto tiempo tardan en responder a mis solicitudes?",
-      answer: "Nuestros tiempos de respuesta varían según el nivel de suscripción. En el Nivel 1, respondemos en horarios laborables. En el Nivel 2, ofrecemos soporte prioritario. En el Nivel 3, tienes soporte total con atención prioritaria y extendida para urgencias."
-    },
-    {
-      question: "¿Puedo pausar mi suscripción temporalmente?",
-      answer: "Sí, puedes pausar tu suscripción por hasta 2 meses consecutivos. Durante la pausa, no se te cobrará, pero tampoco se realizarán publicaciones ni análisis. Para reactivar, simplemente avísanos y continuaremos desde donde lo dejamos."
-    }
-  ];
 
   // Datos de servicios memoizados para evitar re-creaciones
   const services = useMemo(() => [
@@ -554,54 +521,28 @@ const Suscripciones = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-32 relative">
+      <section className="pt-40 pb-16">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center">
             <FadeIn 
               delay={0.1}
               className="text-4xl lg:text-6xl font-black text-foreground mb-8"
               style={{
-                textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
+                textShadow: '0 0 20px hsl(25 95% 53% / 0.3), 0 0 40px hsl(25 95% 53% / 0.2)',
                 willChange: 'text-shadow'
               }}
             >
               SUSCRIPCIONES
             </FadeIn>
-            <FadeIn 
-              delay={0.2}
-              className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8"
-            >
-              Planes mensuales escalables diseñados para acompañar tu negocio en cada etapa de su crecimiento digital. Desde presencia esencial hasta liderazgo total en el mercado.
-            </FadeIn>
-            <FadeIn 
-              delay={0.3}
-              className="flex flex-col sm:flex-row justify-center gap-4"
-            >
-              <Button 
-                onClick={() => {
-                  const tableSection = document.querySelector('[data-section="comparison-table"]');
-                  if (tableSection) {
-                    tableSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
-              >
-                Comparar Planes
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Link to="/estrategia">
-                <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl">
-                  Solicitar Impulso Estratégico
-                </Button>
-              </Link>
+            <FadeIn delay={0.2} className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto">
+              Planes mensuales escalables diseñados para acompañar tu negocio en cada etapa de su crecimiento digital.
             </FadeIn>
           </FadeIn>
         </div>
       </section>
 
       {/* Features Table */}
-      <section className="py-20" data-section="comparison-table">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -618,7 +559,7 @@ const Suscripciones = () => {
                       <span>Características</span>
                     </th>
                     {pricingPlans.map((plan, index) => (
-                      <th key={index} className={`text-center p-6 font-semibold text-foreground bg-card ${plan.isPopular ? 'bg-primary/10' : ''}`}>
+                      <th key={index} className={`text-center p-6 font-semibold text-foreground bg-card ${plan.isPopular ? 'bg-hero-yellow/10' : ''}`}>
                         <div className="space-y-3">
                           <div>
                             <div className="text-lg font-bold">{plan.name}</div>
@@ -632,7 +573,7 @@ const Suscripciones = () => {
                             Ver Precio
                           </Button>
                           {plan.isPopular && (
-                            <Badge className="bg-primary text-primary-foreground">
+                            <Badge className="bg-hero-yellow text-hero-yellow-foreground">
                               Más Popular
                             </Badge>
                           )}
@@ -652,10 +593,10 @@ const Suscripciones = () => {
                             <Tooltip delayDuration={300}>
                               <TooltipTrigger asChild>
                                 <button className="inline-flex">
-                                  <Info className="w-4 h-4 text-primary hover:text-primary/80 cursor-help transition-colors" />
+                                  <Info className="w-4 h-4 text-hero-yellow hover:text-hero-yellow/80 cursor-help transition-colors" />
                                 </button>
                               </TooltipTrigger>
-                              <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
+                              <TooltipContent className="bg-card text-foreground border border-hero-yellow max-w-xs">
                                 <p>{service.serviceDescription}</p>
                               </TooltipContent>
                             </Tooltip>
@@ -665,10 +606,10 @@ const Suscripciones = () => {
                       {pricingPlans.map((plan, planIndex) => {
                         const levelDetail = service.levelDetails.find(detail => detail.levelNumber === planIndex + 1);
                         return (
-                          <td key={planIndex} className={`text-center p-6 ${plan.isPopular ? 'bg-primary/5' : ''}`}>
+                          <td key={planIndex} className={`text-center p-6 ${plan.isPopular ? 'bg-hero-yellow/5' : ''}`}>
                             <div className="flex items-center justify-center space-x-2">
                               {levelDetail?.displayType === "checkmark" ? (
-                                <CheckCircle className="h-5 w-5 text-primary" />
+                                <CheckCircle className="h-5 w-5 text-hero-yellow" />
                               ) : levelDetail?.displayType === "cross" ? (
                                 <X className="h-5 w-5 text-muted-foreground" />
                               ) : (
@@ -678,10 +619,10 @@ const Suscripciones = () => {
                                 <Tooltip delayDuration={300}>
                                   <TooltipTrigger asChild>
                                     <button className="inline-flex">
-                                      <Info className="w-4 h-4 text-primary hover:text-primary/80 cursor-help transition-colors" />
+                                      <Info className="w-4 h-4 text-hero-yellow hover:text-hero-yellow/80 cursor-help transition-colors" />
                                     </button>
                                   </TooltipTrigger>
-                                  <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
+                                  <TooltipContent className="bg-card text-foreground border border-hero-yellow max-w-xs">
                                     <p>{levelDetail.tooltipContent}</p>
                                   </TooltipContent>
                                 </Tooltip>
@@ -699,316 +640,25 @@ const Suscripciones = () => {
         </div>
       </section>
 
-      {/* Tarjetas de Resumen de Impulsos */}
-      <section className="py-20 bg-muted/30" data-section="nuestros-impulsos">
-        <div className="container mx-auto px-6">
-          <FadeIn className="text-center mb-12">
-            <FadeIn 
-              delay={0.1}
-              className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-6"
-              style={{
-                textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
-                willChange: 'text-shadow'
-              }}
-            >
-              Nuestros Planes
-            </FadeIn>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Descubre cuál es el plan perfecto para tu negocio y comienza tu transformación digital.
-            </p>
-          </FadeIn>
-          
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Tarjeta Nivel 1 */}
-              <FadeIn delay={0.1}>
-                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
-                  <CardHeader className="text-center pb-4">
-                    <div className="mb-4">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-                        Presencia Esencial
-                      </h3>
-                      <Badge className="bg-primary text-primary-foreground mb-4">
-                        Nivel 1
-                      </Badge>
-                      <div className="mb-4">
-                        <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          $6,490/mes
-                        </div>
-                        <div className="text-sm text-muted-foreground">
-                          Precio en MXN sin IVA
-                        </div>
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Para los dueños de negocios que necesitan establecer su presencia digital y comenzar su transformación digital de manera escalable.
-                    </p>
-                  </CardHeader>
-                  <CardContent className="space-y-4 flex-1 flex flex-col">
-                    <div className="space-y-3 flex-1">
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Auditoría Inicial por Plataforma</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Hasta 2 Plataformas Sociales</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Diagnóstico Mensual Sencillo</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Acceso a Red de Creadores</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">5 archivos de Post Producción</span>
-                      </div>
-                    </div>
-                    <div className="pt-4 mt-auto">
-                      <Link to="/contacto?servicio=nivel-1">
-                        <Button 
-                          size="lg" 
-                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
-                        >
-                          Comenzar Ahora
-                          <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              </FadeIn>
-
-              {/* Tarjeta Nivel 2 */}
-              <FadeIn delay={0.2}>
-                <Card className="border-hero-yellow/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
-                  <CardHeader className="text-center pb-4">
-                    <div className="mb-4">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-                        Crecimiento y Optimización
-                      </h3>
-                      <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2">
-                        Más Popular
-                      </Badge>
-                      <div className="mb-4 mt-4">
-                        <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          $12,395/mes
-                        </div>
-                        <div className="text-sm text-muted-foreground">
-                          Precio en MXN sin IVA
-                        </div>
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Para negocios en crecimiento que buscan optimizar su presencia digital y expandir su alcance con estrategias avanzadas.
-                    </p>
-                  </CardHeader>
-                  <CardContent className="space-y-4 flex-1 flex flex-col">
-                    <div className="space-y-3 flex-1">
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Todo del Nivel 1</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Hasta 2 Plataformas Sociales</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Diagnóstico Avanzado</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Informe Trimestral</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Hasta 10 archivos de Post Producción</span>
-                      </div>
-                    </div>
-                    <div className="pt-4 mt-auto">
-                      <Link to="/contacto?servicio=nivel-2">
-                        <Button 
-                          size="lg" 
-                          className="w-full bg-hero-yellow hover:bg-hero-yellow/90 text-hero-yellow-foreground px-8 py-4 text-lg font-semibold rounded-xl"
-                        >
-                          Comenzar Ahora
-                          <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              </FadeIn>
-
-              {/* Tarjeta Nivel 3 */}
-              <FadeIn delay={0.3}>
-                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
-                  <CardHeader className="text-center pb-4">
-                    <div className="mb-4">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-                        Liderazgo y Expansión
-                      </h3>
-                      <Badge className="bg-primary text-primary-foreground mb-4">
-                        Nivel 3
-                      </Badge>
-                      <div className="mb-4">
-                        <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          $15,780/mes
-                        </div>
-                        <div className="text-sm text-muted-foreground">
-                          Precio en MXN sin IVA
-                        </div>
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Para negocios establecidos que buscan liderar su mercado y expandir su presencia digital con estrategias integrales.
-                    </p>
-                  </CardHeader>
-                  <CardContent className="space-y-4 flex-1 flex flex-col">
-                    <div className="space-y-3 flex-1">
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Todo del Nivel 2</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Hasta 3 Plataformas Sociales</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Diagnóstico GMS+</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Informe Trimestral GMS+</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Diseños Ilimitados</span>
-                      </div>
-                    </div>
-                    <div className="pt-4 mt-auto">
-                      <Link to="/contacto?servicio=nivel-3">
-                        <Button 
-                          size="lg" 
-                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
-                        >
-                          Comenzar Ahora
-                          <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              </FadeIn>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-hero-yellow">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6">
+            <h2 className="text-3xl lg:text-5xl font-bold text-hero-yellow-foreground mb-6">
               Comienza tu Transformación Digital Hoy
             </h2>
-            <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-hero-yellow-foreground/90 mb-12 leading-relaxed">
               No dejes que el tiempo siga siendo un obstáculo para tu crecimiento. Solicita tu Impulso Estratégico y descubre cómo podemos ayudarte.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link to="/estrategia">
-                <Button variant="hero-yellow" size="lg" className="text-lg px-10 py-8">
+                <Button size="lg" className="text-lg px-10 py-8 bg-primary hover:bg-primary/90 text-primary-foreground">
                   Solicitar Impulso Estratégico
                 </Button>
               </Link>
               <Link to="/contacto">
-                <Button variant="outline" size="lg" className="text-lg px-10 py-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button variant="outline" size="lg" className="text-lg px-10 py-8 border-hero-yellow-foreground text-hero-yellow-foreground hover:bg-hero-yellow-foreground hover:text-hero-yellow">
                   Contactar Ahora
-                </Button>
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Sección de Preguntas Frecuentes */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <FadeIn className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              Preguntas Frecuentes
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Resolvemos las dudas más comunes sobre nuestros planes de suscripción y servicios.
-            </p>
-          </FadeIn>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
-              {faqData.map((faq, index) => (
-                <FadeIn key={index} delay={index * 0.1}>
-                  <Card className="border-primary/20 bg-card/50 backdrop-blur-sm">
-                    <button
-                      onClick={() => toggleFAQ(index)}
-                      className="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-lg"
-                    >
-                      <div className="flex items-center justify-between">
-                        <h3 className="text-lg lg:text-xl font-semibold text-foreground pr-4">
-                          {faq.question}
-                        </h3>
-                        <div className="flex-shrink-0">
-                          <ChevronDown 
-                            className={`h-5 w-5 text-primary transition-transform duration-500 ease-out ${
-                              expandedFAQ === index ? 'rotate-180' : ''
-                            }`}
-                          />
-                        </div>
-                      </div>
-                    </button>
-                    
-                    <div 
-                      className={`overflow-hidden transition-all duration-500 ease-out ${
-                        expandedFAQ === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                      }`}
-                    >
-                      <div className="px-6 pb-6">
-                        <div className="border-t border-border/50 pt-4">
-                          <p className="text-muted-foreground leading-relaxed">
-                            {faq.answer}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </Card>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-          
-          {/* Botones de acción al final de FAQ */}
-          <FadeIn delay={0.6} className="text-center mt-12">
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <Button
-                onClick={() => {
-                  const impulsosSection = document.querySelector('[data-section="nuestros-impulsos"]');
-                  if (impulsosSection) {
-                    impulsosSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-4 text-lg font-semibold rounded-xl w-full sm:w-56"
-              >
-                Ver Planes
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Link to="/contacto" className="w-full sm:w-56">
-                <Button variant="ghost" size="lg" className="px-10 py-4 text-lg font-semibold rounded-xl w-full text-primary border border-primary hover:bg-primary/10">
-                  Tengo Otra Pregunta
                 </Button>
               </Link>
             </div>
