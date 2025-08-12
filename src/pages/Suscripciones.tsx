@@ -575,7 +575,7 @@ const Suscripciones = () => {
             </FadeIn>
             <FadeIn 
               delay={0.3}
-              className="flex justify-center"
+              className="flex flex-col sm:flex-row justify-center gap-4"
             >
               <Button 
                 onClick={() => {
@@ -590,8 +590,94 @@ const Suscripciones = () => {
                 Comparar Planes
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              <Link to="/estrategia">
+                <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl">
+                  Solicitar Impulso Estratégico
+                </Button>
+              </Link>
             </FadeIn>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* Nueva Sección: Elige el Plan Perfecto */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <FadeIn className="text-center mb-12">
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+              Elige el Plan Perfecto para tu Negocio
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Descubre cuál de nuestros planes se adapta mejor a tus necesidades y objetivos de crecimiento.
+            </p>
+          </FadeIn>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Tarjeta 1: Negocio que Busca Tranquilidad */}
+              <FadeIn delay={0.1}>
+                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
+                  <CardHeader className="text-center pb-4">
+                    <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                      Para el Negocio que Busca Tranquilidad
+                    </h3>
+                  </CardHeader>
+                  <CardContent className="flex-1 flex flex-col">
+                    <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
+                      El plan <strong>Presencia Esencial</strong> es ideal si buscas <strong>aliviar tu carga de trabajo</strong> y asegurar una presencia digital consistente y profesional sin tener que pensar en ello. Nosotros nos encargamos de la ejecución para que tú te enfoques en tu negocio.
+                    </p>
+                    <div className="mt-auto">
+                      <Badge className="bg-primary text-primary-foreground mb-3">
+                        Presencia Esencial
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </FadeIn>
+
+              {/* Tarjeta 2: Negocio Listo para Crecer */}
+              <FadeIn delay={0.2}>
+                <Card className="border-hero-yellow/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
+                  <CardHeader className="text-center pb-4">
+                    <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                      Para el Negocio Listo para Crecer
+                    </h3>
+                  </CardHeader>
+                  <CardContent className="flex-1 flex flex-col">
+                    <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
+                      El plan <strong>Crecimiento y Optimización</strong> es para ti si ya tienes una base y estás listo para <strong>crecer de manera proactiva</strong>, entendiendo a tu competencia y optimizando tu contenido para generar más interacción y construir una comunidad leal.
+                    </p>
+                    <div className="mt-auto">
+                      <Badge className="bg-hero-yellow text-hero-yellow-foreground mb-3">
+                        Crecimiento y Optimización
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </FadeIn>
+
+              {/* Tarjeta 3: Negocio que Busca un Socio Estratégico */}
+              <FadeIn delay={0.3}>
+                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
+                  <CardHeader className="text-center pb-4">
+                    <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                      Para el Negocio que Busca un Socio Estratégico
+                    </h3>
+                  </CardHeader>
+                  <CardContent className="flex-1 flex flex-col">
+                    <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
+                      El plan <strong>Liderazgo y Expansión</strong> es para negocios que ven el marketing como una <strong>inversión estratégica</strong>. Actuamos como tu departamento de marketing externo, conectando cada acción con el <strong>impacto en el negocio</strong> y el <strong>retorno de la inversión (ROI)</strong>.
+                    </p>
+                    <div className="mt-auto">
+                      <Badge className="bg-primary text-primary-foreground mb-3">
+                        Liderazgo y Expansión
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -660,7 +746,7 @@ const Suscripciones = () => {
                       {pricingPlans.map((plan, planIndex) => {
                         const levelDetail = service.levelDetails.find(detail => detail.levelNumber === planIndex + 1);
                         return (
-                          <td key={planIndex} className={`text-center p-6 ${plan.isPopular ? 'bg-primary/5' : ''}`}>
+                        <td key={planIndex} className={`text-center p-6 ${plan.isPopular ? 'bg-primary/5' : ''}`}>
                             <div className="flex items-center justify-center space-x-2">
                               {levelDetail?.displayType === "checkmark" ? (
                                 <CheckCircle className="h-5 w-5 text-primary" />
@@ -681,8 +767,8 @@ const Suscripciones = () => {
                                   </TooltipContent>
                                 </Tooltip>
                               )}
-                            </div>
-                          </td>
+                          </div>
+                        </td>
                         );
                       })}
                     </tr>
@@ -714,40 +800,6 @@ const Suscripciones = () => {
           </FadeIn>
           
           <div className="max-w-6xl mx-auto">
-            {/* Switch de Precios */}
-            <div className="flex justify-center mb-8">
-              <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-full p-1 flex items-center relative">
-                {/* Slider animado */}
-                <div 
-                  className={`absolute top-1 bottom-1 bg-primary rounded-full transition-all duration-300 ease-in-out ${
-                    billingCycle === 'monthly' 
-                      ? 'left-1 w-20' 
-                      : 'left-21 w-20'
-                  }`}
-                />
-                <button
-                  onClick={() => setBillingCycle('monthly')}
-                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 z-10 ${
-                    billingCycle === 'monthly'
-                      ? 'text-primary-foreground'
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
-                >
-                  Mensual
-                </button>
-                <button
-                  onClick={() => setBillingCycle('yearly')}
-                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 z-10 ${
-                    billingCycle === 'yearly'
-                      ? 'text-primary-foreground'
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
-                >
-                  Anual
-                </button>
-              </div>
-            </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Tarjeta Nivel 1 */}
               <FadeIn delay={0.1}>
@@ -762,7 +814,7 @@ const Suscripciones = () => {
                       </Badge>
                       <div className="mb-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          {billingCycle === 'monthly' ? '$6,490/mes' : '$5,408.34/mes'}
+                          $6,490/mes
                         </div>
                         <div className="text-sm text-muted-foreground">
                         Precio en MXN, ya incluye IVA
@@ -824,7 +876,7 @@ const Suscripciones = () => {
                       </Badge>
                       <div className="mb-4 mt-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          {billingCycle === 'monthly' ? '$12,395/mes' : '$10,328.75/mes'}
+                          $12,395/mes
                         </div>
                         <div className="text-sm text-muted-foreground">
                         Precio en MXN, ya incluye IVA
@@ -886,7 +938,7 @@ const Suscripciones = () => {
                       </Badge>
                       <div className="mb-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
-                          {billingCycle === 'monthly' ? '$15,780/mes' : '$13,150/mes'}
+                          $15,780/mes
                         </div>
                         <div className="text-sm text-muted-foreground">
                           Precio en MXN, ya incluye IVA
