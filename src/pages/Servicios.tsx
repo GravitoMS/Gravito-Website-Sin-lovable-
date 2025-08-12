@@ -81,7 +81,16 @@ const Servicios = () => {
               }}>
                 crecimiento
               </span>{' '}
-              no debería depender de tu tiempo.
+              <span className="text-primary" style={{
+                background: 'linear-gradient(135deg, hsl(162 100% 45%) 0%, hsl(162 100% 55%) 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                textShadow: '0 0 20px hsl(162 100% 45% / 0.3)'
+              }}>
+                no se detiene
+              </span>{' '}
+              de tu tiempo.
             </EditableHeading>
             
             {/* Párrafo de Contexto */}
