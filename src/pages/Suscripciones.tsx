@@ -595,8 +595,11 @@ const Suscripciones = () => {
         </div>
       </section>
 
+      {/* Espaciado con difuminado */}
+      <div className="h-24 bg-gradient-to-b from-background to-muted/30"></div>
+
       {/* Nueva Sección: Elige el Plan Perfecto */}
-      <section className="py-48 bg-muted/30">
+      <section className="py-38 bg-muted/30">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <h2 
