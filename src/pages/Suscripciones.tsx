@@ -1,5 +1,5 @@
 import React, { useState, useMemo, lazy, Suspense } from 'react';
-import { Info, Check, ArrowRight, CheckCircle, X, ChevronDown } from 'lucide-react';
+import { Info, Check, ArrowRight, CheckCircle, X, ChevronDown, Mouse } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -595,8 +595,16 @@ const Suscripciones = () => {
         </div>
       </section>
 
+      {/* Espaciado con difuminado */}
+      <div className="h-72 bg-gradient-to-b from-background to-muted/30 flex items-center justify-center">
+        <div className="text-center">
+          <Mouse className="h-8 w-8 text-muted-foreground/60 animate-bounce mx-auto mb-2" />
+          <p className="text-sm text-muted-foreground/60">Desliza para continuar</p>
+        </div>
+      </div>
+
       {/* Nueva Sección: Elige el Plan Perfecto */}
-      <section className="py-75 bg-muted/30" data-section="plan-perfecto">
+      <section className="py-95 bg-muted/30" data-section="plan-perfecto">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <h2 
@@ -683,7 +691,7 @@ const Suscripciones = () => {
       </section>
 
       {/* Espaciado con difuminado entre secciones */}
-      <div className="h-47 bg-gradient-to-b from-muted/30 to-background"></div>
+      <div className="h-60 bg-gradient-to-b from-muted/30 to-background"></div>
 
       {/* Features Table */}
       <section className="py-20" data-section="comparison-table">
@@ -1047,7 +1055,7 @@ const Suscripciones = () => {
                           size="lg" 
                           className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
                         >
-                          Contactanos
+                          Contáctanos
                           <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
                       </Link>
