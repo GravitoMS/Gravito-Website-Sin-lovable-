@@ -553,7 +553,7 @@ const Suscripciones = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-              {/* Hero Section */}
+      {/* Hero Section */}
         <section className="pt-60 pb-32 relative">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center">
@@ -799,7 +799,7 @@ const Suscripciones = () => {
       </section>
 
       {/* Tarjetas de Resumen de Impulsos */}
-      <section className="py-25 bg-muted/30" data-section="nuestros-impulsos">
+      <section className="py-15 bg-muted/30" data-section="nuestros-impulsos">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <FadeIn 
