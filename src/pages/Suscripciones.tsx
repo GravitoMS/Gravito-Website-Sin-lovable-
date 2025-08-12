@@ -736,7 +736,7 @@ const Suscripciones = () => {
                           $6,490/mes
                         </div>
                         <div className="text-sm text-muted-foreground">
-                          Precio en MXN sin IVA
+                        Precio en MXN, ya incluye IVA
                         </div>
                       </div>
                     </div>
@@ -784,21 +784,21 @@ const Suscripciones = () => {
 
               {/* Tarjeta Nivel 2 */}
               <FadeIn delay={0.2}>
-                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
+                <Card className="border-hero-yellow/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
                         Crecimiento y Optimización
                       </h3>
-                      <Badge className="bg-primary text-primary-foreground mt-2">
-                        Más Popular
+                      <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2">
+                        Recomendado
                       </Badge>
                       <div className="mb-4 mt-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
                           $12,395/mes
                         </div>
                         <div className="text-sm text-muted-foreground">
-                          Precio en MXN sin IVA
+                        Precio en MXN, ya incluye IVA
                         </div>
                       </div>
                     </div>
@@ -809,23 +809,23 @@ const Suscripciones = () => {
                   <CardContent className="space-y-4 flex-1 flex flex-col">
                     <div className="space-y-3 flex-1">
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Todo del Nivel 1</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Hasta 2 Plataformas Sociales</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Diagnóstico Avanzado</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Informe Trimestral</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Hasta 10 archivos de Post Producción</span>
                       </div>
                     </div>
@@ -833,7 +833,7 @@ const Suscripciones = () => {
                       <Link to="/contacto?servicio=nivel-2">
                         <Button 
                           size="lg" 
-                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
+                          className="w-full bg-hero-yellow hover:bg-hero-yellow/90 text-hero-yellow-foreground px-8 py-4 text-lg font-semibold rounded-xl"
                         >
                           Comenzar Ahora
                           <ArrowRight className="ml-2 h-5 w-5" />
@@ -860,7 +860,7 @@ const Suscripciones = () => {
                           $15,780/mes
                         </div>
                         <div className="text-sm text-muted-foreground">
-                          Precio en MXN sin IVA
+                          Precio en MXN, ya incluye IVA
                         </div>
                       </div>
                     </div>
