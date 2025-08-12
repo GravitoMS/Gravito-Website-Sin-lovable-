@@ -691,7 +691,7 @@ const Suscripciones = () => {
       </section>
 
       {/* Espaciado con difuminado entre secciones */}
-      <div className="h-42 bg-gradient-to-b from-muted/30 to-background"></div>
+      <div className="h-32 bg-gradient-to-b from-muted/30 to-background"></div>
 
       {/* Features Table */}
       <section className="py-14" data-section="comparison-table">
@@ -792,7 +792,7 @@ const Suscripciones = () => {
       </section>
 
       {/* Espaciado con difuminado entre tabla y planes */}
-      <div className="h-28 bg-gradient-to-b from-background to-muted/30"></div>
+      <div className="h-20 bg-gradient-to-b from-background to-muted/30"></div>
 
       {/* Tarjetas de Resumen de Impulsos */}
       <section className="py-14 bg-muted/30" data-section="nuestros-impulsos">
