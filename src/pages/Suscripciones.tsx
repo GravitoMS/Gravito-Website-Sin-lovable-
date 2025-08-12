@@ -553,8 +553,8 @@ const Suscripciones = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-60 pb-32 relative">
+              {/* Hero Section */}
+        <section className="pt-60 pb-32 relative">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center">
             <FadeIn 
