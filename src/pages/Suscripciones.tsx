@@ -784,7 +784,7 @@ const Suscripciones = () => {
 
               {/* Tarjeta Nivel 2 */}
               <FadeIn delay={0.2}>
-                <Card className="border-hero-yellow/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
+                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
