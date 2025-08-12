@@ -721,12 +721,20 @@ const Suscripciones = () => {
           <div className="max-w-6xl mx-auto">
             {/* Switch de Precios */}
             <div className="flex justify-center mb-8">
-              <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-xl p-1 flex items-center space-x-2">
+              <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-full p-1 flex items-center relative">
+                {/* Slider animado */}
+                <div 
+                  className={`absolute top-1 bottom-1 bg-primary rounded-full transition-all duration-300 ease-in-out ${
+                    billingCycle === 'monthly' 
+                      ? 'left-1 w-20' 
+                      : 'left-24 w-16'
+                  }`}
+                />
                 <button
                   onClick={() => setBillingCycle('monthly')}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 z-10 ${
                     billingCycle === 'monthly'
-                      ? 'bg-primary text-primary-foreground shadow-sm'
+                      ? 'text-primary-foreground'
                       : 'text-muted-foreground hover:text-foreground'
                   }`}
                 >
@@ -734,9 +742,9 @@ const Suscripciones = () => {
                 </button>
                 <button
                   onClick={() => setBillingCycle('yearly')}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 z-10 ${
                     billingCycle === 'yearly'
-                      ? 'bg-primary text-primary-foreground shadow-sm'
+                      ? 'text-primary-foreground'
                       : 'text-muted-foreground hover:text-foreground'
                   }`}
                 >
