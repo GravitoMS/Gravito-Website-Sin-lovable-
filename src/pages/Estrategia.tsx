@@ -135,7 +135,7 @@ const Estrategia = () => {
               delay={0.1}
               className="text-4xl lg:text-6xl font-black text-foreground mb-8"
               style={{
-                textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
+                textShadow: '0 0 20px hsl(25 95% 53% / 0.3), 0 0 40px hsl(25 95% 53% / 0.2)',
                 willChange: 'text-shadow'
               }}
             >
@@ -159,7 +159,7 @@ const Estrategia = () => {
                   }
                 }}
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
+                className="bg-hero-yellow hover:bg-hero-yellow/90 text-hero-yellow-foreground px-8 py-4 text-lg font-semibold rounded-xl"
               >
                 Solicítalo Ahora
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -192,7 +192,7 @@ const Estrategia = () => {
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
                 ¿Para Quién es el Impulso Estratégico?
               </h2>
-              <div className="bg-primary/10 rounded-lg p-6 border border-primary/20 mb-8">
+              <div className="bg-hero-yellow/10 rounded-lg p-6 border border-hero-yellow/20 mb-8">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Para todos los negocios que quieren ver y probar nuestro valor estratégico y aún no estan seguros de comprometerse con una suscripción mensual. Es la forma más inteligente y segura de empezar.
                 </p>
@@ -201,7 +201,7 @@ const Estrategia = () => {
               <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
                 ¿Qué es lo que te entregamos?
               </h3>
-              <div className="bg-primary/10 rounded-lg p-6 border border-primary/20">
+              <div className="bg-hero-yellow/10 rounded-lg p-6 border border-hero-yellow/20">
                 <p className="text-muted-foreground">
                   Te entregamos un valor inmenso por adelantado que podemos utilizar para tomar la mejor decisión para tu negocio, con total confianza en nuestra capacidad para generar resultados.
                 </p>
@@ -210,11 +210,11 @@ const Estrategia = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <FadeIn>
-                <Card className="border-primary/20">
+                <Card className="border-hero-yellow/20">
                   <CardHeader>
                     <div className="flex items-center space-x-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <Target className="h-6 w-6 text-primary" />
+                      <div className="p-2 bg-hero-yellow/10 rounded-lg">
+                        <Target className="h-6 w-6 text-hero-yellow" />
                       </div>
                       <CardTitle className="text-xl">Análisis Profundo</CardTitle>
                     </div>
@@ -228,11 +228,11 @@ const Estrategia = () => {
               </FadeIn>
               
               <FadeIn>
-                <Card className="border-primary/20">
+                <Card className="border-hero-yellow/20">
                   <CardHeader>
                     <div className="flex items-center space-x-3">
-                      <div className="p-2 bg-primary/10 rounded-lg">
-                        <TrendingUp className="h-6 w-6 text-primary" />
+                      <div className="p-2 bg-hero-yellow/10 rounded-lg">
+                        <TrendingUp className="h-6 w-6 text-hero-yellow" />
                       </div>
                       <CardTitle className="text-xl">Sin Riesgo</CardTitle>
                     </div>
@@ -279,14 +279,14 @@ const Estrategia = () => {
                       <span>Servicio Incluido</span>
                     </th>
                     {impulsoPlans.map((plan, index) => (
-                      <th key={index} className={`text-center p-6 font-semibold text-foreground bg-card ${plan.isPopular ? 'bg-primary/10' : ''}`}>
+                      <th key={index} className={`text-center p-6 font-semibold text-foreground bg-card ${plan.isPopular ? 'bg-hero-yellow/10' : ''}`}>
                         <div className="space-y-3">
                           <div>
                             <div className="text-lg font-bold">{plan.name}</div>
                             <div className="text-sm text-muted-foreground">{plan.subtitle}</div>
                           </div>
                           {plan.isPopular && (
-                            <Badge className="bg-primary text-primary-foreground">
+                            <Badge className="bg-hero-yellow text-hero-yellow-foreground">
                               Recomendado
                             </Badge>
                           )}
@@ -299,7 +299,7 @@ const Estrategia = () => {
                   {impulsoServices.map((service, index) => (
                     <tr 
                       key={index} 
-                      className={`${service.name === "Beneficio Clave" ? "border-b-2 border-primary/20 bg-primary/5" : "border-b border-border"} hover:bg-muted/50`}
+                      className={`${service.name === "Beneficio Clave" ? "border-b-2 border-hero-yellow/20 bg-hero-yellow/5" : "border-b border-border"} hover:bg-muted/50`}
                     >
                       <td className="p-6">
                         <div className="flex items-center space-x-2">
@@ -310,7 +310,7 @@ const Estrategia = () => {
                       <td className="text-center p-6">
                         <div className="flex items-center justify-center space-x-2">
                           {service.basic === "checkmark" ? (
-                            <CheckCircle className="h-5 w-5 text-primary" />
+                            <CheckCircle className="h-5 w-5 text-hero-yellow" />
                           ) : (
                             <span className="text-sm text-foreground max-w-xs mx-auto">{service.basic}</span>
                           )}
@@ -318,20 +318,20 @@ const Estrategia = () => {
                             <Tooltip delayDuration={300}>
                               <TooltipTrigger asChild>
                                 <button className="inline-flex">
-                                  <Info className="w-4 h-4 text-primary hover:text-primary/80 cursor-help transition-colors" />
+                                  <Info className="w-4 h-4 text-hero-yellow hover:text-hero-yellow/80 cursor-help transition-colors" />
                                 </button>
                               </TooltipTrigger>
-                              <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
+                              <TooltipContent className="bg-card text-foreground border border-hero-yellow max-w-xs">
                                 <p>{service.basicTooltip}</p>
                               </TooltipContent>
                             </Tooltip>
                           )}
                         </div>
                       </td>
-                      <td className="text-center p-6 bg-primary/5">
+                      <td className="text-center p-6 bg-hero-yellow/5">
                         <div className="flex items-center justify-center space-x-2">
                           {service.advanced === "checkmark" ? (
-                            <CheckCircle className="h-5 w-5 text-primary" />
+                            <CheckCircle className="h-5 w-5 text-hero-yellow" />
                           ) : (
                             <span className="text-sm text-foreground max-w-xs mx-auto">{service.advanced}</span>
                           )}
@@ -339,10 +339,10 @@ const Estrategia = () => {
                             <Tooltip delayDuration={300}>
                               <TooltipTrigger asChild>
                                 <button className="inline-flex">
-                                  <Info className="w-4 h-4 text-primary hover:text-primary/80 cursor-help transition-colors" />
+                                  <Info className="w-4 h-4 text-hero-yellow hover:text-hero-yellow/80 cursor-help transition-colors" />
                                 </button>
                               </TooltipTrigger>
-                              <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
+                              <TooltipContent className="bg-card text-foreground border border-hero-yellow max-w-xs">
                                 <p>{service.advancedTooltip}</p>
                               </TooltipContent>
                             </Tooltip>
@@ -366,7 +366,7 @@ const Estrategia = () => {
               delay={0.1}
               className="text-4xl lg:text-6xl xl:text-7xl font-black text-foreground mb-6"
               style={{
-                textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
+                textShadow: '0 0 20px hsl(25 95% 53% / 0.3), 0 0 40px hsl(25 95% 53% / 0.2)',
                 willChange: 'text-shadow'
               }}
             >
@@ -381,13 +381,13 @@ const Estrategia = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Tarjeta Impulso GMS (Básico) */}
               <FadeIn delay={0.1}>
-                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
+                <Card className="border-hero-yellow/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
                         Análisis inicial básico
                       </h3>
-                      <Badge className="bg-primary text-primary-foreground mb-4">
+                      <Badge className="bg-hero-yellow text-hero-yellow-foreground mb-4">
                         Básico
                       </Badge>
                       <div className="mb-4">
@@ -406,23 +406,23 @@ const Estrategia = () => {
                   <CardContent className="space-y-4 flex-1 flex flex-col">
                     <div className="space-y-3 flex-1">
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Diagnóstico Inicial Completo</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Planeación en forma de Línea del Tiempo</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Explicación con Videos Personales (Loom)</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">Recomendación de Plan de Suscripción Ideal</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
                         <span className="text-foreground">100% Descontable del costo de nuestras suscripciones</span>
                       </div>
                     </div>
@@ -430,7 +430,7 @@ const Estrategia = () => {
                       <Link to="/contacto?servicio=impulso-gms">
                         <Button 
                           size="lg" 
-                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
+                          className="w-full bg-hero-yellow hover:bg-hero-yellow/90 text-hero-yellow-foreground px-8 py-4 text-lg font-semibold rounded-xl"
                         >
                           Descubre tu Estrategia
                           <ArrowRight className="ml-2 h-5 w-5" />
@@ -443,13 +443,13 @@ const Estrategia = () => {
 
               {/* Tarjeta Impulso Estratégico GMS + (Avanzado) */}
               <FadeIn delay={0.2}>
-                <Card className="border-hero-yellow/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
+                <Card className="border-primary/20 bg-card/50 backdrop-blur-sm h-full flex flex-col">
                   <CardHeader className="text-center pb-4">
                     <div className="mb-4">
                       <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
                         Análisis Avanzado
                       </h3>
-                      <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2">
+                      <Badge className="bg-primary text-primary-foreground mt-2">
                         Recomendado
                       </Badge>
                       <div className="mb-4 mt-4">
@@ -468,19 +468,19 @@ const Estrategia = () => {
                   <CardContent className="space-y-4 flex-1 flex flex-col">
                     <div className="space-y-3 flex-1">
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                         <span className="text-foreground">Todo lo de Impulso GMS Más:</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                         <span className="text-foreground">Análisis FODA y Estrategia Derivada</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                         <span className="text-foreground">Benchmarking con Múltiples Competidores</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                         <span className="text-foreground">100% Descontable del costo de nuestras suscripciones</span>
                       </div>
                     </div>
@@ -488,7 +488,7 @@ const Estrategia = () => {
                       <Link to="/contacto?servicio=impulso-estrategico">
                         <Button 
                           size="lg" 
-                          className="w-full bg-hero-yellow hover:bg-hero-yellow/90 text-hero-yellow-foreground px-8 py-4 text-lg font-semibold rounded-xl"
+                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
                         >
                           Descubre tu Estrategia
                           <ArrowRight className="ml-2 h-5 w-5" />
@@ -592,10 +592,10 @@ const Estrategia = () => {
             <div className="space-y-4">
               {faqData.map((faq, index) => (
                 <FadeIn key={index} delay={index * 0.1}>
-                  <Card className="border-primary/20 bg-card/50 backdrop-blur-sm">
+                  <Card className="border-hero-yellow/20 bg-card/50 backdrop-blur-sm">
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-lg"
+                      className="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-hero-yellow/20 rounded-lg"
                     >
                       <div className="flex items-center justify-between">
                         <h3 className="text-lg lg:text-xl font-semibold text-foreground pr-4">
@@ -603,7 +603,7 @@ const Estrategia = () => {
                         </h3>
                                                   <div className="flex-shrink-0">
                             <ChevronDown 
-                              className={`h-5 w-5 text-primary transition-transform duration-500 ease-out ${
+                              className={`h-5 w-5 text-hero-yellow transition-transform duration-500 ease-out ${
                                 expandedFAQ === index ? 'rotate-180' : ''
                               }`}
                             />
@@ -641,13 +641,13 @@ const Estrategia = () => {
                   }
                 }}
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-4 text-lg font-semibold rounded-xl w-full sm:w-56"
+                className="bg-hero-yellow hover:bg-hero-yellow/90 text-hero-yellow-foreground px-10 py-4 text-lg font-semibold rounded-xl w-full sm:w-56"
               >
                 Solicítalo Ahora
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Link to="/contacto" className="w-full sm:w-56">
-                <Button variant="ghost" size="lg" className="px-10 py-4 text-lg font-semibold rounded-xl w-full text-primary border border-primary hover:bg-primary/10">
+                <Button variant="ghost" size="lg" className="px-10 py-4 text-lg font-semibold rounded-xl w-full text-hero-yellow border border-hero-yellow hover:bg-hero-yellow/10">
                   Tengo Otra Pregunta
                 </Button>
               </Link>

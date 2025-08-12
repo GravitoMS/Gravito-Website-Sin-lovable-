@@ -528,7 +528,7 @@ const Suscripciones = () => {
               delay={0.1}
               className="text-4xl lg:text-6xl font-black text-foreground mb-8"
               style={{
-                textShadow: '0 0 20px hsl(25 95% 53% / 0.3), 0 0 40px hsl(25 95% 53% / 0.2)',
+                textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
                 willChange: 'text-shadow'
               }}
             >
@@ -559,7 +559,7 @@ const Suscripciones = () => {
                       <span>Características</span>
                     </th>
                     {pricingPlans.map((plan, index) => (
-                      <th key={index} className={`text-center p-6 font-semibold text-foreground bg-card ${plan.isPopular ? 'bg-hero-yellow/10' : ''}`}>
+                      <th key={index} className={`text-center p-6 font-semibold text-foreground bg-card ${plan.isPopular ? 'bg-primary/10' : ''}`}>
                         <div className="space-y-3">
                           <div>
                             <div className="text-lg font-bold">{plan.name}</div>
@@ -573,7 +573,7 @@ const Suscripciones = () => {
                             Ver Precio
                           </Button>
                           {plan.isPopular && (
-                            <Badge className="bg-hero-yellow text-hero-yellow-foreground">
+                            <Badge className="bg-primary text-primary-foreground">
                               Más Popular
                             </Badge>
                           )}
@@ -593,10 +593,10 @@ const Suscripciones = () => {
                             <Tooltip delayDuration={300}>
                               <TooltipTrigger asChild>
                                 <button className="inline-flex">
-                                  <Info className="w-4 h-4 text-hero-yellow hover:text-hero-yellow/80 cursor-help transition-colors" />
+                                  <Info className="w-4 h-4 text-primary hover:text-primary/80 cursor-help transition-colors" />
                                 </button>
                               </TooltipTrigger>
-                              <TooltipContent className="bg-card text-foreground border border-hero-yellow max-w-xs">
+                              <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
                                 <p>{service.serviceDescription}</p>
                               </TooltipContent>
                             </Tooltip>
@@ -606,10 +606,10 @@ const Suscripciones = () => {
                       {pricingPlans.map((plan, planIndex) => {
                         const levelDetail = service.levelDetails.find(detail => detail.levelNumber === planIndex + 1);
                         return (
-                          <td key={planIndex} className={`text-center p-6 ${plan.isPopular ? 'bg-hero-yellow/5' : ''}`}>
+                          <td key={planIndex} className={`text-center p-6 ${plan.isPopular ? 'bg-primary/5' : ''}`}>
                             <div className="flex items-center justify-center space-x-2">
                               {levelDetail?.displayType === "checkmark" ? (
-                                <CheckCircle className="h-5 w-5 text-hero-yellow" />
+                                <CheckCircle className="h-5 w-5 text-primary" />
                               ) : levelDetail?.displayType === "cross" ? (
                                 <X className="h-5 w-5 text-muted-foreground" />
                               ) : (
@@ -619,10 +619,10 @@ const Suscripciones = () => {
                                 <Tooltip delayDuration={300}>
                                   <TooltipTrigger asChild>
                                     <button className="inline-flex">
-                                      <Info className="w-4 h-4 text-hero-yellow hover:text-hero-yellow/80 cursor-help transition-colors" />
+                                      <Info className="w-4 h-4 text-primary hover:text-primary/80 cursor-help transition-colors" />
                                     </button>
                                   </TooltipTrigger>
-                                  <TooltipContent className="bg-card text-foreground border border-hero-yellow max-w-xs">
+                                  <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
                                     <p>{levelDetail.tooltipContent}</p>
                                   </TooltipContent>
                                 </Tooltip>
@@ -641,23 +641,23 @@ const Suscripciones = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-hero-yellow">
+      <section className="py-20 bg-primary">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl lg:text-5xl font-bold text-hero-yellow-foreground mb-6">
+            <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6">
               Comienza tu Transformación Digital Hoy
             </h2>
-            <p className="text-xl lg:text-2xl text-hero-yellow-foreground/90 mb-12 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
               No dejes que el tiempo siga siendo un obstáculo para tu crecimiento. Solicita tu Impulso Estratégico y descubre cómo podemos ayudarte.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link to="/estrategia">
-                <Button size="lg" className="text-lg px-10 py-8 bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button size="lg" className="text-lg px-10 py-8 bg-hero-yellow hover:bg-hero-yellow/90 text-hero-yellow-foreground">
                   Solicitar Impulso Estratégico
                 </Button>
               </Link>
               <Link to="/contacto">
-                <Button variant="outline" size="lg" className="text-lg px-10 py-8 border-hero-yellow-foreground text-hero-yellow-foreground hover:bg-hero-yellow-foreground hover:text-hero-yellow">
+                <Button variant="outline" size="lg" className="text-lg px-10 py-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                   Contactar Ahora
                 </Button>
               </Link>

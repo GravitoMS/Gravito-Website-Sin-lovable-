@@ -125,7 +125,7 @@ const Servicios = () => {
           <div className="max-w-6xl mx-auto space-y-8">
             {/* Tarjeta Impulso Estratégico */}
             <FadeIn>
-              <Card className="border border-primary/20 bg-card hover:shadow-lg transition-shadow">
+              <Card className="border border-hero-yellow/20 bg-card hover:shadow-lg transition-shadow">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between p-8">
                   <div className="flex-1 lg:pr-8">
                     <div className="mb-4">
@@ -137,19 +137,19 @@ const Servicios = () => {
                     </EditableText>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-hero-yellow flex-shrink-0" />
                         <span className="text-sm text-muted-foreground">Análisis profundo de tu presencia digital</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-hero-yellow flex-shrink-0" />
                         <span className="text-sm text-muted-foreground">100% Descontable</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-hero-yellow flex-shrink-0" />
                         <span className="text-sm text-muted-foreground">Estrategia personalizada</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-hero-yellow flex-shrink-0" />
                         <span className="text-sm text-muted-foreground">Recomendación de plan ideal</span>
                       </div>
                     </div>
@@ -158,7 +158,7 @@ const Servicios = () => {
                     <Link to="/estrategia">
                       <Button 
                         size="lg" 
-                        className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-fast"
+                        className="bg-hero-yellow hover:bg-hero-yellow/90 text-hero-yellow-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-fast"
                       >
                         Comenzar Impulso Estratégico
                         <ArrowRight className="ml-2 h-5 w-5" />
@@ -171,7 +171,7 @@ const Servicios = () => {
 
             {/* Tarjeta Suscripciones */}
             <FadeIn>
-              <Card className="border border-secondary/20 bg-card hover:shadow-lg transition-shadow">
+              <Card className="border border-primary/20 bg-card hover:shadow-lg transition-shadow">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between p-8">
                   <div className="flex-1 lg:pr-8">
                     <div className="mb-4">
@@ -183,15 +183,15 @@ const Servicios = () => {
                     </EditableText>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                         <span className="text-sm text-muted-foreground">Nivel 1: Presencia Esencial</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                         <span className="text-sm text-muted-foreground">Nivel 2: Crecimiento y Optimización</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                         <span className="text-sm text-muted-foreground">Nivel 3: Liderazgo y Expansión</span>
                       </div>
                     </div>
@@ -200,7 +200,7 @@ const Servicios = () => {
                     <Link to="/suscripciones">
                       <Button 
                         size="lg" 
-                        className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-fast"
+                        className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-fast"
                       >
                         Ver Planes de Suscripción
                         <ArrowRight className="ml-2 h-5 w-5" />
