@@ -596,7 +596,7 @@ const Suscripciones = () => {
       </section>
 
       {/* Espaciado con difuminado */}
-      <div className="h-40 bg-gradient-to-b from-background to-muted/30 flex items-center justify-center">
+      <div className="h-60 bg-gradient-to-b from-background to-muted/30 flex items-center justify-center">
         <div className="text-center">
           <Mouse className="h-8 w-8 text-muted-foreground/60 animate-bounce mx-auto mb-2" />
           <p className="text-sm text-muted-foreground/60">Desliza para continuar</p>
