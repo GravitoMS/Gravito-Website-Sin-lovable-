@@ -1002,39 +1002,39 @@ const Suscripciones = () => {
             <div className="mt-12">
               <FadeIn delay={0.4}>
                 <Card className="border-primary/20 bg-card/50 backdrop-blur-sm">
-                  <div className="flex flex-col lg:flex-row items-center lg:items-start p-8">
+                  <div className="flex flex-col lg:flex-row items-center lg:items-center p-8">
                     {/* Contenido izquierdo */}
                     <div className="flex-1 lg:pr-8 mb-6 lg:mb-0">
                       <div className="text-center lg:text-left mb-4">
                         <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
-                          Enterprise
+                        GMS Enterprise
                         </h3>
-                        <Badge className="bg-primary text-primary-foreground mb-4">
+                        <Badge className="bg-hero-yellow text-hero-yellow-foreground mb-4">
                           Plan Personalizado
                         </Badge>
                       </div>
                       <p className="text-muted-foreground leading-relaxed mb-6">
-                        Para empresas que requieren una solución completamente personalizada. Todos nuestros servicios son adaptados específicamente a tus necesidades, objetivos y presupuesto. Trabajamos como tu departamento de marketing externo con atención prioritaria y estrategias únicas.
+                      Para empresas con necesidades complejas y metas de crecimiento ambiciosas. Esto no es un plan, es una asociación estratégica. Nos integramos directamente con tu equipo para construir y ejecutar una hoja de ruta de marketing a medida, alineada con tus KPIs de negocio más importantes.
                       </p>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-3">
                           <div className="flex items-center space-x-3">
                             <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                            <span className="text-foreground">Servicios 100% personalizados</span>
+                            <span className="text-foreground">Estrategia y Ejecución 100% a la Medida</span>
                           </div>
                           <div className="flex items-center space-x-3">
                             <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                            <span className="text-foreground">Atención prioritaria 24/7</span>
+                            <span className="text-foreground">Reportes de ROI y Business Intelligence</span>
                           </div>
                         </div>
                         <div className="space-y-3">
                           <div className="flex items-center space-x-3">
                             <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                            <span className="text-foreground">Estrategias únicas por empresa</span>
+                            <span className="text-foreground">Acceso Directo a Dirección y Soporte Prioritario</span>
                           </div>
                           <div className="flex items-center space-x-3">
                             <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                            <span className="text-foreground">Gestor de cuenta dedicado</span>
+                            <span className="text-foreground">Gestión de Redes Ilimitadas</span>
                           </div>
                         </div>
                       </div>
@@ -1047,7 +1047,7 @@ const Suscripciones = () => {
                           size="lg" 
                           className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl"
                         >
-                          Solicitar Plan Enterprise
+                          Contactanos
                           <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
                       </Link>
