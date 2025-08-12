@@ -691,10 +691,10 @@ const Suscripciones = () => {
       </section>
 
       {/* Espaciado con difuminado entre secciones */}
-      <div className="h-60 bg-gradient-to-b from-muted/30 to-background"></div>
+      <div className="h-42 bg-gradient-to-b from-muted/30 to-background"></div>
 
       {/* Features Table */}
-      <section className="py-20" data-section="comparison-table">
+      <section className="py-14" data-section="comparison-table">
         <div className="container mx-auto px-6">
           <div className="text-center mb-8">
             <h2 
@@ -792,10 +792,10 @@ const Suscripciones = () => {
       </section>
 
       {/* Espaciado con difuminado entre tabla y planes */}
-      <div className="h-40 bg-gradient-to-b from-background to-muted/30"></div>
+      <div className="h-28 bg-gradient-to-b from-background to-muted/30"></div>
 
       {/* Tarjetas de Resumen de Impulsos */}
-      <section className="py-20 bg-muted/30" data-section="nuestros-impulsos">
+      <section className="py-14 bg-muted/30" data-section="nuestros-impulsos">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <FadeIn 
