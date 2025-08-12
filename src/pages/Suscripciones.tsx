@@ -722,7 +722,7 @@ const Suscripciones = () => {
                   className={`absolute top-1 bottom-1 bg-primary rounded-full transition-all duration-300 ease-in-out ${
                     billingCycle === 'monthly' 
                       ? 'left-1 w-20' 
-                      : 'right-1 w-20'
+                      : 'left-21 w-20'
                   }`}
                 />
                 <button
