@@ -691,7 +691,7 @@ const Suscripciones = () => {
       </section>
 
       {/* Espaciado con difuminado entre secciones */}
-      <div className="h-34 bg-gradient-to-b from-muted/30 to-background"></div>
+      <div className="h-60 bg-gradient-to-b from-muted/30 to-background"></div>
 
       {/* Features Table */}
       <section className="py-20" data-section="comparison-table">
