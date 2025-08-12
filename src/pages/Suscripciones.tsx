@@ -604,7 +604,7 @@ const Suscripciones = () => {
       </div>
 
       {/* Nueva Sección: Elige el Plan Perfecto */}
-      <section className="py-38 bg-muted/30">
+      <section className="py-95 bg-muted/30">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <h2 
@@ -820,7 +820,7 @@ const Suscripciones = () => {
                   className={`absolute top-1 bottom-1 bg-primary rounded-full transition-all duration-300 ease-in-out ${
                     billingCycle === 'monthly' 
                       ? 'left-1 w-20' 
-                      : 'left-21 w-20'
+                      : 'left-20 w-20'
                   }`}
                 />
                 <button
