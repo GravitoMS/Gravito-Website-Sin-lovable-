@@ -571,11 +571,11 @@ const Suscripciones = () => {
               delay={0.2}
               className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8"
             >
-               La competencia no se detiene, tu presencia digital tampoco debería. Nuestros planes son la solución integral para dueños de negocio que buscan resultados consistentes mes a mes, sin la carga de la gestión diaria..
+               La competencia no se detiene, tu presencia digital tampoco debería. Nuestros planes son la solución definitiva para quienes buscan resultados consistentes mes a messin la carga de la gestión diaria...
             </FadeIn>
             <FadeIn 
               delay={0.3}
-              className="flex flex-col sm:flex-row justify-center gap-4"
+              className="flex justify-center"
             >
               <Button 
                 onClick={() => {
@@ -590,11 +590,6 @@ const Suscripciones = () => {
                 Comparar Planes
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Link to="/estrategia">
-                <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl">
-                  Solicitar Impulso Estratégico
-                </Button>
-              </Link>
             </FadeIn>
           </FadeIn>
         </div>
@@ -611,7 +606,7 @@ const Suscripciones = () => {
                 willChange: 'text-shadow'
               }}
             >
-              Elige el Plan Perfecto para tu Negocio
+              El Plan Perfecto para tu Negocio
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Descubre cuál de nuestros planes se adapta mejor a tus necesidades y objetivos de crecimiento.
