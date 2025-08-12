@@ -575,7 +575,7 @@ const Suscripciones = () => {
             </FadeIn>
             <FadeIn 
               delay={0.3}
-              className="flex flex-col sm:flex-row justify-center gap-4"
+              className="flex justify-center"
             >
               <Button 
                 onClick={() => {
@@ -590,11 +590,6 @@ const Suscripciones = () => {
                 Comparar Planes
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Link to="/estrategia">
-                <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl">
-                  Solicitar Impulso Estratégico
-                </Button>
-              </Link>
             </FadeIn>
           </FadeIn>
         </div>
@@ -949,20 +944,15 @@ const Suscripciones = () => {
         <div className="container mx-auto px-6">
           <FadeIn className="text-center max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6">
-              Comienza tu Transformación Digital Hoy
+              ¿Prefieres un producto para probar antes de suscribirte?
             </h2>
             <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
-              No dejes que el tiempo siga siendo un obstáculo para tu crecimiento. Solicita tu Impulso Estratégico y descubre cómo podemos ayudarte.
+              Justo por esa razón desarrollamos el producto perfecto, el cual puedes probar antes de suscribirte.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <div className="flex justify-center">
               <Link to="/estrategia">
                 <Button variant="hero-yellow" size="lg" className="text-lg px-10 py-8">
-                  Solicitar Impulso Estratégico
-                </Button>
-              </Link>
-              <Link to="/contacto">
-                <Button variant="outline" size="lg" className="text-lg px-10 py-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  Contactar Ahora
+                  Conoce nuestro Impulso Estratégico
                 </Button>
               </Link>
             </div>
