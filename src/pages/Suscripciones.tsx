@@ -571,7 +571,7 @@ const Suscripciones = () => {
               delay={0.2}
               className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8"
             >
-              Planes mensuales escalables diseñados para acompañar tu negocio en cada etapa de su crecimiento digital. Desde presencia esencial hasta liderazgo total en el mercado.
+               La competencia no se detiene, tu presencia digital tampoco debería. Nuestros planes son la solución integral para dueños de negocio que buscan resultados consistentes mes a mes, sin la carga de la gestión diaria..
             </FadeIn>
             <FadeIn 
               delay={0.3}
@@ -601,10 +601,16 @@ const Suscripciones = () => {
       </section>
 
       {/* Nueva Sección: Elige el Plan Perfecto */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-32 bg-muted/30">
         <div className="container mx-auto px-6">
           <FadeIn className="text-center mb-12">
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 
+              className="text-3xl lg:text-5xl font-bold text-foreground mb-6"
+              style={{
+                textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
+                willChange: 'text-shadow'
+              }}
+            >
               Elige el Plan Perfecto para tu Negocio
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -626,7 +632,7 @@ const Suscripciones = () => {
                     <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
                       El plan <strong>Presencia Esencial</strong> es ideal si buscas <strong>aliviar tu carga de trabajo</strong> y asegurar una presencia digital consistente y profesional sin tener que pensar en ello. Nosotros nos encargamos de la ejecución para que tú te enfoques en tu negocio.
                     </p>
-                    <div className="mt-auto">
+                    <div className="mt-auto text-center">
                       <Badge className="bg-primary text-primary-foreground mb-3">
                         Presencia Esencial
                       </Badge>
@@ -647,7 +653,7 @@ const Suscripciones = () => {
                     <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
                       El plan <strong>Crecimiento y Optimización</strong> es para ti si ya tienes una base y estás listo para <strong>crecer de manera proactiva</strong>, entendiendo a tu competencia y optimizando tu contenido para generar más interacción y construir una comunidad leal.
                     </p>
-                    <div className="mt-auto">
+                    <div className="mt-auto text-center">
                       <Badge className="bg-hero-yellow text-hero-yellow-foreground mb-3">
                         Crecimiento y Optimización
                       </Badge>
@@ -668,7 +674,7 @@ const Suscripciones = () => {
                     <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
                       El plan <strong>Liderazgo y Expansión</strong> es para negocios que ven el marketing como una <strong>inversión estratégica</strong>. Actuamos como tu departamento de marketing externo, conectando cada acción con el <strong>impacto en el negocio</strong> y el <strong>retorno de la inversión (ROI)</strong>.
                     </p>
-                    <div className="mt-auto">
+                    <div className="mt-auto text-center">
                       <Badge className="bg-primary text-primary-foreground mb-3">
                         Liderazgo y Expansión
                       </Badge>
