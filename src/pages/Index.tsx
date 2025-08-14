@@ -1,46 +1,57 @@
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Mouse, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useMemo } from "react";
-import { FadeIn, HoverScale } from "@/components/ui/SimpleAnimations";
-import { EditableFadeIn, EditableHeading, EditableText } from "@/components/ui/EditableAnimations";
+import { FadeIn } from "@/components/ui/SimpleAnimations";
+import { EditableHeading, EditableText } from "@/components/ui/EditableAnimations";
 import ServicesCarousel from "@/components/ServicesCarousel";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { useState, useEffect } from "react";
 
 const Index = () => {
-  // Memoizar los datos de servicios para evitar re-creaciones
-  const services = useMemo(() => [{
-    title: "Decisiones Basadas en Datos",
-    description: "Monitoreamos y analizamos constantemente el rendimiento de tus redes sociales para tomar decisiones inteligentes, no suposiciones."
-  }, {
-    title: "Una Hoja de Ruta Clara",
-    description: "Convertimos esos datos en una estrategia personalizada y comprobada para tu negocio, entregándote el plan de acción que seguiremos de una manera visual y fácil de entender cada mes."
-  }, {
-    title: "Contenido que Conecta",
-    description: "Basados en la estrategia, creamos contenido atractivo y relevante que resuena para tu audiencia diseñada para generar confianza, iniciar conversaciones y construir una comunidad alrededor de tu negocio."
-  }, {
-    title: "Crecimiento de la Comunidad",
-    description: "Gestionamos la interacción diaria con tus clientes y seguidores, convirtiendo a tu audiencia pasiva en una comunidad activa y comprometida con tu marca."
-  }], []);
+  const [splineLoaded, setSplineLoaded] = useState(false);
+  const { elementRef, isIntersecting } = useIntersectionObserver({
+    threshold: 0.1,
+    rootMargin: '50px'
+  });
+
+  // Cargar Spline solo cuando la sección esté visible
+  useEffect(() => {
+    if (isIntersecting && !splineLoaded) {
+      setSplineLoaded(true);
+    }
+  }, [isIntersecting, splineLoaded]);
 
   return <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section with Spline Background */}
-      <section className="relative overflow-hidden bg-muted">
-        {/* Spline Background */}
+      {/* Hero Section with Optimized Spline Background */}
+      <section ref={elementRef} className="relative overflow-hidden bg-muted">
+        {/* Optimized Spline Background */}
         <div className="absolute inset-0 w-full h-full">
-          <iframe 
-            src="https://my.spline.design/waveform-YSe8p0A6zP9xanzxuXbn1y8l/" 
-            frameBorder="0" 
-            width="100%" 
-            height="100%" 
-            className="absolute inset-0" 
-            style={{
-              border: 'none'
-            }} 
-          />
+          {/* Placeholder mientras no está cargado */}
+          {!splineLoaded && (
+            <div className="absolute inset-0 spline-placeholder"></div>
+          )}
+          
+          {/* Spline iframe optimizado */}
+          {splineLoaded && (
+            <iframe 
+              src="https://my.spline.design/waveform-YSe8p0A6zP9xanzxuXbn1y8l/" 
+              frameBorder="0" 
+              width="100%" 
+              height="100%" 
+              className="absolute inset-0 spline-iframe transition-opacity duration-1000" 
+              style={{
+                border: 'none',
+                opacity: splineLoaded ? 1 : 0
+              }}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              sandbox="allow-scripts allow-same-origin allow-forms"
+            />
+          )}
+          
           {/* Subtle blur overlay to reduce competition with text */}
           <div className="absolute inset-0 bg-muted/20 backdrop-blur-[1px]"></div>
         </div>
@@ -51,19 +62,20 @@ const Index = () => {
             <FadeIn className="flex flex-col items-center text-center gap-12">
               <div className="max-w-4xl">
                 <EditableHeading level={1} className="text-5xl lg:text-7xl font-black text-foreground mb-8 leading-none" delay={0.1}>
-                  GESTIÓN
+                  Tu Propio Equipo Digital,
                   <br />
-                  INTEGRAL DE TU
-                  <br />
-                  <span className="text-primary">PRESENCIA DIGITAL</span>
+                  con{' '}
+                  <span className="alma-humana-glow">
+                    Alma Humana
+                  </span>
                 </EditableHeading>
                 <EditableText className="text-xl lg:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto" delay={0.2}>
-                  Nos encargamos de tu crecimiento digital devolviendote tu tiempo para que lo dediques en tu negocio.
+                  Recupera tu tiempo y enfócate en tu negocio. Nosotros gestionamos tu presencia digital proporcionando ese toque humano y genuino que tus clientes tanto necesitan.
                 </EditableText>
                 <FadeIn delay={0.3} className="flex flex-col sm:flex-row justify-center gap-6">
                   <Link to="/estrategia">
                     <Button variant="hero-yellow" size="lg" className="text-lg px-10 py-8">
-                      Descubre tu Estrategia
+                      Consultoría sin Compromiso
                     </Button>
                   </Link>
                   <Link to="/servicios">
@@ -72,14 +84,19 @@ const Index = () => {
                     </Button>
                   </Link>
                 </FadeIn>
+                <FadeIn delay={0.4} className="mt-6">
+                  <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+                    La consultoría sin compromiso es 100% descontable. Es considerado por muchos como el primer paso inteligente hacia la liberación digital.
+                  </p>
+                </FadeIn>
               </div>
             </FadeIn>
           </div>
           
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
-            <div className="flex flex-col items-center animate-bounce" style={{ animationDuration: '2s' }}>
-              <Mouse className="w-8 h-8 text-muted-foreground animate-pulse" style={{ animationDuration: '3s' }} />
+            <div className="text-muted-foreground font-medium text-lg animate-bounce scroll-indicator">
+              Desliza para continuar
             </div>
           </div>
         </div>
@@ -148,10 +165,13 @@ const Index = () => {
 
       {/* Services Section */}
       <section className="container mx-auto px-6 py-20">
-        <EditableHeading level={2} className="text-4xl lg:text-6xl font-black text-center mb-16">
-          LO QUE HACEMOS POR TI
+        <EditableHeading level={2} className="text-4xl lg:text-6xl font-black text-center mb-8">
+          Más que una Agencia, tu Departamento de Marketing Externo
           <div className="w-32 h-1 bg-secondary rounded-full mx-auto mt-4"></div>
         </EditableHeading>
+        <EditableText className="text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
+          Descubre los servicios clave que nos permiten cumplir lo que prometemos.
+        </EditableText>
         <ServicesCarousel />
       </section>
 
@@ -161,7 +181,7 @@ const Index = () => {
           <FadeIn className="text-center max-w-4xl mx-auto">
             {/* Encabezado - El Reaseguro */}
             <EditableHeading level={2} className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6" delay={0.1}>
-              Comienza sin Riesgo
+              ¿No Estás Seguro?
             </EditableHeading>
 
             {/* Subtítulo - La Guía */}
@@ -173,7 +193,7 @@ const Index = () => {
             <FadeIn delay={0.3} className="flex justify-center">
               <Link to="/estrategia">
                 <Button variant="hero-yellow" size="lg" className="text-lg px-10 py-8">
-                  Descubre tu Estrategia
+                  Impulso Estratégico GMS
                 </Button>
               </Link>
             </FadeIn>

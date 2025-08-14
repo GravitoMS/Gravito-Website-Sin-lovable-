@@ -1,5 +1,5 @@
 import React, { useState, useMemo, lazy, Suspense } from 'react';
-import { Info, Check, ArrowRight, CheckCircle, X, ChevronDown, Mouse } from 'lucide-react';
+import { Info, Check, ArrowRight, CheckCircle, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -60,19 +60,19 @@ const Suscripciones = () => {
           levelNumber: 1,
           displayType: "checkmark",
           displayText: "",
-          tooltipContent: "- Recopilación de datos iniciales y métricas clave por plataforma: Alcance, impresiones, engagement, clics, seguidores adquiridos.\n\n- Identificación de contenido con mejor y peor rendimiento\n\n- Observaciones generales del primer mes\n\n- Calificación general y meta para el mes siguiente\n\n-Auditoría inicial por plataforma\n\n-Quick Wins: áreas de oportunidad y acciones inmediatas recomendadas\n\n-Benchmarking inicial\n\n-Datos internos: \nobjetivo SMART, insights clave, recomendaciones accionables, propuesta creativa, pilares de contenido, KPIs, bloqueos, activaciones clave y prioridades del mes siguiente"
+          tooltipContent: "• Recopilación de datos iniciales y métricas clave por plataforma: Alcance, impresiones, engagement, clics, seguidores adquiridos.\n\n• Identificación de contenido con mejor y peor rendimiento\n\n• Observaciones generales del primer mes\n\n• Calificación general y meta para el mes siguiente\n\n• Auditoría inicial por plataforma\n\n• Quick Wins: áreas de oportunidad y acciones inmediatas recomendadas\n\n• Benchmarking inicial\n\n• Datos internos: objetivo SMART, insights clave, recomendaciones accionables, propuesta creativa, pilares de contenido, KPIs, bloqueos, activaciones clave y prioridades del mes siguiente"
         },
         {
           levelNumber: 2,
           displayType: "checkmark",
           displayText: "",
-          tooltipContent: "- Recopilación de datos iniciales y métricas clave por plataforma: Alcance, impresiones, engagement, clics, seguidores adquiridos.\n\n- Identificación de contenido con mejor y peor rendimiento\n\n- Observaciones generales del primer mes\n\n- Calificación general y meta para el mes siguiente\n\n-Auditoría inicial por plataforma\n\n-Quick Wins: áreas de oportunidad y acciones inmediatas recomendadas\n\n-Benchmarking inicial\n\n-Datos internos: \nobjetivo SMART, insights clave, recomendaciones accionables, propuesta creativa, pilares de contenido, KPIs, bloqueos, activaciones clave y prioridades del mes siguiente"
+          tooltipContent: "• Recopilación de datos iniciales y métricas clave por plataforma: Alcance, impresiones, engagement, clics, seguidores adquiridos.\n\n• Identificación de contenido con mejor y peor rendimiento\n\n• Observaciones generales del primer mes\n\n• Calificación general y meta para el mes siguiente\n\n• Auditoría inicial por plataforma\n\n• Quick Wins: áreas de oportunidad y acciones inmediatas recomendadas\n\n• Benchmarking inicial\n\n• Datos internos: objetivo SMART, insights clave, recomendaciones accionables, propuesta creativa, pilares de contenido, KPIs, bloqueos, activaciones clave y prioridades del mes siguiente"
         },
         {
           levelNumber: 3,
           displayType: "checkmark",
           displayText: "",
-          tooltipContent: "Nivel 1/2 +\n\n- Benchmarking exhaustivo \n\n-Estrategia derivada del análisis FODA \n(FO, DO, FA, DA)"
+          tooltipContent: "Nivel 1/2 +\n\n• Benchmarking exhaustivo\n\n• Estrategia derivada del análisis FODA (FO, DO, FA, DA)"
         }
       ]
     },
@@ -85,19 +85,19 @@ const Suscripciones = () => {
           levelNumber: 1,
           displayType: "text",
           displayText: "Hasta 2 Plataformas a elegir.",
-          tooltipContent: "Gestión integral del ciclo de vida del contenido y la comunidad en las plataformas seleccionadas.\n\nPlataformas a elegir:\nFacebook Pages: Páginas, Reels y Stories.\nInstagram: Publicaciones, Reels y Stories.\nLinkedIn: Perfil personal y Páginas.\nThreads: Publicaciones e Hilos.\nX: Posts y retweets\nPinterest: Pins y boards"
+          tooltipContent: "Gestión integral del ciclo de vida del contenido y la comunidad en las plataformas seleccionadas.\n\nPlataformas a elegir:\n• Facebook Pages: Páginas, Reels y Stories\n• Instagram: Publicaciones, Reels y Stories\n• LinkedIn: Perfil personal y Páginas\n• Threads: Publicaciones e Hilos\n• X: Posts y retweets\n• Pinterest: Pins y boards"
         },
         {
           levelNumber: 2,
           displayType: "text",
           displayText: "Hasta 2 Plataformas a elegir.",
-          tooltipContent: "Gestión integral del ciclo de vida del contenido y la comunidad en las plataformas seleccionadas.\n\nPlataformas a elegir:\nFacebook Pages: Páginas, Reels y Stories.\nInstagram: Publicaciones, Reels y Stories.\nLinkedIn: Perfil personal y Páginas.\nThreads: Publicaciones e Hilos.\nX: Posts y retweets\nPinterest: Pins y boards"
+          tooltipContent: "Gestión integral del ciclo de vida del contenido y la comunidad en las plataformas seleccionadas.\n\nPlataformas a elegir:\n• Facebook Pages: Páginas, Reels y Stories\n• Instagram: Publicaciones, Reels y Stories\n• LinkedIn: Perfil personal y Páginas\n• Threads: Publicaciones e Hilos\n• X: Posts y retweets\n• Pinterest: Pins y boards"
         },
         {
           levelNumber: 3,
           displayType: "text",
           displayText: "Hasta 3 Plataformas a elegir.",
-          tooltipContent: "Gestión integral del ciclo de vida del contenido y la comunidad en las plataformas seleccionadas.\n\nPlataformas a elegir:\nFacebook Pages: Páginas, Reels y Stories.\nInstagram: Publicaciones, Reels y Stories.\nLinkedIn: Perfil personal y Páginas.\nThreads: Publicaciones e Hilos.\nX: Posts y retweets\nPinterest: Pins y boards"
+          tooltipContent: "Gestión integral del ciclo de vida del contenido y la comunidad en las plataformas seleccionadas.\n\nPlataformas a elegir:\n• Facebook Pages: Páginas, Reels y Stories\n• Instagram: Publicaciones, Reels y Stories\n• LinkedIn: Perfil personal y Páginas\n• Threads: Publicaciones e Hilos\n• X: Posts y retweets\n• Pinterest: Pins y boards"
         }
       ]
     },
@@ -185,19 +185,19 @@ const Suscripciones = () => {
           levelNumber: 1,
           displayType: "text",
           displayText: "Hasta 4 Diseños para Redes/mes",
-          tooltipContent: "Incluye:\n\nInfografías visuales\n\nPublicaciones promocionales\n\nContenido de branding\n\nFrases sobre imagen\n\nMotion graphics o animaciones breves\n\nEntre Otros…"
+          tooltipContent: "Incluye:\n\n• Infografías visuales\n• Publicaciones promocionales\n• Contenido de branding\n• Frases sobre imagen\n• Motion graphics o animaciones breves\n• Entre Otros…"
         },
         {
           levelNumber: 2,
           displayType: "text",
           displayText: "Hasta 8 Diseños para Redes/mes",
-          tooltipContent: "Incluye:\n\nInfografías visuales\n\nPublicaciones promocionales\n\nContenido de branding\n\nFrases sobre imagen\n\nMotion graphics o animaciones breves\n\nEntre Otros…"
+          tooltipContent: "Incluye:\n\n• Infografías visuales\n• Publicaciones promocionales\n• Contenido de branding\n• Frases sobre imagen\n• Motion graphics o animaciones breves\n• Entre Otros…"
         },
         {
           levelNumber: 3,
           displayType: "text",
           displayText: "Diseños ilimitados",
-          tooltipContent: "Incluye:\n\nInfografías visuales\n\nPublicaciones promocionales\n\nContenido de branding\n\nFrases sobre imagen\n\nMotion graphics o animaciones breves\n\nEntre Otros…"
+          tooltipContent: "Incluye:\n\n• Infografías visuales\n• Publicaciones promocionales\n• Contenido de branding\n• Frases sobre imagen\n• Motion graphics o animaciones breves\n• Entre Otros…"
         }
       ]
     },
@@ -266,13 +266,13 @@ const Suscripciones = () => {
           levelNumber: 2,
           displayType: "text",
           displayText: "Nivel 1 + 2 horas de sesión/mes",
-          tooltipContent: "Las horas aplican solo con studios/fotógrafos recomendados\n\nSe puede dividir en 3 sesiones de 1 hr/sesión\n\nPuedes elegir entre autoagendamiento o tu tomar las sesiones cada que lo necesites"
+          tooltipContent: "Las horas aplican solo con studios/fotógrafos recomendados\n\n• Se puede dividir en 3 sesiones de 1 hr/sesión\n• Puedes elegir entre autoagendamiento o tomar las sesiones cada que lo necesites"
         },
         {
           levelNumber: 3,
           displayType: "text",
-          displayText: "Nivel 2 + 4 horas de sesión/mes + Prioridad de agenda",
-          tooltipContent: "Las horas aplican solo con studios/fotógrafos recomendados\n\nSe puede dividir en sesiones más cortas\n\nPuedes elegir entre autoagendamiento o tu tomar las sesiones cada que lo necesites"
+          displayText: "4 horas de sesión/mes + Prioridad de agenda",
+          tooltipContent: "Las horas aplican solo con studios/fotógrafos recomendados\n\n• Se puede dividir en sesiones más cortas\n• Puedes elegir entre autoagendamiento o tomar las sesiones cada que lo necesites"
         }
       ]
     },
@@ -285,13 +285,13 @@ const Suscripciones = () => {
           levelNumber: 1,
           displayType: "text",
           displayText: "Identificación de oportunidades + Propuestas + Eventos Sencillos",
-          tooltipContent: "Todos los eventos que se realicen serán personalizados para adaptarse al contexto de tu negocio por lo que estos eventos pueden variar dependiendo de tu marca y diversos factores externos.\n\nAlgunos ejemplos son:\n\n* Desafíos virales en redes sociales\n* Códigos de descuento escondidos\n* Giveaways o sorteos\n* Campañas de \"comenta y gana\"\n* Cupones por referidos\n\nPor mencionar algunos…."
+          tooltipContent: "Todos los eventos que se realicen serán personalizados para adaptarse al contexto de tu negocio por lo que estos eventos pueden variar dependiendo de tu marca y diversos factores externos.\n\nAlgunos ejemplos son:\n\n• Desafíos virales en redes sociales\n• Códigos de descuento escondidos\n• Giveaways o sorteos\n• Campañas de \"comenta y gana\"\n• Cupones por referidos\n\nPor mencionar algunos…."
         },
         {
           levelNumber: 2,
           displayType: "text",
           displayText: "Todo el Nivel 1 + Eventos Avanzados",
-          tooltipContent: "Todos los eventos que se realicen serán personalizados para adaptarse al contexto de tu negocio por lo que estos eventos pueden variar dependiendo de tu marca y diversos factores externos.\n\nAlgunos ejemplos son:\n\n* Programas de fidelidad con dinámicas\n* Códigos de descuento escondidos\n* Regalos sorpresa por interacción\n* Campañas con influencers\n* Miércoles de casino\n\nPor mencionar algunos…."
+          tooltipContent: "Todos los eventos que se realicen serán personalizados para adaptarse al contexto de tu negocio por lo que estos eventos pueden variar dependiendo de tu marca y diversos factores externos.\n\nAlgunos ejemplos son:\n\n• Programas de fidelidad con dinámicas\n• Códigos de descuento escondidos\n• Regalos sorpresa por interacción\n• Campañas con influencers\n• Miércoles de casino\n\nPor mencionar algunos…."
         },
         {
           levelNumber: 3,
@@ -335,19 +335,19 @@ const Suscripciones = () => {
           levelNumber: 1,
           displayType: "text",
           displayText: "Diagnóstico Sencillo",
-          tooltipContent: "- Resumen de datos generales del último mes por plataforma\n- Métricas clave: alcance, impresiones, engagement, clics, crecimiento de seguidores\n- Observaciones cualitativas de la semana\n- Calificación general del desempeño\n- Análisis de performance por plataforma\n- Comparativa de contenido propuesto vs. resultados\n- Meta general para el próximo mes y justificación\n- Datos internos: objetivo SMART, insights clave, recomendaciones, etc."
+          tooltipContent: "• Resumen de datos generales del último mes por plataforma\n• Métricas clave: alcance, impresiones, engagement, clics, crecimiento de seguidores\n• Observaciones cualitativas de la semana\n• Calificación general del desempeño\n• Análisis de performance por plataforma\n• Comparativa de contenido propuesto vs. resultados\n• Meta general para el próximo mes y justificación\n• Datos internos: objetivo SMART, insights clave, recomendaciones, etc."
         },
         {
           levelNumber: 2,
           displayType: "text",
           displayText: "Diagnóstico Avanzado",
-          tooltipContent: "Nivel 1 +\n- Análisis de sentimiento: observaciones, oportunidades de contenido, etc.\n- Radar competitivo: comparación con el principal competidor\n- Priorización de acciones para el mes siguiente"
+          tooltipContent: "Nivel 1 +\n\n• Análisis de sentimiento: observaciones, oportunidades de contenido, etc.\n• Radar competitivo: comparación con el principal competidor\n• Priorización de acciones para el mes siguiente"
         },
         {
           levelNumber: 3,
           displayType: "text",
           displayText: "Diagnóstico GMS+",
-          tooltipContent: "Nivel 2 +\n- Pruebas A/B propuestas para el mes siguiente\n- Tabla de pendientes: tareas no realizadas, razón y acción correctiva\n- Resumen de avances: mejores resultados, metas, campañas activas, diagnóstico clave y resumen ejecutivo"
+          tooltipContent: "Nivel 2 +\n\n• Pruebas A/B propuestas para el mes siguiente\n• Tabla de pendientes: tareas no realizadas, razón y acción correctiva\n• Resumen de avances: mejores resultados, metas, campañas activas, diagnóstico clave y resumen ejecutivo"
         }
       ]
     },
@@ -360,19 +360,19 @@ const Suscripciones = () => {
           levelNumber: 1,
           displayType: "text",
           displayText: "Informe de gestión",
-          tooltipContent: "- Registro semanal de publicaciones por plataforma\n- Seguimiento de publicaciones en Google My Business\n- Resumen de campañas UGC con creadores/influencers\n- Calendario de campañas ADS (opcional)\n- Resumen mensual: objetivos SMART, pilares de contenido, KPIs, etc."
+          tooltipContent: "• Registro semanal de publicaciones por plataforma\n• Seguimiento de publicaciones en Google My Business\n• Resumen de campañas UGC con creadores/influencers\n• Calendario de campañas ADS (opcional)\n• Resumen mensual: objetivos SMART, pilares de contenido, KPIs, etc."
         },
         {
           levelNumber: 2,
           displayType: "text",
           displayText: "Informe de gestión Avanzado",
-          tooltipContent: "Nivel 1 +\n- Registro de métricas post-publicación (48h) para cada contenido\n- Resumen del objetivo táctico de cada post y copy específico.\n- Detalle de resultados y aprendizajes de colaboraciones y UGC.\n- Resumen cualitativo mensual más detallado"
+          tooltipContent: "Nivel 1 +\n\n• Registro de métricas post-publicación (48h) para cada contenido\n• Resumen del objetivo táctico de cada post y copy específico\n• Detalle de resultados y aprendizajes de colaboraciones y UGC\n• Resumen cualitativo mensual más detallado"
         },
         {
           levelNumber: 3,
           displayType: "text",
           displayText: "Informe de gestión GMS+",
-          tooltipContent: "Nivel 2 +\n- Planificación y registro de campañas ADS y UGC con mayor profundidad\n- Análisis estratégico de resultados: inversión, ROI, etc.\n- Resumen ejecutivo mensual con énfasis en la toma de decisiones."
+          tooltipContent: "Nivel 2 +\n\n• Planificación y registro de campañas ADS y UGC con mayor profundidad\n• Análisis estratégico de resultados: inversión, ROI, etc.\n• Resumen ejecutivo mensual con énfasis en la toma de decisiones"
         }
       ]
     },
@@ -391,13 +391,13 @@ const Suscripciones = () => {
           levelNumber: 2,
           displayType: "text",
           displayText: "Informe Trimestral",
-          tooltipContent: "Resumen general del trimestre:\n\n-Video análisis Personal\n\n-Principales logros, métricas estrella, observaciones clave\n\n-Datos generales trimestrales por plataforma\n\n-Tendencia general y comentarios adicionales por plataforma\nResultados de Google My Business y colaboraciones y campañas UGC\n\n-Benchmarking: comparación de posts destacados y aprendizajes clave con el principal competidor\n\n-Resumen de logros, aprendizajes tácticos y observaciones de la comunidad\n\n-Valoración estratégica trimestral\n\n-Conclusiones finales y enfoque para el próximo trimestre\n\n-Espacio para feedback del cliente y fecha sugerida para la próxima revisión"
+          tooltipContent: "Resumen general del trimestre:\n\n• Video análisis Personal\n• Principales logros, métricas estrella, observaciones clave\n• Datos generales trimestrales por plataforma\n• Tendencia general y comentarios adicionales por plataforma\n• Resultados de Google My Business y colaboraciones y campañas UGC\n• Benchmarking: comparación de posts destacados y aprendizajes clave con el principal competidor\n• Resumen de logros, aprendizajes tácticos y observaciones de la comunidad\n• Valoración estratégica trimestral\n• Conclusiones finales y enfoque para el próximo trimestre\n• Espacio para feedback del cliente y fecha sugerida para la próxima revisión"
         },
         {
           levelNumber: 3,
           displayType: "text",
           displayText: "Informe Trimestral GMS+",
-          tooltipContent: "Nivel 2 +\n\nVideo análisis personal y resumen ejecutivo del trimestre\n\nRecomendación principal para el próximo trimestre\n\nDatos generales trimestrales para más plataformas (hasta 3 o más)\nObjetivos SMART de cada mes: KPI principal/secundario, meta, resultado y análisis de cumplimiento\n\nAnálisis de pruebas A/B realizadas cada mes: hipótesis, grupos, KPI, duración, aprendizajes clave\n\nAnálisis de sentimiento y oportunidades: insight principal, impacto estimado, justificación y oportunidades de contenido/formato sugerido\n\nBenchmarking más profundo: estrategias y tácticas, gap analysis (dónde se superó y dónde no al competidor), insight clave y acción estratégica para cerrar brechas\n\nAcciones correctivas y gestión de bloqueos: recomendaciones, justificación, impacto, acción propuesta y decisiones del cliente por mes\n\nConclusiones finales y próximos pasos detallados (GMS y cliente), aprendizajes clave y resumen del trimestre"
+          tooltipContent: "Nivel 2 +\n\n• Video análisis personal y resumen ejecutivo del trimestre\n• Recomendación principal para el próximo trimestre\n• Datos generales trimestrales para más plataformas (hasta 3 o más)\n• Objetivos SMART de cada mes: KPI principal/secundario, meta, resultado y análisis de cumplimiento\n• Análisis de pruebas A/B realizadas cada mes: hipótesis, grupos, KPI, duración, aprendizajes clave\n• Análisis de sentimiento y oportunidades: insight principal, impacto estimado, justificación y oportunidades de contenido/formato sugerido\n• Benchmarking más profundo: estrategias y tácticas, gap analysis (dónde se superó y dónde no al competidor), insight clave y acción estratégica para cerrar brechas\n• Acciones correctivas y gestión de bloqueos: recomendaciones, justificación, impacto, acción propuesta y decisiones del cliente por mes\n• Conclusiones finales y próximos pasos detallados (GMS y cliente), aprendizajes clave y resumen del trimestre"
         }
       ]
     },
@@ -428,7 +428,7 @@ const Suscripciones = () => {
     },
     {
       icon: "🗺️",
-      serviceName: "Linea del Tiempo",
+      serviceName: "Línea del Tiempo",
       serviceDescription: "Tu Hoja de Ruta Estratégica Mensual. Convertimos nuestro análisis y hallazgos en una Línea del Tiempo visual. Es un plan de acción claro que te muestra exactamente qué contenido crearemos, por qué y qué objetivos buscamos alcanzar cada mes.",
       levelDetails: [
         { levelNumber: 1, displayType: "checkmark", displayText: "", tooltipContent: "" },
@@ -577,7 +577,13 @@ const Suscripciones = () => {
                   textShadow: '0 0 10px hsl(162 100% 45% / 0.5), 0 0 20px hsl(162 100% 45% / 0.3)',
                   willChange: 'text-shadow'
                 }}
-              >no se detiene</span>, tu presencia digital tampoco debería. Nuestros planes son la solución definitiva para quienes buscan resultados consistentes mes a messin la carga de la gestión diaria...
+              >no se detiene</span>, tu presencia digital tampoco debería. Nuestros planes son la solución definitiva para quienes buscan <span 
+                className="text-primary font-bold"
+                style={{
+                  textShadow: '0 0 10px hsl(162 100% 45% / 0.5), 0 0 20px hsl(162 100% 45% / 0.3)',
+                  willChange: 'text-shadow'
+                }}
+              >resultados consistentes</span> mes a mes sin la carga de la gestión diaria...
             </FadeIn>
             <FadeIn 
               delay={0.3}
@@ -604,8 +610,9 @@ const Suscripciones = () => {
       {/* Espaciado con difuminado */}
       <div className="h-72 bg-gradient-to-b from-background to-muted/30 flex items-center justify-center">
         <div className="text-center">
-          <Mouse className="h-8 w-8 text-muted-foreground/60 animate-bounce mx-auto mb-2" />
-          <p className="text-sm text-muted-foreground/60">Desliza para continuar</p>
+          <div className="text-muted-foreground/60 font-medium text-lg animate-bounce mx-auto mb-2" style={{ animationDuration: '2s' }}>
+            Desliza para continuar
+          </div>
         </div>
       </div>
 
@@ -754,7 +761,12 @@ const Suscripciones = () => {
                                 </button>
                               </TooltipTrigger>
                               <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
-                                <p>{service.serviceDescription}</p>
+                                <div 
+                                  className="whitespace-pre-line leading-relaxed"
+                                  dangerouslySetInnerHTML={{ 
+                                    __html: service.serviceDescription.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>') 
+                                  }}
+                                />
                               </TooltipContent>
                             </Tooltip>
                           </div>
@@ -780,7 +792,12 @@ const Suscripciones = () => {
                                     </button>
                                   </TooltipTrigger>
                                   <TooltipContent className="bg-card text-foreground border border-primary max-w-xs">
-                                    <p>{levelDetail.tooltipContent}</p>
+                                    <div 
+                                      className="whitespace-pre-line leading-relaxed"
+                                      dangerouslySetInnerHTML={{ 
+                                        __html: levelDetail.tooltipContent.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>') 
+                                      }}
+                                    />
                                   </TooltipContent>
                                 </Tooltip>
                               )}
@@ -883,23 +900,31 @@ const Suscripciones = () => {
                     <div className="space-y-3 flex-1">
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Auditoría Inicial por Plataforma</span>
+                        <span className="text-foreground">Auditoría integral de Presencia Digital</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Hasta 2 Plataformas Sociales</span>
+                        <span className="text-foreground">Gestión de 2 Plataformas Sociales</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Diagnóstico Mensual Sencillo</span>
+                        <span className="text-foreground">Setup + Gestión + Análisis en Google</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Acceso a Red de Creadores</span>
+                        <span className="text-foreground">Diseños Gráficos y Edición de Video</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">5 archivos de Post Producción</span>
+                        <span className="text-foreground">Sistema de Informes Básico</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">Profesionales en Google/Meta ADS</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">Aprobación de Posts</span>
                       </div>
                     </div>
                     <div className="pt-4 mt-auto">
@@ -949,11 +974,15 @@ const Suscripciones = () => {
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
-                        <span className="text-foreground">Hasta 2 Plataformas Sociales</span>
+                        <span className="text-foreground">Estrategia de reseñas en Google</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
-                        <span className="text-foreground">Diagnóstico Avanzado</span>
+                        <span className="text-foreground">Estrategia UGC y Colaboraciones</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
+                        <span className="text-foreground">2 Hrs de Sesión Fotográfica</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
@@ -961,7 +990,15 @@ const Suscripciones = () => {
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
-                        <span className="text-foreground">Hasta 10 archivos de Post Producción</span>
+                        <span className="text-foreground">Creación de Eventos Avanzada</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
+                        <span className="text-foreground">Video Explicación Avanzada</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-hero-yellow flex-shrink-0" />
+                        <span className="text-foreground">Aprobación de Posts</span>
                       </div>
                     </div>
                     <div className="pt-4 mt-auto">
@@ -1011,19 +1048,27 @@ const Suscripciones = () => {
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Hasta 3 Plataformas Sociales</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Diagnóstico GMS+</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">Informe Trimestral GMS+</span>
+                        <span className="text-foreground">Gestión de 3 Plataformas Sociales</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                         <span className="text-foreground">Diseños Ilimitados</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">4 Hrs de Sesión Fotográfica en total</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">Sistema de Informes GMS+</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">Soporte Prioritario</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                        <span className="text-foreground">Aprobación de Posts</span>
                       </div>
                     </div>
                     <div className="pt-4 mt-auto">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Target, TrendingUp, Users, Zap, Info, ChevronDown, ChevronRight, Mouse } from 'lucide-react';
+import { ArrowRight, CheckCircle, Target, TrendingUp, Users, Zap, Info, ChevronDown, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -145,7 +145,19 @@ const Estrategia = () => {
               delay={0.2}
               className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8"
             >
-              Este es el primer paso inteligente para tu presencia digital. Recibirás un análisis completo de tu negocio y una hoja de ruta estratégica. Y lo mejor de todo: Es 100% descontable.
+              Este es el <span 
+                className="text-hero-yellow font-bold"
+                style={{
+                  textShadow: '0 0 10px hsl(25 95% 53% / 0.5), 0 0 20px hsl(25 95% 53% / 0.3)',
+                  willChange: 'text-shadow'
+                }}
+              >primer paso inteligente</span> para tu presencia digital. Recibirás un análisis completo de tu negocio y una hoja de ruta estratégica. Y lo mejor de todo: <span 
+                className="text-hero-yellow font-bold"
+                style={{
+                  textShadow: '0 0 10px hsl(25 95% 53% / 0.5), 0 0 20px hsl(25 95% 53% / 0.3)',
+                  willChange: 'text-shadow'
+                }}
+              >Es 100% descontable</span>.
             </FadeIn>
             <FadeIn 
               delay={0.3}
@@ -161,9 +173,9 @@ const Estrategia = () => {
                 size="lg" 
                 className="bg-hero-yellow hover:bg-hero-yellow/90 text-hero-yellow-foreground px-8 py-4 text-lg font-semibold rounded-xl"
               >
-                Solicítalo Ahora
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+                  Solicítalo Ahora
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               <Link to="/servicios">
                 <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold rounded-xl">
                   Ver Todos los Servicios
@@ -175,14 +187,16 @@ const Estrategia = () => {
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
             <div className="flex flex-col items-center animate-bounce" style={{ animationDuration: '2s' }}>
-              <Mouse className="w-8 h-8 text-muted-foreground animate-pulse" style={{ animationDuration: '3s' }} />
+              <div className="text-muted-foreground font-medium text-lg animate-bounce" style={{ animationDuration: '2s' }}>
+                Desliza para continuar
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Degradado de transición suave */}
-      <div className="h-32 bg-gradient-to-b from-background via-background/80 to-muted/30"></div>
+      <div className="h-48 bg-gradient-to-b from-background via-background/80 to-muted/30"></div>
 
       {/* ¿Qué es el Impulso Estratégico? */}
       <section className="py-16 bg-muted/30" data-section="para-quien-impulso">
@@ -259,7 +273,7 @@ const Estrategia = () => {
             <h2 
               className="text-5xl lg:text-7xl xl:text-8xl font-black text-foreground mb-6"
               style={{
-                textShadow: '0 0 20px hsl(162 100% 45% / 0.3), 0 0 40px hsl(162 100% 45% / 0.2)',
+                textShadow: '0 0 20px hsl(25 95% 53% / 0.3), 0 0 40px hsl(25 95% 53% / 0.2)',
                 willChange: 'text-shadow'
               }}
             >
@@ -304,7 +318,7 @@ const Estrategia = () => {
                       <td className="p-6">
                         <div className="flex items-center space-x-2">
                           <span className="text-lg">{service.icon}</span>
-                          <span className="font-medium text-foreground">{service.name}</span>
+                            <span className="font-medium text-foreground">{service.name}</span>
                         </div>
                       </td>
                       <td className="text-center p-6">
@@ -358,6 +372,9 @@ const Estrategia = () => {
         </div>
       </section>
 
+      {/* Difuminado de transición */}
+      <div className="h-16 bg-gradient-to-b from-background to-muted/30"></div>
+      
       {/* Tarjetas de Resumen de Impulsos */}
       <section className="py-20 bg-muted/30" data-section="nuestros-impulsos">
         <div className="container mx-auto px-6">
@@ -503,6 +520,9 @@ const Estrategia = () => {
         </div>
       </section>
       
+      {/* Difuminado de transición */}
+      <div className="h-16 bg-gradient-to-b from-muted/30 to-background"></div>
+      
       {/* Proceso del Impulso Estratégico */}
       <section className="py-16">
         <div className="container mx-auto px-6">
@@ -518,8 +538,8 @@ const Estrategia = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8">
               <FadeIn delay={0.1} className="text-center">
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">1</span>
+                <div className="bg-hero-yellow/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-hero-yellow">1</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Diagnóstico Inicial</h3>
                 <p className="text-muted-foreground">
@@ -527,14 +547,14 @@ const Estrategia = () => {
                 </p>
               </FadeIn>
               
-              {/* Flecha verde */}
+              {/* Flecha naranja */}
               <div className="hidden lg:block">
-                <ArrowRight className="w-8 h-8 text-primary" />
+                <ArrowRight className="w-8 h-8 text-hero-yellow" />
               </div>
               
               <FadeIn delay={0.2} className="text-center">
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">2</span>
+                <div className="bg-hero-yellow/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-hero-yellow">2</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Análisis FODA</h3>
                 <p className="text-muted-foreground">
@@ -542,14 +562,14 @@ const Estrategia = () => {
                 </p>
               </FadeIn>
               
-              {/* Flecha verde */}
+              {/* Flecha naranja */}
               <div className="hidden lg:block">
-                <ArrowRight className="w-8 h-8 text-primary" />
+                <ArrowRight className="w-8 h-8 text-hero-yellow" />
               </div>
               
               <FadeIn delay={0.3} className="text-center">
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">3</span>
+                <div className="bg-hero-yellow/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-hero-yellow">3</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Estrategia Personalizada</h3>
                 <p className="text-muted-foreground">
@@ -557,14 +577,14 @@ const Estrategia = () => {
                 </p>
               </FadeIn>
               
-              {/* Flecha verde */}
+              {/* Flecha naranja */}
               <div className="hidden lg:block">
-                <ArrowRight className="w-8 h-8 text-primary" />
+                <ArrowRight className="w-8 h-8 text-hero-yellow" />
               </div>
               
               <FadeIn delay={0.4} className="text-center">
-                <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">4</span>
+                <div className="bg-hero-yellow/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-hero-yellow">4</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Recomendación de Plan</h3>
                 <p className="text-muted-foreground">
@@ -576,6 +596,9 @@ const Estrategia = () => {
         </div>
       </section>
 
+      {/* Difuminado de transición */}
+      <div className="h-16 bg-gradient-to-b from-background to-muted/30"></div>
+      
       {/* Sección de Preguntas Frecuentes */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">

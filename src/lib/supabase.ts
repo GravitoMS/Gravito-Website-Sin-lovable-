@@ -28,7 +28,7 @@ export async function withRetry<T>(
   maxRetries: number = 3,
   delay: number = 1000
 ): Promise<T> {
-  let lastError: any;
+  let lastError: unknown;
   
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
@@ -62,9 +62,9 @@ export async function checkSupabaseConnection(): Promise<boolean> {
 
 // Función para obtener datos con retry automático
 export async function fetchWithRetry<T>(
-  query: () => Promise<{ data: T | null; error: any }>,
+  query: () => Promise<{ data: T | null; error: unknown }>,
   maxRetries: number = 3
-): Promise<{ data: T | null; error: any }> {
+): Promise<{ data: T | null; error: unknown }> {
   return withRetry(async () => {
     const result = await query();
     if (result.error) {
@@ -86,7 +86,7 @@ export interface AdminUser {
 export interface PageContent {
   id: string
   page_name: string
-  content: any // Puede ser string, objeto JSON, o cualquier tipo
+  content: unknown // Puede ser string, objeto JSON, o cualquier tipo
   created_at: string
   updated_at: string
   updated_by?: string // Opcional según el diagnóstico

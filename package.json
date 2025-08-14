@@ -8,17 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "validate-colors": "node scripts/validateColors.cjs",
-    "protect:check": "node scripts/document-protection.cjs check",
-    "protect:backup": "node scripts/document-protection.cjs backup",
-    "protect:restore": "node scripts/document-protection.cjs restore",
-    "protect:setup": "node scripts/document-protection.cjs setup",
-    "protect:monitor": "node scripts/document-protection.cjs monitor",
-    "protect:help": "node scripts/document-protection.cjs help",
-    "protect:install": "node scripts/setup-protection.cjs",
-    "no-mock": "node scripts/anti-mock-detector.cjs",
-    "setup-real-data": "node scripts/setup-real-data.cjs"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -49,9 +39,6 @@
     "@radix-ui/react-toggle": "^1.1.9",
     "@radix-ui/react-toggle-group": "^1.1.10",
     "@radix-ui/react-tooltip": "^1.2.7",
-    "@splinetool/react-spline": "^4.1.0",
-    "@splinetool/runtime": "^1.10.42",
-    "@supabase/supabase-js": "^2.54.0",
     "@tanstack/react-query": "^5.83.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
