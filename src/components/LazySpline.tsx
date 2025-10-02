@@ -63,3 +63,4 @@ const LazySpline: React.FC<LazySplineProps> = ({
 };
 
 export default LazySpline;
+

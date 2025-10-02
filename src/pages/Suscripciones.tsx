@@ -883,14 +883,15 @@ const Suscripciones = () => {
                       <Badge className="bg-primary text-primary-foreground mb-4">
                         Nivel 1
                       </Badge>
-                      <div className="mb-4">
+                      {/* Precio deshabilitado */}
+                      {/* <div className="mb-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
                           {billingCycle === 'monthly' ? '$6,490/mes' : '$5,408.34/mes'}
                         </div>
                         <div className="text-sm text-muted-foreground">
                         Precio en MXN, ya incluye IVA
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
                       Para los dueños de negocios que necesitan establecer su presencia digital y comenzar su transformación digital de manera escalable.
@@ -953,14 +954,15 @@ const Suscripciones = () => {
                       <Badge className="bg-hero-yellow text-hero-yellow-foreground mt-2 mx-auto">
                         Recomendado
                       </Badge>
-                      <div className="mb-4 mt-4">
+                      {/* Precio deshabilitado */}
+                      {/* <div className="mb-4 mt-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
                           {billingCycle === 'monthly' ? '$12,395/mes' : '$10,328.75/mes'}
                         </div>
                         <div className="text-sm text-muted-foreground">
                         Precio en MXN, ya incluye IVA
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
                       Para negocios en crecimiento que buscan optimizar su presencia digital y expandir su alcance con estrategias avanzadas.
@@ -1027,14 +1029,15 @@ const Suscripciones = () => {
                       <Badge className="bg-primary text-primary-foreground mb-4">
                         Nivel 3
                       </Badge>
-                      <div className="mb-4">
+                      {/* Precio deshabilitado */}
+                      {/* <div className="mb-4">
                         <div className="text-xl lg:text-2xl font-bold text-foreground">
                           {billingCycle === 'monthly' ? '$15,780/mes' : '$13,150/mes'}
                         </div>
                         <div className="text-sm text-muted-foreground">
                           Precio en MXN, ya incluye IVA
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
                       Para negocios establecidos que buscan liderar su mercado y expandir su presencia digital con estrategias integrales.

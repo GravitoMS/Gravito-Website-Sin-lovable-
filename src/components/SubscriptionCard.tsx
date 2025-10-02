@@ -48,8 +48,8 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = React.memo(({
         </CardHeader>
         
         <CardContent className="space-y-6">
-          {/* Precio */}
-          <div className="text-center">
+          {/* Precio - DESHABILITADO */}
+          {/* <div className="text-center">
             <div className="text-4xl font-bold">
               ${price.toLocaleString()}
               <span className="text-lg text-muted-foreground">/{billingCycle === 'monthly' ? 'mes' : 'año'}</span>
@@ -59,7 +59,7 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = React.memo(({
                 Ahorras {savings}% con facturación anual
               </p>
             )}
-          </div>
+          </div> */}
 
           {/* Características */}
           <div className="space-y-3">
